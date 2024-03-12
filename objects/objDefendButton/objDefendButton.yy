@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"objAttackButton",
+  "%Name":"objDefendButton",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objAttackButton",
+  "name":"objDefendButton",
   "overriddenProperties":[],
   "parent":{
     "name":"Testing_Buttons",
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprAttackButton",
-    "path":"sprites/sprAttackButton/sprAttackButton.yy",
+    "name":"sprDefendButton",
+    "path":"sprites/sprDefendButton/sprDefendButton.yy",
   },
   "spriteMaskId":null,
   "visible":true,

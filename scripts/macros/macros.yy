@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"macros",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"utility_functions",
+    "path":"folders/Scripts/utility_functions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

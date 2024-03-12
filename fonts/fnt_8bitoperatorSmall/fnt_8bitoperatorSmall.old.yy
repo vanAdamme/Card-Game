@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fnt_8bitoperator",
+  "%Name":"fnt_8bitoperatorSmall",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":55,
@@ -117,7 +117,7 @@
   "last":0,
   "lineHeight":72,
   "maintainGms1Font":false,
-  "name":"fnt_8bitoperator",
+  "name":"fnt_8bitoperatorSmall",
   "parent":{
     "name":"Fonts",
     "path":"folders/Fonts.yy",

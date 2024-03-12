@@ -28,4 +28,15 @@ function macros_and_enums()
 	{
 		BASIC
 	}
+
+	enum ATTACHMENT_TYPE
+	{
+		CORE,
+		HEAD,
+		BODY,
+		LEFT_ARM,
+		RIGHT_ARM,
+		LEFT_LEG,
+		RIGHT_LEG
+	}
 }

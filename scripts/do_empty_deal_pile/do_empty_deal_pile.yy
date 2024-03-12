@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"do_empty_deal_pile",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"card_functions",
+    "path":"folders/Scripts/card_functions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"do_attack",
+  "%Name":"do_defend",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"do_attack",
+  "name":"do_defend",
   "parent":{
     "name":"player_actions",
     "path":"folders/Scripts/player_actions.yy",

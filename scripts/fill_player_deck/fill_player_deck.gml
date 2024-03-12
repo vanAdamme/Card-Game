@@ -16,7 +16,7 @@ function fill_player_deck(_deck, _deck_type)
 					attack_val_m	= objGame_Controller.BasicAttack.attack_val[0];
 					attack_val_sd	= objGame_Controller.BasicAttack.attack_val[1];
 					defend_val		= objGame_Controller.BasicAttack.defend_val;
-					support_val		= objGame_Controller.BasicAttack.support;
+					support_val		= objGame_Controller.BasicAttack.support_val;
 					front			= objGame_Controller.BasicAttack.front;
 					back			= objGame_Controller.BasicAttack.back;
 
@@ -27,7 +27,7 @@ function fill_player_deck(_deck, _deck_type)
 				deck.add_to_deal_pile(_inst);
 			}
 
-			repeat(5)
+			repeat(3)
 			{
 				var _inst = instance_create_layer(objDeckGoesHere.x, objDeckGoesHere.y, "Hidden_items_layer", objPlayerCard);
 				with (_inst)
@@ -38,9 +38,31 @@ function fill_player_deck(_deck, _deck_type)
 					attack_val_m	= objGame_Controller.BasicDefend.attack_val[0];
 					attack_val_sd	= objGame_Controller.BasicDefend.attack_val[1];
 					defend_val		= objGame_Controller.BasicDefend.defend_val;
-					support_val		= objGame_Controller.BasicDefend.support;
+					support_val		= objGame_Controller.BasicDefend.support_val;
 					front			= objGame_Controller.BasicDefend.front;
 					back			= objGame_Controller.BasicDefend.back;
+
+					sprite_index	= back;
+				}
+
+				deck.add_to_deck(_inst);
+				deck.add_to_deal_pile(_inst);
+			}
+
+			repeat(2)
+			{
+				var _inst = instance_create_layer(objDeckGoesHere.x, objDeckGoesHere.y, "Hidden_items_layer", objPlayerCard);
+				with (_inst)
+				{
+					title			= objGame_Controller.BasicSupport.title;
+					type			= objGame_Controller.BasicSupport.type;
+					subtype			= objGame_Controller.BasicSupport.subtype;
+					attack_val_m	= objGame_Controller.BasicSupport.attack_val[0];
+					attack_val_sd	= objGame_Controller.BasicSupport.attack_val[1];
+					defend_val		= objGame_Controller.BasicSupport.defend_val;
+					support_val		= objGame_Controller.BasicSupport.support_val;
+					front			= objGame_Controller.BasicSupport.front;
+					back			= objGame_Controller.BasicSupport.back;
 
 					sprite_index	= back;
 				}

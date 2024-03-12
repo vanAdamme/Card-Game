@@ -7,11 +7,13 @@ function Card(_title, _type, _subtype, _front, _back) constructor
 	back		= _back;
 }
 
-function PlayerCard(_title, _type, _subtype, _front, _back, _attack_val, _defend_val, _support) : Card(_title, _type, _subtype, _front, _back) constructor
+function PlayerCard(_title, _type, _subtype, _front, _back = sprCardBasicBack, _attack_val, _defend_val, _support_val, _cost = 1/*, _attachment*/) : Card(_title, _type, _subtype, _front, _back) constructor
 {
 	attack_val	= _attack_val;
 	defend_val	= _defend_val;
-	support		= _support;
+	support_val	= _support_val;
+	cost		= _cost;
+	//attachment	= _attachment;
 }
 
 function Deck() constructor
@@ -30,11 +32,6 @@ function Deck() constructor
 	static add_to_deal_pile = function(_card)
 	{
 		array_push(cards_in_deal_pile, _card);
-	}
-
-	static add_to_discard = function(_card)
-	{
-		array_push(cards_in_discard, _card);
 	}
 
 	static discard_card = function(_card)
