@@ -4,45 +4,44 @@ if mouse_check_doubleclick(mb_left, DOUBLE_CLICK_DELAY) && position_meeting(mous
 	if card_on_top() { flip_card(); }
 }
 
-
-/*
-
-//mouse drag and drop
-if (!drag)
+if discarding
 {
-   if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id) && card_on_top() && clickable
-   {
-	   if is_active_card()
-	   {
-		   set_active_card(false);
-	   }
-	   else
-	   {
-			set_active_card(true);
-			drag = true;
-			mx = x - mouse_x;
-			my = y - mouse_y;
-	   }
-	}
-}
-else
-{
-	x = mouse_x + mx;
-	y = mouse_y + my;
-	if !mouse_check_button(mb_left)
+	if x == objDiscardGoesHere.x && y == objDiscardGoesHere.y
 	{
-		drag = false;
+		discarding = false;
+	}
+	else
+	{
+		var dx = objDiscardGoesHere.x - x;
+		var dy = objDiscardGoesHere.y - y;
+		if (abs(dx) != 0)
+		{
+		  x += min(abs(dx), room_speed) * sign(dx);
+		}
+		else
+		{
+		  y += min(abs(dy), room_speed) * sign(dy);
+		}
 	}
 }
 
-
-
-///Collision
-collide = instance_place(x, y, all);
-if is_active_card() && collide != noone
+if dealing
 {
-	if object_get_parent(collide.object_index) == objCardParent
+	if x == objDeckGoesHere.x && y == objDeckGoesHere.y
 	{
-		put_on_top();
+		deealing = false;
+	}
+	else
+	{
+		var dx = objDeckGoesHere.x - x;
+		var dy = objDeckGoesHere.y - y;
+		if (abs(dx) != 0)
+		{
+		  x += min(abs(dx), room_speed) * sign(dx);
+		}
+		else
+		{
+		  y += min(abs(dy), room_speed) * sign(dy);
+		}
 	}
 }

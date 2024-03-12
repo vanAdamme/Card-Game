@@ -7,7 +7,7 @@ function fill_player_deck(_deck, _deck_type)
 		case DECK_TYPE.BASIC:
 			repeat(5)
 			{
-				var _inst = instance_create_layer(objDeckGoesHere.x + 21, objDeckGoesHere.y + 40, "Hidden_items_layer", objPlayerCard);
+				var _inst = instance_create_layer(objDeckGoesHere.x, objDeckGoesHere.y, "Hidden_items_layer", objPlayerCard);
 				with (_inst)
 				{
 					title			= objGame_Controller.BasicAttack.title;
@@ -29,7 +29,7 @@ function fill_player_deck(_deck, _deck_type)
 
 			repeat(5)
 			{
-				var _inst = instance_create_layer(objDeckGoesHere.x + 21, objDeckGoesHere.y + 40, "Hidden_items_layer", objPlayerCard);
+				var _inst = instance_create_layer(objDeckGoesHere.x, objDeckGoesHere.y, "Hidden_items_layer", objPlayerCard);
 				with (_inst)
 				{
 					title			= objGame_Controller.BasicDefend.title;

@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"objRoomSetup",
+  "%Name":"objRoom_Controller",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objRoomSetup",
+  "name":"objRoom_Controller",
   "overriddenProperties":[],
   "parent":{
     "name":"Controllers",
-    "path":"folders/Objects/Cards/Controllers.yy",
+    "path":"folders/Objects/Controllers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

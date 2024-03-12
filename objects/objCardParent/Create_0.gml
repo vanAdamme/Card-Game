@@ -1,11 +1,8 @@
 
 //mouse handling
-mx = -1;
-my = -1;
-drag = false;
+//drag = false;
 mouse_doubleclick_init();  // initializes the timer variable for double-click timing
 
-collide = noone;
 
 //stats
 attack_val_m = 0;
@@ -16,3 +13,6 @@ front = noone;
 back = noone;
 
 clickable = false;
+discarding = false;
+dealing = false;
+card_spot_num = -1;

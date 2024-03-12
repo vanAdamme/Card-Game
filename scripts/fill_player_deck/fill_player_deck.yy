@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"fill_player_deck",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"card_functions",
+    "path":"folders/Scripts/card_functions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
