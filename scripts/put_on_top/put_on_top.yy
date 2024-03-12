@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"put_on_top",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"put_on_top",
+  "parent":{
+    "name":"card_functions",
+    "path":"folders/Scripts/card_functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"do_empty_deal_pile",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"do_empty_deal_pile",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

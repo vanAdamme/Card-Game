@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"show_debug_message_utilities",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"show_debug_message_utilities",
+  "parent":{
+    "name":"utility_functions",
+    "path":"folders/Scripts/utility_functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

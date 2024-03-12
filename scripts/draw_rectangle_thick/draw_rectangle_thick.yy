@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"draw_rectangle_thick",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_rectangle_thick",
+  "parent":{
+    "name":"utility_functions",
+    "path":"folders/Scripts/utility_functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"maths_functions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"maths_functions",
+  "parent":{
+    "name":"utility_functions",
+    "path":"folders/Scripts/utility_functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

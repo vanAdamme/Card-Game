@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"set_active_card",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"set_active_card",
+  "parent":{
+    "name":"card_functions",
+    "path":"folders/Scripts/card_functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

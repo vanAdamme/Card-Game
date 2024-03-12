@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"utils_CommunityToolboxMath",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"utils_CommunityToolboxMath",
+  "parent":{
+    "name":"utility_functions",
+    "path":"folders/Scripts/utility_functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

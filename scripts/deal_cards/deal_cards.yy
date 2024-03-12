@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"deal_cards",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"deal_cards",
+  "parent":{
+    "name":"card_functions",
+    "path":"folders/Scripts/card_functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

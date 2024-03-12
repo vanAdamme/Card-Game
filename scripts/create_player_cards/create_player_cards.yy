@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"create_player_cards",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_player_cards",
+  "parent":{
+    "name":"card_functions",
+    "path":"folders/Scripts/card_functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

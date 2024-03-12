@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_position_highest",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_position_highest",
+  "parent":{
+    "name":"card_functions",
+    "path":"folders/Scripts/card_functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
