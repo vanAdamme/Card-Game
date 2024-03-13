@@ -1,7 +1,7 @@
 function do_empty_deal_pile()
 {
-	var _discards = objPlayer.deck.cards_in_discard;
-	var _deal_pile = objPlayer.deck.cards_in_deal_pile;
+	var _discards = objPlayer.deck.discard_pile;
+	var _deal_pile = objPlayer.deck.deal_pile;
 	
 	shuffle(_discards);
 

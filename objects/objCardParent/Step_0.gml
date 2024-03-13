@@ -9,6 +9,7 @@ if discarding
 	if x == objDiscardGoesHere.x && y == objDiscardGoesHere.y
 	{
 		discarding = false;
+		shift_depth(id);
 	}
 	else
 	{
@@ -18,28 +19,7 @@ if discarding
 		{
 		  x += min(abs(dx), room_speed) * sign(dx);
 		}
-		else
-		{
-		  y += min(abs(dy), room_speed) * sign(dy);
-		}
-	}
-}
-
-if dealing
-{
-	if x == objDeckGoesHere.x && y == objDeckGoesHere.y
-	{
-		deealing = false;
-	}
-	else
-	{
-		var dx = objDeckGoesHere.x - x;
-		var dy = objDeckGoesHere.y - y;
-		if (abs(dx) != 0)
-		{
-		  x += min(abs(dx), room_speed) * sign(dx);
-		}
-		else
+		if (abs(dy) != 0)
 		{
 		  y += min(abs(dy), room_speed) * sign(dy);
 		}

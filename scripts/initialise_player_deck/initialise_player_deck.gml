@@ -1,4 +1,4 @@
-function fill_player_deck(_deck, _deck_type)
+function initialise_player_deck(_deck, _deck_type)
 {
 	var deck = _deck;
 
@@ -20,9 +20,8 @@ function fill_player_deck(_deck, _deck_type)
 					front			= objGame_Controller.BasicAttack.front;
 					back			= objGame_Controller.BasicAttack.back;
 
-					sprite_index	= back;
+					//sprite_index	= back;
 				}
-
 				deck.add_to_deck(_inst);
 				deck.add_to_deal_pile(_inst);
 			}
@@ -42,9 +41,8 @@ function fill_player_deck(_deck, _deck_type)
 					front			= objGame_Controller.BasicDefend.front;
 					back			= objGame_Controller.BasicDefend.back;
 
-					sprite_index	= back;
+					//sprite_index	= back;
 				}
-
 				deck.add_to_deck(_inst);
 				deck.add_to_deal_pile(_inst);
 			}
@@ -64,14 +62,15 @@ function fill_player_deck(_deck, _deck_type)
 					front			= objGame_Controller.BasicSupport.front;
 					back			= objGame_Controller.BasicSupport.back;
 
-					sprite_index	= back;
+					//sprite_index	= back;
 				}
-
 				deck.add_to_deck(_inst);
 				deck.add_to_deal_pile(_inst);
 			}
 		break;
 	}
-	deck.shuffle_deal_pile();
+
+	array_shuffle(deck.deal_pile);
+
 	return deck;
 }

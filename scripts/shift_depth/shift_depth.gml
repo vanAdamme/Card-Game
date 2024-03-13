@@ -1,14 +1,14 @@
-function shift_depth(top_object)
+function shift_depth(_object)
 {
     if (instance_exists(objCardParent))
     {
-        if (top_object.depth == 0)
+        if (_object.depth == TOPPEST_CARD)
             exit;
 
-        top_object.depth = 0;
+        _object.depth = TOPPEST_CARD;
         with(objCardParent)
         {
-            if (id == top_object)
+            if (id == _object)
                 continue;
 
             depth++;

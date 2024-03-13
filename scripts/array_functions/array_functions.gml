@@ -43,7 +43,6 @@ function array_copy_simple(_array) {
     return _new_array;
 }
 
-
 /// @function array_join(array, array, [...arrays])
 /// @param {array_id} array
 /// @param {array_id} array
@@ -83,8 +82,8 @@ function array_flatten(_array) {
 
     return _new_array;
 }    
-    
-    
+
+
 /// @function array_find_index(array, value)
 /// @param {array_id} array
 /// @param {variable} value
@@ -218,17 +217,6 @@ function array_some(_array, _script) {
     return false;    
 }
 
-
-/// @function array_shuffle(array)
-/// @param {array} array
-/// @description Randomizes the order of an array. It does return the array, however, it will add them to the array itself. 
-function array_shuffle(_array) {
-    var _length = array_length(_array);
-    repeat (_length) {
-        array_swap_indexes(_array, irandom(_length - 1), irandom(_length - 1));
-    }
-    return _array;
-}
 
 /// @function array_filter(array, script)
 /// @param {array_id} array

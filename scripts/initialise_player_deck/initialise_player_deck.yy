@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"fill_player_deck",
+  "%Name":"initialise_player_deck",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"fill_player_deck",
+  "name":"initialise_player_deck",
   "parent":{
     "name":"card_functions",
     "path":"folders/Scripts/card_functions.yy",

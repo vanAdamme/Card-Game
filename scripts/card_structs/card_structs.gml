@@ -7,7 +7,7 @@ function Card(_title, _type, _subtype, _front, _back) constructor
 	back		= _back;
 }
 
-function PlayerCard(_title, _type, _subtype, _front, _back = sprCardBasicBack, _attack_val, _defend_val, _support_val, _cost = 1/*, _attachment*/) : Card(_title, _type, _subtype, _front, _back) constructor
+function PlayerCard(_title, _type, _subtype, _front, _back, _attack_val, _defend_val, _support_val, _cost = 1/*, _attachment*/) : Card(_title, _type, _subtype, _front, _back) constructor
 {
 	attack_val	= _attack_val;
 	defend_val	= _defend_val;
@@ -19,28 +19,32 @@ function PlayerCard(_title, _type, _subtype, _front, _back = sprCardBasicBack, _
 function Deck() constructor
 {
 	cards = [];
-	cards_in_deal_pile = [];
+	deal_pile = [];
 	cards_in_hand = [];
-	cards_in_discard = [];
+	discard_pile = [];
 
 	static add_to_deck = function(_card)
 	{
 		array_push(cards, _card);
-		shift_depth(_card);
 	}
 
 	static add_to_deal_pile = function(_card)
 	{
-		array_push(cards_in_deal_pile, _card);
+		array_push(deal_pile, _card);
+		_card.sprite_index = _card.back;
+		_card.clickable = false;
+		_card.x = objDeckGoesHere.x;
+		_card.y = objDeckGoesHere.y;
+		shift_depth(_card);
 	}
 
 	static discard_card = function(_card)
 	{
 		var _index = array_get_index(cards_in_hand, _card);
+
 		array_delete(cards_in_hand, _index, 1);
-		array_push(cards_in_discard, _card);
+		array_push(discard_pile, _card);
 		_card.sprite_index = _card.front;
-		shift_depth(_card);
 		_card.clickable = false;
 		_card.discarding = true;
 	}
@@ -50,52 +54,38 @@ function Deck() constructor
 		while !empty(cards_in_hand)
 		{
 			var _card = array_last(cards_in_hand);
-			_card.sprite_index = _card.front;
-			_card.clickable = false;
-			shift_depth(_card);
-			array_push(cards_in_discard, _card);
-			array_pop(cards_in_hand);
-			_card.discarding = true;
+			discard_card(_card);
 		}
 	}
 
-	static shuffle_deal_pile = function()
+	static empty_discard = function()
 	{
-		cards_in_deal_pile = array_shuffle(cards_in_deal_pile);
+		array_for_each(discard_pile, add_to_deal_pile);
+		clear_array(discard_pile);
+		array_shuffle(deal_pile);
 	}
 
 	static deal = function(_hand_size)
 	{
+		discard_hand();
+
 		for (var i = 0; i < _hand_size; i++)
 		{
-			if empty(cards_in_deal_pile)
+			if empty(deal_pile)
 			{
-				var _len = array_length(cards_in_discard);
-				array_copy(cards_in_deal_pile, 0, cards_in_discard, 0, _len);
-				clear_array(cards_in_discard);
-				shuffle_deal_pile();
-				for (var j = 0; j < array_length(cards_in_deal_pile); j++)
-				{
-					var _card = cards_in_deal_pile[j];
-					_card.sprite_index = _card.back;
-					_card.x = objDeckGoesHere.x;
-					_card.y = objDeckGoesHere.y;
-				}
+				empty_discard();
 			}
 
-			var _card = cards_in_deal_pile[i];
+			var _card = array_last(deal_pile);
 
-			_card.layer = layer_get_id("Cards");
-//			_card.depth = CARD_MIN_DEPTH - i;
-			shift_depth(_card);
 			_card.x = objRoom_Controller.card_spot_array[i].x;
 			_card.y = objRoom_Controller.card_spot_array[i].y;
-//_card.dealing = true;
+			shift_depth(_card);
 			_card.sprite_index = _card.front;
 			_card.clickable = true;
 			array_push(cards_in_hand, _card);
-			//do deal animation
+			array_pop(deal_pile);
+			//do deal animation	
 		}
-		array_delete(cards_in_deal_pile, 0, _hand_size);
 	}
 }

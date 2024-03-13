@@ -13,6 +13,6 @@ draw_text(50, 150, "Defence: " + string(objPlayer.current_defence));
 draw_set_font(fnt_8bitoperatorSmall);
 
 draw_text(1000, 50, "# cards: " + string(array_length(objPlayer.deck.cards)));
-draw_text(1000, 100, "# cards in deal pile: " + string(array_length(objPlayer.deck.cards_in_deal_pile)));
+draw_text(1000, 100, "# cards in deal pile: " + string(array_length(objPlayer.deck.deal_pile)));
 draw_text(1000, 150, "# cards in hand: " + string(array_length(objPlayer.deck.cards_in_hand)));
-draw_text(1000, 200, "# cards in discard: " + string(array_length(objPlayer.deck.cards_in_discard)));
+draw_text(1000, 200, "# cards in discard: " + string(array_length(objPlayer.deck.discard_pile)));

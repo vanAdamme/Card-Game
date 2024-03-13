@@ -3,8 +3,8 @@ function macros_and_enums()
 	#macro	CARD_WIDTH		180
 	#macro	CARD_HEIGHT		250
 
-	#macro	CARD_MIN_DEPTH	0
-	#macro	CARD_MAX_DEPTH	1000
+	#macro	TOPPEST_CARD	0
+	#macro	BOTTOMEST_CARD	1000
 
 	#macro	DOUBLE_CLICK_DELAY	250000
 

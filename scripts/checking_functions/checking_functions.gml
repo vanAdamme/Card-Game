@@ -22,3 +22,16 @@ function face_up()
 {
 	return sprite_index == front;
 }
+
+function check_deck()
+{
+	with (objPlayer.deck)
+	{
+		if array_length(deal_pile) + array_length(discard_pile) + array_length(cards_in_hand) != array_length(cards)
+		{
+			var _text = "deal: " + string(array_length(deal_pile)) + "\ndiscard: " + string(array_length(discard_pile)) + "\nhand: " + string(array_length(cards_in_hand)) + "\ncards: " + string(array_length(cards));
+			show_message(_text);
+			//game_end(69);
+		}
+	}
+}

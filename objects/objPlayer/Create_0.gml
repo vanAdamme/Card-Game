@@ -1,5 +1,5 @@
 deck = new Deck();
-deck = fill_player_deck(deck, DECK_TYPE.BASIC);
+deck = initialise_player_deck(deck, DECK_TYPE.BASIC);
 
 hand_size = 5;
 max_hp = 500;
@@ -8,6 +8,7 @@ current_hp = max_hp - 100;
 max_defence = 10000;
 current_defence = 0;
 
+/*
 max_actions = 3;
 current_actions = max_actions;
 

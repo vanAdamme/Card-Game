@@ -71,7 +71,7 @@
     {"id":{"name":"objSupportButton","path":"objects/objSupportButton/objSupportButton.yy",},},
     {"id":{"name":"objTester","path":"objects/objTester/objTester.yy",},},
     {"id":{"name":"objText","path":"objects/objText/objText.yy",},},
-    {"id":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},},
+    {"id":{"name":"rmTest","path":"rooms/rmTest/rmTest.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"__scribble_class_element","path":"scripts/__scribble_class_element/__scribble_class_element.yy",},},
     {"id":{"name":"__scribble_class_event","path":"scripts/__scribble_class_event/__scribble_class_event.yy",},},
@@ -128,7 +128,7 @@
     {"id":{"name":"draw_rectangle_thick","path":"scripts/draw_rectangle_thick/draw_rectangle_thick.yy",},},
     {"id":{"name":"draw_text_scribble_ext","path":"scripts/draw_text_scribble_ext/draw_text_scribble_ext.yy",},},
     {"id":{"name":"draw_text_scribble","path":"scripts/draw_text_scribble/draw_text_scribble.yy",},},
-    {"id":{"name":"fill_player_deck","path":"scripts/fill_player_deck/fill_player_deck.yy",},},
+    {"id":{"name":"initialise_player_deck","path":"scripts/initialise_player_deck/initialise_player_deck.yy",},},
     {"id":{"name":"flip_card","path":"scripts/flip_card/flip_card.yy",},},
     {"id":{"name":"macros","path":"scripts/macros/macros.yy",},},
     {"id":{"name":"maths_functions","path":"scripts/maths_functions/maths_functions.yy",},},
@@ -227,8 +227,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rmTest","path":"rooms/rmTest/rmTest.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"roomId":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
