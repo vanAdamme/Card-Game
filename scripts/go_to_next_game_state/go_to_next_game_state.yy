@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"go_to_next_game_state",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"go_to_next_game_state",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

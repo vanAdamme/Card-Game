@@ -1,15 +1,26 @@
 function do_attack()
 {
-	var _damage_m; //mean
-	var _damage_sd; //standard deviation
+	var _total_action_cost = 0;
+	
+	for (var i = 0; i < array_length(global.active_cards); i++)
+	{
+		_total_action_cost += global.active_cards[i].cost;
+	}
+
+	if _total_action_cost > objPlayer.current_actions
+	{
+		show_message("Not enough action points");
+		exit;
+	}
 
 	for (var i = 0; i < array_length(global.active_cards); i++)
 	{
 		var _card = global.active_cards[i];
-		_damage_m = _card.attack_val_m;
-		_damage_sd = _card.attack_val_sd;
+		var _damage_m = _card.attack_val_m;
+		var _damage_sd = _card.attack_val_sd;
 
 		var _damage = round(gauss(_damage_m, _damage_sd));
+
 		with (objEnemy)
 		{
 			hp = Approach(hp, 0, _damage);
@@ -21,8 +32,12 @@ function do_attack()
 			text = _card.title + " card: " + string(_damage) + " damage!";
 		}
 
-		objPlayer.deck.discard_card(_card);
+		with(objPlayer)
+		{
+			deck.discard_card(_card);
+			current_actions -= _card.cost;
+		}
 	}
-	
+
 	if objEnemy.hp == 0 { show_message("You win!"); }
 }

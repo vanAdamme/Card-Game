@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"do_end_turn",
+  "%Name":"use_card",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"do_end_turn",
+  "name":"use_card",
   "parent":{
     "name":"player_actions",
     "path":"folders/Scripts/player_actions.yy",

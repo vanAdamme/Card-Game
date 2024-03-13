@@ -1,1 +1,1 @@
-do_end_turn();
+do_current_turn();

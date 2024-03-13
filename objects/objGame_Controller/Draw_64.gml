@@ -7,8 +7,9 @@ while (show_damage)
 	draw_text(100, 100, "damage");
 }
 
-draw_text(50, 50, "HP: " + string(objPlayer.current_hp));
-draw_text(50, 150, "Defence: " + string(objPlayer.current_defence));
+draw_text(50, 20, "HP: " + string(objPlayer.current_hp));
+draw_text(50, 60, "Defence: " + string(objPlayer.current_defence));
+draw_text(50, 100, "Action points: " + string(objPlayer.current_actions));
 
 draw_set_font(fnt_8bitoperatorSmall);
 

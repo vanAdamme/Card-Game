@@ -3,15 +3,18 @@ deck = initialise_player_deck(deck, DECK_TYPE.BASIC);
 
 hand_size = 5;
 max_hp = 500;
-current_hp = max_hp - 100;
+current_hp = max_hp;
 
 max_defence = 10000;
 current_defence = 0;
 
-/*
+
 max_actions = 3;
 current_actions = max_actions;
+action_refresh = 3;
 
+
+/*
 attachment_slot = ds_map_create();
 ds_map_add(attachment_slot, "Core", noone);
 ds_map_add(attachment_slot, "Head", noone);
