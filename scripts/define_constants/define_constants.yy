@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"macros",
+  "%Name":"define_constants",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"macros",
+  "name":"define_constants",
   "parent":{
-    "name":"utility_functions",
-    "path":"folders/Scripts/utility_functions.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

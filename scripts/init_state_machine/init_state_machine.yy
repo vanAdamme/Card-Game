@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"go_to_next_game_state",
+  "%Name":"init_state_machine",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"go_to_next_game_state",
+  "name":"init_state_machine",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

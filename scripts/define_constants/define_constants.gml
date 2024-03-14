@@ -1,4 +1,4 @@
-function macros_and_enums()
+function define_constants()
 {
 	#macro	CARD_WIDTH		180
 	#macro	CARD_HEIGHT		250
@@ -50,4 +50,6 @@ function macros_and_enums()
 		LEFT_LEG,
 		RIGHT_LEG
 	}
+
+	global.active_cards = [];
 }
