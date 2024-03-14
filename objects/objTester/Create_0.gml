@@ -1,1 +1,0 @@
-print(GAME_STATE.LENGTH);

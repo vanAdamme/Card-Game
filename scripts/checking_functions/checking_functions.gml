@@ -35,3 +35,8 @@ function check_deck()
 		}
 	}
 }
+
+function is_attack_card(_card)
+{
+	return _card.subtype == CARD_SUBTYPE.ATTACK;
+}

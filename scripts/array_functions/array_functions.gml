@@ -146,7 +146,7 @@ function array_find_index_custom_last(_array, _script) {
 /// @function array_find_index_all(array, value)
 /// @param {array} array
 /// @param {variable} value
-/// @description Returns an array of all indexs containing the value specified, searching from left to right. Returns an empty array if the value is not found.
+/// @description Returns an array of all indexes containing the value specified, searching from left to right. Returns an empty array if the value is not found.
 function array_find_index_all(_array, _value) {
     var _length, _new_array, _counter;
     _length = array_length(_array);
@@ -160,13 +160,13 @@ function array_find_index_all(_array, _value) {
     }
 
     return _new_array;
-}    
+}
     
 
 /// @function array_find_index_all_custom(array, script, [...script_arguments_array])
 /// @param {array_id} array
 /// @param {script_id} script
-/// @description Returns an array of all indexs containing the value specified, searching from left to right. Returns an empty array if the value is not found.
+/// @description Returns an array of all indexes containing the value specified, searching from left to right. Returns an empty array if the value is not found.
 function array_find_index_all_custom(_array, _script) {
     var _new_array, _counter, _length;
     _length = array_length(_array);
@@ -294,5 +294,3 @@ function array_for_each_copy(_array, _script) {
     }
     return _new_array;   
 }
-
-

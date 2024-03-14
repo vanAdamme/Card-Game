@@ -11,17 +11,6 @@ function define_constants()
 	#macro gui_mouse_x device_mouse_x_to_gui(0)
 	#macro gui_mouse_y device_mouse_y_to_gui(0)
 
-	enum GAME_STATE
-	{
-		PLAYER_START = 0,
-		PLAYER_DURING = 1,
-		PLAYER_END = 2,
-		ENEMY_START = 3,
-		ENEMY_DURING = 4,
-		ENEMY_END = 5,
-		LENGTH,
-	}
-
 	enum CARD_TYPE
 	{
 		PLAYER,

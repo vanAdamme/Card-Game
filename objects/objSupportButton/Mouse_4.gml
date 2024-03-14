@@ -1,6 +1,4 @@
 if mouse_check_button_pressed(mb_left) && !empty(global.active_cards)
 {
-	do_support();
+	do_support(objPlayer);
 }
-
-clear_array(global.active_cards);

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"do_enemy_turn",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"do_enemy_turn",
+  "parent":{
+    "name":"enemy_actions",
+    "path":"folders/Scripts/enemy_actions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
