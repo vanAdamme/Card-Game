@@ -71,4 +71,5 @@ function do_attack(_actor, _enemy_card = noone)
 			}
 		break;
 	}
+	return _damage;
 }

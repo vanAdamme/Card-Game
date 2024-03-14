@@ -1,4 +1,4 @@
-deck = new Deck();
+deck = new Deck(PARENT_TYPE.PLAYER);
 initialise_player_deck(deck, DECK_TYPE.BASIC);
 
 hand_size = 5;
@@ -12,7 +12,6 @@ current_defence = 0;
 max_actions = 3;
 current_actions = max_actions;
 action_refresh = 3;
-
 
 /*
 attachment_slot = ds_map_create();

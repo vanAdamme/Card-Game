@@ -57,6 +57,15 @@ function init_state_machine()
 			do_enemy_turn();
 			fsm.leave();
 		},
+		draw: function() {
+			draw_self();
+
+			draw_set_font(fnt_8bitoperatorBig);
+			draw_set_colour(c_black);
+
+			draw_text(x + 200, y, "Enemy HP: " + string(current_hp));
+			draw_text(x + 200, y + 100, "Enemy defence: " + string(current_defence));
+		},
 		leave: function() {
 			//do enemy turn clean up
 			with(objEnemy)
@@ -71,4 +80,5 @@ function init_state_machine()
 
 	fsm.add_transition("end_player_turn", "player_turn", "enemy_turn");
 	fsm.add_transition("end_enemy_turn", "enemy_turn", "player_turn", undefined, function() {});
+	//fsm.add_transition(//to transition into draw states and the like or something else better
 }

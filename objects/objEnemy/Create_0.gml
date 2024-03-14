@@ -1,4 +1,4 @@
-deck = new Enemy_Deck();
+deck = new Deck(PARENT_TYPE.ENEMY);
 initialise_enemy_deck(deck, DECK_TYPE.BASIC);
 
 hand_size = 5;

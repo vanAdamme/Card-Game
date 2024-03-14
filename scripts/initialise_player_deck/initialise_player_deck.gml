@@ -1,6 +1,5 @@
 function initialise_player_deck(_deck, _deck_type)
 {
-	show_message("initialising player deck");
 	var deck = _deck;
 
 	switch(_deck_type)
@@ -21,8 +20,6 @@ function initialise_player_deck(_deck, _deck_type)
 					front			= objGame_Controller.BasicAttack.front;
 					back			= objGame_Controller.BasicAttack.back;
 					cost			= objGame_Controller.BasicAttack.cost;
-
-					//sprite_index	= back;
 				}
 				deck.add_to_deck(_inst);
 				deck.add_to_deal_pile(_inst);
@@ -43,8 +40,6 @@ function initialise_player_deck(_deck, _deck_type)
 					front			= objGame_Controller.BasicDefend.front;
 					back			= objGame_Controller.BasicDefend.back;
 					cost			= objGame_Controller.BasicDefend.cost;
-
-					//sprite_index	= back;
 				}
 				deck.add_to_deck(_inst);
 				deck.add_to_deal_pile(_inst);
@@ -65,8 +60,6 @@ function initialise_player_deck(_deck, _deck_type)
 					front			= objGame_Controller.BasicSupport.front;
 					back			= objGame_Controller.BasicSupport.back;
 					cost			= objGame_Controller.BasicSupport.cost;
-
-					//sprite_index	= back;
 				}
 				deck.add_to_deck(_inst);
 				deck.add_to_deal_pile(_inst);
@@ -75,5 +68,4 @@ function initialise_player_deck(_deck, _deck_type)
 	}
 
 	deck.deal_pile = array_shuffle(deck.deal_pile);
-//	return deck;
 }

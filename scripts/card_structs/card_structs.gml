@@ -16,8 +16,9 @@ function PlayerCard(_title, _type, _subtype, _front, _back, _attack_val, _defend
 	//attachment	= _attachment;
 }
 
-function Deck() constructor
+function Deck(_parent) constructor
 {
+	parent = _parent;
 	cards = [];
 	deal_pile = [];
 	cards_in_hand = [];
@@ -41,25 +42,34 @@ function Deck() constructor
 
 			var _card = array_last(deal_pile);
 
-			_card.x = objRoom_Controller.card_spot_array[i].x;
-			_card.y = objRoom_Controller.card_spot_array[i].y;
-			shift_depth(_card);
-			_card.sprite_index = _card.front;
-			_card.clickable = true;
 			array_push(cards_in_hand, _card);
 			array_pop(deal_pile);
-			//do deal animation	
+
+			if parent == PARENT_TYPE.PLAYER
+			{
+				_card.x = objRoom_Controller.card_spot_array[i].x;
+				_card.y = objRoom_Controller.card_spot_array[i].y;
+				shift_depth(_card);
+				_card.sprite_index = _card.front;
+				_card.clickable = true;
+
+				//do deal animation
+			}
 		}
 	}
 
 	static add_to_deal_pile = function(_card)
 	{
 		array_push(deal_pile, _card);
-		_card.sprite_index = _card.back;
-		_card.clickable = false;
-		_card.x = objDeckGoesHere.x;
-		_card.y = objDeckGoesHere.y;
-		shift_depth(_card);
+
+		if parent == PARENT_TYPE.PLAYER
+		{
+			_card.sprite_index = _card.back;
+			_card.clickable = false;
+			_card.x = objDeckGoesHere.x;
+			_card.y = objDeckGoesHere.y;
+			shift_depth(_card);
+		}
 	}
 	
 	static discard_card = function(_card)
@@ -68,9 +78,13 @@ function Deck() constructor
 
 		array_delete(cards_in_hand, _index, 1);
 		array_push(discard_pile, _card);
-		_card.sprite_index = _card.front;
-		_card.clickable = false;
-		_card.discarding = true;
+		
+		if parent == PARENT_TYPE.PLAYER
+		{
+			_card.sprite_index = _card.front;
+			_card.clickable = false;
+			_card.discarding = true;
+		}
 	}
 	
 	static discard_hand = function()

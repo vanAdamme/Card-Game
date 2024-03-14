@@ -1,8 +1,8 @@
-function do_support(_actor)
+function do_support(_actor, _enemy_card = noone)
 {
 	switch(_actor)
 	{
-		case objPlayer:
+		case "player":
 			var _total_action_cost = 0;
 	
 			for (var i = 0; i < array_length(global.active_cards); i++)
@@ -38,5 +38,22 @@ function do_support(_actor)
 			
 			clear_array(global.active_cards);
 		break;
+		
+		case "enemy":
+			var _support_amt = _enemy_card.support_val;
+				with (objEnemy)
+				{
+					current_hp = Approach(current_hp, max_hp, _support_amt);
+					current_actions -= _enemy_card.cost;
+					deck.discard_card(_enemy_card);
+				}
+
+				var _text = instance_create_layer(800, 230, "Text", objText);
+				with (_text)
+				{
+					text = _enemy_card.title + " card: " + string(_support_amt) + " healed!";
+				}
+		break;
 	}
+	return _support_amt;
 }
