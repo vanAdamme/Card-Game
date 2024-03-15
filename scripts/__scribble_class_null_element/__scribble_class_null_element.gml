@@ -1,4 +1,3 @@
-// Feather disable all
 function __scribble_class_null_element() constructor
 {
     static __error = function()
@@ -339,19 +338,19 @@ function __scribble_class_null_element() constructor
     
     
     
-    #region SDF
+    #region MSDF
     
-    static sdf_shadow = function()
+    static msdf_shadow = function()
     {
         __error();
     }
     
-    static sdf_border = function()
+    static msdf_border = function()
     {
         __error();
     }
     
-    static sdf_feather = function()
+    static msdf_feather = function()
     {
         __error();
     }

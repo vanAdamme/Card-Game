@@ -1,4 +1,3 @@
-// Feather disable all
 /// Emulation of string_length(), but using Scribble for calculating the length of a string
 /// 
 /// **Please do not use this function in conjunction with string_copy()**

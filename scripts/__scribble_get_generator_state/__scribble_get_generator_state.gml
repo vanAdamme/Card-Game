@@ -1,4 +1,3 @@
-// Feather disable all
 function __scribble_get_generator_state()
 {
     static _struct = new __scribble_class_generator_state();

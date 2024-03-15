@@ -1,4 +1,3 @@
-// Feather disable all
 function __scribble_get_state()
 {
     static _struct = {
@@ -10,11 +9,15 @@ function __scribble_get_state()
         __blink_off_duration: SCRIBBLE_DEFAULT_BLINK_OFF_DURATION,
         __blink_time_offset:  SCRIBBLE_DEFAULT_BLINK_TIME_OFFSET,
         
-        __shader_anim_desync:            false,
-        __shader_anim_desync_to_default: false,
-        __shader_anim_default:           false,
+        __standard_anim_desync:            false,
+        __standard_anim_desync_to_default: false,
+        __standard_anim_default:           false,
         
-        __sdf_thickness_offset: 0,
+        __msdf_anim_desync:            false,
+        __msdf_anim_desync_to_default: false,
+        __msdf_anim_default:           false,
+        
+        __msdf_thickness_offset: 0,
         
         __markdown_styles_struct: {},
     };

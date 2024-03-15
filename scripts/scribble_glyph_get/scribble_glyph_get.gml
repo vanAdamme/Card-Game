@@ -1,4 +1,3 @@
-// Feather disable all
 /// Returns: Real-value for the specified property
 /// @param fontName     The target font, as a string
 /// @param character    Target character, as a string

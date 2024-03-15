@@ -6,7 +6,7 @@
   "name":"scribble_super_create",
   "parent":{
     "name":"Superfonts",
-    "path":"folders/Scribble/Superfonts.yy",
+    "path":"folders/gooey/Dependencies/Scribble 8.7/Superfonts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

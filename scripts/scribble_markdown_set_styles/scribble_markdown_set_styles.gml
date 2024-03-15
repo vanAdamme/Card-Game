@@ -1,4 +1,3 @@
-// Feather disable all
 /// @param styleStruct
 /// @param [fastMode=false]
 

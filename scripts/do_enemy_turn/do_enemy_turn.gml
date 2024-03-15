@@ -9,21 +9,17 @@ function do_enemy_turn()
 			switch(choose("attack", "defend", "support"))
 			{
 				case "attack":
-					var _damage = do_attack("enemy", _card);
-show_message("Damage: " + string(_damage));
-
-
+					do_attack("enemy", _card);
 				break;
+
 				case "defend":
-					var _defend = do_defend("enemy", _card);
-show_message("Defend: " + string(_defend));
+					do_defend("enemy", _card);
 				break;
+
 				case "support":
-					var _support = do_support("enemy", _card);
-show_message("Support: " + string(_support));
+					do_support("enemy", _card);
 				break;
 			}
 		}
 	}
-	fsm.change(");
 }

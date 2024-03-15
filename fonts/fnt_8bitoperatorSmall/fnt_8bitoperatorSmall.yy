@@ -1,7 +1,7 @@
 {
   "$GMFont":"",
   "%Name":"fnt_8bitoperatorSmall",
-  "AntiAlias":1,
+  "AntiAlias":0,
   "applyKerning":0,
   "ascender":19,
   "ascenderOffset":0,
@@ -107,7 +107,7 @@
     "124":{"character":124,"h":24,"offset":1,"shift":6,"w":3,"x":34,"y":28,},
     "125":{"character":125,"h":24,"offset":1,"shift":12,"w":9,"x":23,"y":28,},
     "126":{"character":126,"h":24,"offset":1,"shift":14,"w":11,"x":242,"y":80,},
-    "9647":{"character":9647,"h":24,"offset":3,"shift":16,"w":10,"x":2,"y":106,},
+    "9647":{"character":9647,"h":24,"offset":3,"shift":16,"w":9,"x":2,"y":106,},
   },
   "hinting":0,
   "includeTTF":false,

@@ -6,7 +6,7 @@
   "name":"scribble_anim_wobble",
   "parent":{
     "name":"Animation",
-    "path":"folders/Scribble/Animation.yy",
+    "path":"folders/gooey/Dependencies/Scribble 8.7/Animation.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

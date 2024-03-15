@@ -1,4 +1,3 @@
-// Feather disable all
 function scribble_refresh_everything()
 {
     if (__SCRIBBLE_DEBUG) __scribble_trace("Refreshing everything");

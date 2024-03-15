@@ -1,4 +1,3 @@
-// Feather disable all
 /// @param soundID
 /// @param alias
 

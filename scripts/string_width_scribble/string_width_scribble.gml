@@ -1,4 +1,3 @@
-// Feather disable all
 /// Emulation of string_width(), but using Scribble for calculating the width
 /// 
 /// **Please do not use this function in conjunction with string_copy()**

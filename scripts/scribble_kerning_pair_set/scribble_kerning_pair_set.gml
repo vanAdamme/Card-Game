@@ -1,4 +1,3 @@
-// Feather disable all
 /// Adjusts the separation offset between two characters
 /// 
 /// Returns: The new value of the property that was modified.

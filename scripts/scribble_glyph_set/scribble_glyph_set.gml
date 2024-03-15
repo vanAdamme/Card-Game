@@ -1,4 +1,3 @@
-// Feather disable all
 /// Modifies a particular value for a character in a font previously added to Scribble.
 /// 
 /// Returns: The new value of the property that was modified.

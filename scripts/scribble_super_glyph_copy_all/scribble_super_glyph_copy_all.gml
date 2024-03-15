@@ -1,4 +1,3 @@
-// Feather disable all
 /// @param targetFontName
 /// @param sourceFontName
 /// @param overwrite

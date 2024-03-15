@@ -1,4 +1,3 @@
-// Feather disable all
 /// Returns the default font that Scribble is using for text elements
 
 function scribble_font_get_default()

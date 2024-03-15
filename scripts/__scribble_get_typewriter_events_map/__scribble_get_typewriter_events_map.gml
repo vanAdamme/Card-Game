@@ -1,4 +1,3 @@
-// Feather disable all
 function __scribble_get_typewriter_events_map()
 {
     static _map = ds_map_create();

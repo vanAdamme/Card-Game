@@ -1,4 +1,3 @@
-// Feather disable all
 function __scribble_get_cache_state()
 {
     static _struct = {

@@ -1,4 +1,3 @@
-// Feather disable all
 /// Creates a new font with an outline based on a given source font
 ///
 /// @param sourceFontName   Name, as a string, of the font to use as a basis for the effect

@@ -1,4 +1,3 @@
-// Feather disable all
 function __scribble_get_krutidev_lookup_map()
 {
     static _map = ds_map_create();
@@ -31,8 +30,6 @@ function __scribble_krutidev_lookup_map_initialize()
         "ट्ट",   "ट्ठ",   "ट",   "ठ",   "ड्ड",   "ड्ढ",  "ड",   "ढ",  "ण्", "ण",  
         "त्",  "त",  "थ्", "थ",  "द्ध",  "द", "ध्", "ध",  "न्",  "न",  
         
-        "म्म्",
-        
         "प्",  "प",  "फ्", "फ",  "ब्",  "ब", "भ्",  "भ",  "म्",  "म",
         "य्",  "य",  "र",  "ल्", "ल",  "ळ",  "व्",  "व", 
         "श्", "श",  "ष्", "ष",  "स्",   "स",   "ह",     
@@ -60,8 +57,6 @@ function __scribble_krutidev_lookup_map_initialize()
         
         "ê",      "ë",      "V",  "B",   "ì",       "ï",     "M",  "<",  ".", ".k",   
         "R",  "r",   "F", "Fk",  ")",    "n", "/",  "/k",  "U", "u",   
-        
-        "Ee~",
         
         "I",  "i",   "¶", "Q",   "C",  "c",  "H",  "Hk", "E",   "e",
         "¸",   ";",    "j",  "Y",   "y",  "G",  "O",  "o",

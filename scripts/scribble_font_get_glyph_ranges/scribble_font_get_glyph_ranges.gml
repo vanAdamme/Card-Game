@@ -1,4 +1,3 @@
-// Feather disable all
 /// @param fontName
 /// @param [hex=false]
 

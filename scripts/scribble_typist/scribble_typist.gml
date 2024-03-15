@@ -1,4 +1,3 @@
-// Feather disable all
 /// @param [perLine=false]
 
 function scribble_typist(_per_line = false)

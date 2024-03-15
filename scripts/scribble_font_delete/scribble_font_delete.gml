@@ -1,4 +1,3 @@
-// Feather disable all
 /// @param name
 
 function scribble_font_delete(_name)

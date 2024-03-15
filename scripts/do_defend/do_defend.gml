@@ -38,7 +38,7 @@ function do_defend(_actor, _enemy_card = noone)
 			
 			clear_array(global.active_cards);
 		break;
-		
+
 		case "enemy":
 			var _defend_amt = _enemy_card.defend_val;
 			with (objEnemy)
@@ -55,5 +55,4 @@ function do_defend(_actor, _enemy_card = noone)
 			}
 		break;
 	}
-	return _defend_amt;
 }

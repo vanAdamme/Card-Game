@@ -1,4 +1,3 @@
-// Feather disable all
 /// Returns the colour for the given colour name
 /// If the colour doesn't exist, this function will return <undefined>
 /// 

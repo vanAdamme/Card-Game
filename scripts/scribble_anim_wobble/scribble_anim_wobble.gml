@@ -1,4 +1,3 @@
-// Feather disable all
 /// @param angle      Maximum wobble angle. Larger values cause glyphs to oscillate further to the left and right
 /// @param frequency  Wobble frequency. Larger values cause glyphs to oscillate faster
 
@@ -15,8 +14,10 @@ function scribble_anim_wobble(_angle, _frequency)
         static _scribble_state = __scribble_get_state();
         with(_scribble_state)
         {
-            __shader_anim_desync            = true;
-            __shader_anim_desync_to_default = false;
+            __standard_anim_desync            = true;
+            __standard_anim_desync_to_default = false;
+            __msdf_anim_desync                = true;
+            __msdf_anim_desync_to_default     = false;
         }
     }
 }

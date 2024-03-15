@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scribble_msdf_thickness_offset",
   "parent":{
-    "name":"Deprecated",
-    "path":"folders/Scribble/(System - don't call these functions)/Deprecated.yy",
+    "name":"Miscellaneous",
+    "path":"folders/gooey/Dependencies/Scribble 8.7/Miscellaneous.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

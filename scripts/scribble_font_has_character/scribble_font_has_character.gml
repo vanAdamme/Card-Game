@@ -1,4 +1,3 @@
-// Feather disable all
 /// Tests to see if a font has the given character
 /// 
 /// Returns: Boolean, indicating whether the given character is found in the font

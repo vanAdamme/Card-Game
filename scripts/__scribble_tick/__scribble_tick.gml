@@ -1,4 +1,3 @@
-// Feather disable all
 function __scribble_tick()
 {
     static _scribble_state = __scribble_get_state();
@@ -32,8 +31,10 @@ function __scribble_tick()
         static _scribble_state = __scribble_get_state();
         with(_scribble_state)
         {
-            __shader_anim_desync            = true;
-            __shader_anim_desync_to_default = true;
+            __standard_anim_desync            = true;
+            __standard_anim_desync_to_default = true;
+            __msdf_anim_desync                = true;
+            __msdf_anim_desync_to_default     = true;
         }
     }
     

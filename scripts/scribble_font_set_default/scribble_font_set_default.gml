@@ -1,4 +1,3 @@
-// Feather disable all
 /// Sets the default font to use for Scribble text elements
 /// 
 /// @param fontName   The name of the default Scribble font to use, as a string

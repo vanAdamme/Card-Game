@@ -1,4 +1,3 @@
-// Feather disable all
 /// @param font
 /// @param state
 

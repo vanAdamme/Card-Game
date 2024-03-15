@@ -1,4 +1,3 @@
-// Feather disable all
 /// Resets animation effects to their default values
 
 function scribble_anim_reset()
@@ -6,7 +5,7 @@ function scribble_anim_reset()
     static _scribble_state = __scribble_get_state();
     with(_scribble_state)
     {
-        if (!__shader_anim_default)
+        if (!__standard_anim_default || !__msdf_anim_default)
         {
             static _array = __scribble_get_anim_properties();
             _array[@ __SCRIBBLE_ANIM.__WAVE_SIZE       ] = SCRIBBLE_DEFAULT_WAVE_SIZE;
@@ -36,10 +35,16 @@ function scribble_anim_reset()
             __blink_time_offset  = SCRIBBLE_DEFAULT_BLINK_TIME_OFFSET;
         }
         
-        if (!__shader_anim_desync)
+        if (!__standard_anim_default)
         {
-            __shader_anim_desync            = true;
-            __shader_anim_desync_to_default = true;
+            __standard_anim_desync            = true;
+            __standard_anim_desync_to_default = true;
+        }
+        
+        if (!__msdf_anim_desync)
+        {
+            __msdf_anim_desync            = true;
+            __msdf_anim_desync_to_default = true;
         }
     }
 }
