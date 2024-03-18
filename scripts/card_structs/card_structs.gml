@@ -44,15 +44,22 @@ function Deck(_parent) constructor
 
 			array_push(cards_in_hand, _card);
 			array_pop(deal_pile);
+			_card.sprite_index = _card.front;
+			shift_depth(_card);
 
 			if parent == PARENT_TYPE.PLAYER
 			{
-				_card.x = objRoom_Controller.card_spot_array[i].x;
-				_card.y = objRoom_Controller.card_spot_array[i].y;
-				shift_depth(_card);
-				_card.sprite_index = _card.front;
+				_card.x = objRoom_Controller.player_card_spot_array[i].x;
+				_card.y = objRoom_Controller.player_card_spot_array[i].y;
 				_card.clickable = true;
 
+				//do deal animation
+			}
+
+			if parent == PARENT_TYPE.ENEMY
+			{
+				_card.x = objRoom_Controller.enemy_card_spot_array[i].x;
+				_card.y = objRoom_Controller.enemy_card_spot_array[i].y;
 				//do deal animation
 			}
 		}
@@ -61,14 +68,21 @@ function Deck(_parent) constructor
 	static add_to_deal_pile = function(_card)
 	{
 		array_push(deal_pile, _card);
+		_card.sprite_index = _card.back;
+		shift_depth(_card);
 
 		if parent == PARENT_TYPE.PLAYER
 		{
-			_card.sprite_index = _card.back;
 			_card.clickable = false;
-			_card.x = objDeckGoesHere.x;
-			_card.y = objDeckGoesHere.y;
-			shift_depth(_card);
+			_card.x = objRoom_Controller.player_deck_spot.x;
+			_card.y = objRoom_Controller.player_deck_spot.y;
+
+		}
+
+		if parent == PARENT_TYPE.ENEMY
+		{
+			_card.x = objRoom_Controller.enemy_deck_spot.x;
+			_card.y = objRoom_Controller.enemy_deck_spot.y;
 		}
 	}
 	
@@ -78,10 +92,11 @@ function Deck(_parent) constructor
 
 		array_delete(cards_in_hand, _index, 1);
 		array_push(discard_pile, _card);
-		
+
+		_card.sprite_index = _card.front;
+
 		if parent == PARENT_TYPE.PLAYER
 		{
-			_card.sprite_index = _card.front;
 			_card.clickable = false;
 			_card.discarding = true;
 		}
@@ -132,7 +147,7 @@ function Enemy_Deck() constructor
 			array_pop(deal_pile);
 		}
 	}
-	
+
 	static add_to_deal_pile = function(_card)
 	{
 		array_push(deal_pile, _card);

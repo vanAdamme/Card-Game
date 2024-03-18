@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"objPlayerCardSpot",
+  "%Name":"objCardSpot",
   "eventList":[],
   "managed":true,
-  "name":"objPlayerCardSpot",
+  "name":"objCardSpot",
   "overriddenProperties":[],
   "parent":{
     "name":"GUI_objs",

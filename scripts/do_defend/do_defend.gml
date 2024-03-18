@@ -18,13 +18,16 @@ function do_defend(_actor, _enemy_card = noone)
 
 			for (var i = 0; i < array_length(global.active_cards); i++)
 				{
-					var _defend_amt;
 					var _card = global.active_cards[i];
-					_defend_amt = _card.defend_val;
+
+					var _defence_m = _card.defend_val_m;
+					var _defence_sd = _card.defend_val_sd;
+
+					var _defence = round(gauss(_defence_m, _defence_sd));
 
 					with (objPlayer)
 					{
-						current_defence = Approach(current_defence, max_defence, _defend_amt);
+						current_defence = Approach(current_defence, max_defence, _defence);
 						current_actions -= _card.cost;
 						deck.discard_card(_card);
 					}
@@ -32,7 +35,7 @@ function do_defend(_actor, _enemy_card = noone)
 					var _text = instance_create_layer(800, 180 + 50 * i, "Text", objText);
 					with (_text)
 					{
-						text = _card.title + " card: " + string(_defend_amt) + " defended!";
+						text = _card.title + " card: " + string(_defence) + " defended!";
 					}
 				}
 			
@@ -40,10 +43,14 @@ function do_defend(_actor, _enemy_card = noone)
 		break;
 
 		case "enemy":
-			var _defend_amt = _enemy_card.defend_val;
+			var _defence_m = _enemy_card.defend_val_m;
+			var _defence_sd = _enemy_card.defend_val_sd;
+
+			var _defence = round(gauss(_defence_m, _defence_sd));
+
 			with (objEnemy)
 			{
-				current_defence = Approach(current_defence, max_defence, _defend_amt);
+				current_defence = Approach(current_defence, max_defence, _defence);
 				current_actions -= _enemy_card.cost;
 				deck.discard_card(_enemy_card);
 			}
@@ -51,7 +58,7 @@ function do_defend(_actor, _enemy_card = noone)
 			var _text = instance_create_layer(800, 230, "Text", objText);
 			with (_text)
 			{
-				text = _enemy_card.title + " card: " + string(_defend_amt) + " defended!";
+				text = _enemy_card.title + " card: " + string(_defence) + " defended!";
 			}
 		break;
 	}
