@@ -34,11 +34,6 @@ function init_state_machine()
 	fsm.add("enemy_turn", {
 		enter: function() {
 			//do start of enemy turn stuff
-			with(objEnemy)
-			{
-				current_defence = 0;
-				current_actions = approach(current_actions, max_actions, action_refresh); 
-			}
 			fsm.step();
 		},
 		step: function() {
@@ -48,11 +43,6 @@ function init_state_machine()
 		},
 		leave: function() {
 			//do enemy turn clean up
-			with(objEnemy)
-			{
-				deck.discard_hand();
-				deck.deal(hand_size);
-			}		
 			fsm.trigger("end_enemy_turn");
 		}
 	});

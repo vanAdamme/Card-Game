@@ -1,6 +1,6 @@
 function is_active_card()
 {
-	return array_contains(global.active_cards, id);
+	return global.active_card == id;
 }
 
 function card_on_top()

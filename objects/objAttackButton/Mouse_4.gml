@@ -1,4 +1,4 @@
-if mouse_check_button_pressed(mb_left) && !empty(global.active_cards)
+if global.active_card != noone
 {
-	do_attack("player");
+	do_attack();
 }

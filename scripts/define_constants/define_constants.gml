@@ -45,6 +45,4 @@ function define_constants()
 		LEFT_LEG,
 		RIGHT_LEG
 	}
-
-	global.active_cards = [];
 }

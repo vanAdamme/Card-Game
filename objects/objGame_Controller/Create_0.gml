@@ -1,18 +1,16 @@
 instance_create_layer(0, 0, "Controllers", objRoom_Controller);
-instance_create_layer(50, 0, "Controllers", objMouse_Controller);
 instance_create_layer(100, 0, "Controllers", UI);
+instance_create_layer(50, 0, "Controllers", objMouse_Controller);
 
+	
 init_state_machine();
 
 instance_create_layer(0, 0, "Player", objPlayer);
 instance_create_layer(870, 390, "Enemy", objEnemy);
 
-with(objPlayer)
-{
-	deck.deal(hand_size);
-}
+global.active_card = noone;
 
-with(objEnemy)
+with(objPlayer)
 {
 	deck.deal(hand_size);
 }

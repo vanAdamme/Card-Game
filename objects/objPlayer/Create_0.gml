@@ -3,7 +3,7 @@ initialise_player_deck(deck, DECK_TYPE.BASIC);
 
 hand_size = 5;
 max_hp = 500;
-current_hp = max_hp;
+current_hp = max_hp - 300;
 
 max_defence = 10000;
 current_defence = 0;
