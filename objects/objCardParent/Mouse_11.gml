@@ -1,0 +1,1 @@
+card_popup.destroy();

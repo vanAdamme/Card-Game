@@ -12,9 +12,11 @@ function init_state_machine()
 
 	fsm.add("player_turn", {
 		enter: function() {
+			//check hp and so forth ...
+			
 			with(objPlayer)
 			{
-				current_defence = 0;
+				current_defence = approach(current_defence, 0, defence_loss);
 				current_actions = approach(current_actions, max_actions, action_refresh); 
 			}
 			fsm.step();
@@ -34,11 +36,17 @@ function init_state_machine()
 	fsm.add("enemy_turn", {
 		enter: function() {
 			//do start of enemy turn stuff
+			with (objEnemy)
+			{
+				current_defence = approach(current_defence, 0, defence_loss);
+			}
 			fsm.step();
 		},
 		step: function() {
+			enemy_choose_actions();
 			//do enemy turn things
 			do_enemy_turn();
+
 			fsm.leave();
 		},
 		leave: function() {

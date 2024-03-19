@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"do_defend",
   "parent":{
-    "name":"player_actions",
-    "path":"folders/Scripts/player_actions.yy",
+    "name":"player_functions",
+    "path":"folders/Scripts/player_functions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

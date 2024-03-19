@@ -1,7 +1,6 @@
 instance_create_layer(0, 0, "Controllers", objRoom_Controller);
 instance_create_layer(100, 0, "Controllers", UI);
 instance_create_layer(50, 0, "Controllers", objMouse_Controller);
-
 	
 init_state_machine();
 

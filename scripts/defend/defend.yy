@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"do_current_turn",
+  "%Name":"defend",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"do_current_turn",
+  "name":"defend",
   "parent":{
-    "name":"player_functions",
-    "path":"folders/Scripts/player_functions.yy",
+    "name":"enemy_actions",
+    "path":"folders/Scripts/enemy_functions/enemy_actions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

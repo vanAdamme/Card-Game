@@ -6,8 +6,8 @@
   "name":"objBackgroundCardSpot",
   "overriddenProperties":[],
   "parent":{
-    "name":"Card game",
-    "path":"Card game.yyp",
+    "name":"Sprites",
+    "path":"folders/Sprites.yy",
   },
   "parentObjectId":null,
   "persistent":false,

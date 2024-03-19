@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"corrode_armour",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"corrode_armour",
+  "parent":{
+    "name":"enemy_actions",
+    "path":"folders/Scripts/enemy_functions/enemy_actions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

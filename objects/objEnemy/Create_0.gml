@@ -1,6 +1,8 @@
 max_hp = 500;
 current_hp = max_hp;
 
-max_defence = 10000;
+max_defence = 200;
 current_defence = 0;
+defence_loss = 40;
 
+enemy_actions = ds_queue_create();

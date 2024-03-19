@@ -86,7 +86,12 @@ var _player_defence = _info_panel.add(new UIText("Player Defence", 50, 200, "", 
 		UI.get("Player Defence").setText("[fa_left]Defence: " + string(objPlayer.current_defence));
 	});
 
-var _player_AP = _info_panel.add(new UIText("Player AP", 50, 250, "", UI_RELATIVE_TO.TOP_LEFT));
+var _player_defence_loss = _info_panel.add(new UIText("Player Defence Loss", 50, 250, "", UI_RELATIVE_TO.TOP_LEFT));
+	_player_defence_loss.setPreRenderCallback(function() {
+		UI.get("Player Defence Loss").setText("[fa_left]Defence Loss: " + string(objPlayer.defence_loss));
+	});
+
+var _player_AP = _info_panel.add(new UIText("Player AP", 50, 300, "", UI_RELATIVE_TO.TOP_LEFT));
 	_player_AP.setPreRenderCallback(function() {
 		UI.get("Player AP").setText("[fa_left]Action points: " + string(objPlayer.current_actions));
 	});

@@ -20,10 +20,7 @@ function do_attack()
 		current_actions -= _card.cost;
 	}
 
-	with (objEnemy)
-	{
-		current_hp = Approach(current_hp, 0, _damage);
-	}
+	harm_enemy(_damage);
 
 	var _text = instance_create_layer(800, 280, "Text", objText);
 	with (_text)

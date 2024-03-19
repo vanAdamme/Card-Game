@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"do_enemy_turn",
+  "%Name":"enemy_choose_actions",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"do_enemy_turn",
+  "name":"enemy_choose_actions",
   "parent":{
     "name":"enemy_functions",
     "path":"folders/Scripts/enemy_functions.yy",

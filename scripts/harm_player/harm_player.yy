@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"do_current_turn",
+  "%Name":"harm_player",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"do_current_turn",
+  "name":"harm_player",
   "parent":{
     "name":"player_functions",
     "path":"folders/Scripts/player_functions.yy",
