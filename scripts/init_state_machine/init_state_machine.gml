@@ -6,7 +6,8 @@ function init_state_machine()
 		enter: function() {
 			randomise();
 			define_constants();
-			create_player_cards();
+			create_cards();
+			create_decks();
 		}
 	});
 

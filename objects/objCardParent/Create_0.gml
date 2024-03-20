@@ -22,6 +22,5 @@ back = noone;
 clickable = false;
 discarding = false;
 dealing = false;
-dealt_pos = -1;
 
 range = 25;

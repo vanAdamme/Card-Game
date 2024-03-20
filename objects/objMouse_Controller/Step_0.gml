@@ -29,12 +29,12 @@ if (mouse_check_button_released(mb_left))
 		with(global.active_card)
 		{
 			//snap to nearest card spot
-			var _nearest = instance_nearest(x, y, objBackgroundCardSpot);
+			//var _nearest = instance_nearest(x, y, objActiveCardSpot);
 
-			if distance_to_object(_nearest) < range
+			if distance_to_object(objActiveCardSpot) < range
 			{
-				x = _nearest.x;
-				y = _nearest.y + 10;
+				x = objActiveCardSpot.x;
+				y = objActiveCardSpot.y + 10;
 			}
 		}
 	}

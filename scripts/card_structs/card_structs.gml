@@ -15,6 +15,7 @@ function PlayerCard(_title, _type, _subtype, _front, _back, _attack_val, _defend
 	support_val	= _support_val;
 	cost		= _cost;
 	xp_to_level	= _xp_to_level;
+	level		= 1;
 	//attachment	= _attachment;
 }
 
@@ -80,8 +81,11 @@ function Deck(_parent) constructor
 		array_push(discard_pile, _card);
 
 		_card.sprite_index = _card.front;
-		_card.clickable = false;
-		_card.discarding = true;
+		_card.clickable = true;
+		_card.x = objDiscardGoesHere.x;
+		_card.y = objDiscardGoesHere.y + 10;
+		
+		//_card.discarding = true;
 	}
 
 	static discard_hand = function()
@@ -109,15 +113,27 @@ function Deck(_parent) constructor
 		{
 			_card = dealt_cards[i];
 			_card.x = (_width / 2) + (_width * i) + objBackgroundCardSpot.bbox_left;
+			_card.y = objBackgroundCardSpot.y + 10;
 			shift_depth(_card);
 		}
 	}
-
+/*
 	static duplicate_card = function(_card)
 	{
 		var _new_card = new PlayerCard(_card.title, _card.type, _card.subtype, _card.front, _card.back, _card.attack_val, _card.defend_val, _card.support_val, _card.cost, _card.xp_to_level);
 		//do instance create thing here
 		//add_to_deck(_new_card);
 		//discard(_new_card);		
+	}
+*/
+}
+
+function DeckType(_card_type, _amount) constructor
+{
+	cards_in_deck = array_create(argument_count / 2);
+	
+	for (var i = 0; i < argument_count / 2; i++)
+	{
+		cards_in_deck[i] = [argument[2 * i], argument[2 * i + 1]];
 	}
 }

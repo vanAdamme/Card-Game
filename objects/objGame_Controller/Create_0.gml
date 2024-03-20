@@ -11,7 +11,7 @@ global.active_card = noone;
 
 with(objPlayer)
 {
-	deck.deal_hand(hand_size);
+	//deck.deal_hand(hand_size);
 }
 
 instance_create_layer(150, 0, "GUI", objGUI_Controller);

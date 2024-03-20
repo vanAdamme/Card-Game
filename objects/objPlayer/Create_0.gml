@@ -1,5 +1,6 @@
 deck = new Deck(PARENT_TYPE.PLAYER);
-initialise_player_deck(deck, DECK_TYPE.BASIC);
+//initialise_player_deck(deck, DECK_TYPE.BASIC);
+deck = create_player_deck(deck, objGame_Controller.BasicDeck);
 
 hand_size = 5;
 max_hp = 500;

@@ -1,6 +1,42 @@
-//need much better way of creating an instance of a card
+function create_player_deck(_deck, _deck_type)
+{
+	var deck = _deck;
+	var deck_type = _deck_type;
 
-//maybe an array with each variable [title, type, ...] that does a foreach
+	for (var i = 0; i < array_length(deck_type.cards_in_deck); i++)
+	{
+		var card_amount = deck_type.cards_in_deck[i][1];
+		var card_type = deck_type.cards_in_deck[i][0];
+
+		repeat(card_amount)
+		{
+			var _inst = instance_create_layer(0, 0, "Hidden_items_layer", objPlayerCard);
+			with (_inst)
+			{
+				title			= card_type.title;
+				type			= card_type.type;
+				subtype			= card_type.subtype;
+				attack_val_m	= card_type.attack_val[0];
+				attack_val_sd	= card_type.attack_val[1];
+				defend_val_m	= card_type.defend_val[0];
+				defend_val_sd	= card_type.defend_val[1];
+				support_val_m	= card_type.support_val[0];
+				support_val_sd	= card_type.support_val[1];
+				xp_to_level		= card_type.xp_to_level;
+				front			= card_type.front;
+				back			= card_type.back;
+				cost			= card_type.cost;
+			}
+			deck.add_to_deck(_inst);
+			deck.add_to_deal_pile(_inst);
+		}		
+	}
+	deck.deal_pile = array_shuffle(deck.deal_pile);
+
+	return deck;
+}
+
+/*
 
 function initialise_player_deck(_deck, _deck_type)
 {
@@ -11,7 +47,7 @@ function initialise_player_deck(_deck, _deck_type)
 		case DECK_TYPE.BASIC:
 			repeat(5)
 			{
-				var _inst = instance_create_layer(objDeckGoesHere.x, objDeckGoesHere.y, "Hidden_items_layer", objPlayerCard);
+				var _inst = instance_create_layer(0, 0, "Hidden_items_layer", objPlayerCard);
 				with (_inst)
 				{
 					title			= objGame_Controller.BasicAttack.title;
@@ -79,6 +115,5 @@ function initialise_player_deck(_deck, _deck_type)
 			}
 		break;
 	}
-
 	deck.deal_pile = array_shuffle(deck.deal_pile);
 }

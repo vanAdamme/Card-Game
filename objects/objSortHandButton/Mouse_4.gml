@@ -1,0 +1,1 @@
+objPlayer.deck.sort_dealt_cards();
