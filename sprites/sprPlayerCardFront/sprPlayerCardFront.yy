@@ -19,11 +19,12 @@
   "height":279,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"0803be14-6a85-4431-b7df-80107c7108b4","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"0803be14-6a85-4431-b7df-80107c7108b4","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"0de09086-2fff-45dd-aed0-844bee3c02c8","blendMode":0,"displayName":"default","isLocked":false,"name":"0de09086-2fff-45dd-aed0-844bee3c02c8","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sprPlayerCardFront",
   "nineSlice":null,
-  "origin":0,
+  "origin":1,
   "parent":{
     "name":"Sprites",
     "path":"folders/Sprites.yy",
@@ -75,7 +76,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
+    "xorigin":90,
     "yorigin":0,
   },
   "swatchColours":null,

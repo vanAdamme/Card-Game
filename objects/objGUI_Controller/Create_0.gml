@@ -29,7 +29,7 @@ draw_set_halign(fa_left);
 //	setCallback(UI_EVENT.LEFT_RELEASE, function() {
 //		with(objPlayer)
 //		{
-//			deck.deal(hand_size);
+//			deck.deal_hand(hand_size);
 //		}
 //	});
 //}
@@ -96,7 +96,7 @@ var _player_AP = _info_panel.add(new UIText("Player AP", 50, 300, "", UI_RELATIV
 		UI.get("Player AP").setText("[fa_left]Action points: " + string(objPlayer.current_actions));
 	});
 
-_info_panel.add(new UIText("Enemy Info", 0, 350, "[fa_center]Enemy Info", UI_RELATIVE_TO.TOP_CENTER));
+_info_panel.add(new UIText("Enemy Info", 0, 400, "[fa_center]Enemy Info", UI_RELATIVE_TO.TOP_CENTER));
 
 var _enemy_hp = _info_panel.add(new UIText("Enemy HP", 50, 450, "", UI_RELATIVE_TO.TOP_LEFT));
 	_enemy_hp.setPreRenderCallback(function() {

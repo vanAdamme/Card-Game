@@ -1,4 +1,4 @@
 with(objPlayer)
 {
-	deck.deal(hand_size);
+	deck.deal_hand(hand_size);
 }

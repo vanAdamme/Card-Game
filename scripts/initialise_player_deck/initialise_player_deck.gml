@@ -1,3 +1,7 @@
+//need much better way of creating an instance of a card
+
+//maybe an array with each variable [title, type, ...] that does a foreach
+
 function initialise_player_deck(_deck, _deck_type)
 {
 	var deck = _deck;
@@ -19,6 +23,7 @@ function initialise_player_deck(_deck, _deck_type)
 					defend_val_sd	= objGame_Controller.BasicAttack.defend_val[1];
 					support_val_m	= objGame_Controller.BasicAttack.support_val[0];
 					support_val_sd	= objGame_Controller.BasicAttack.support_val[1];
+					xp_to_level		= objGame_Controller.BasicAttack.xp_to_level;
 					front			= objGame_Controller.BasicAttack.front;
 					back			= objGame_Controller.BasicAttack.back;
 					cost			= objGame_Controller.BasicAttack.cost;
@@ -38,9 +43,10 @@ function initialise_player_deck(_deck, _deck_type)
 					attack_val_m	= objGame_Controller.BasicDefend.attack_val[0];
 					attack_val_sd	= objGame_Controller.BasicDefend.attack_val[1];
 					defend_val_m	= objGame_Controller.BasicDefend.defend_val[0];
-					defend_val_sd	= objGame_Controller.BasicDefend.defend_val[0];
+					defend_val_sd	= objGame_Controller.BasicDefend.defend_val[1];
 					support_val_m	= objGame_Controller.BasicDefend.support_val[0];
-					support_val_sd	= objGame_Controller.BasicDefend.support_val[0];
+					support_val_sd	= objGame_Controller.BasicDefend.support_val[1];
+					xp_to_level		= objGame_Controller.BasicDefend.xp_to_level;
 					front			= objGame_Controller.BasicDefend.front;
 					back			= objGame_Controller.BasicDefend.back;
 					cost			= objGame_Controller.BasicDefend.cost;
@@ -63,6 +69,7 @@ function initialise_player_deck(_deck, _deck_type)
 					defend_val_sd	= objGame_Controller.BasicSupport.defend_val[1];
 					support_val_m	= objGame_Controller.BasicSupport.support_val[0];
 					support_val_sd	= objGame_Controller.BasicSupport.support_val[1];
+					xp_to_level		= objGame_Controller.BasicSupport.xp_to_level;
 					front			= objGame_Controller.BasicSupport.front;
 					back			= objGame_Controller.BasicSupport.back;
 					cost			= objGame_Controller.BasicSupport.cost;

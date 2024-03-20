@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"objBackgroundCardSpot",
+  "%Name":"objActiveCardSpot",
   "eventList":[],
   "managed":true,
-  "name":"objBackgroundCardSpot",
+  "name":"objActiveCardSpot",
   "overriddenProperties":[],
   "parent":{
     "name":"GUI_objs",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprBackgroundCardSpot",
-    "path":"sprites/sprBackgroundCardSpot/sprBackgroundCardSpot.yy",
+    "name":"sprActiveCardSpot",
+    "path":"sprites/sprActiveCardSpot/sprActiveCardSpot.yy",
   },
   "spriteMaskId":null,
   "visible":true,

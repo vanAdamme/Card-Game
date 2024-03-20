@@ -14,7 +14,7 @@ if discarding
 	else
 	{
 		var dx = objDiscardGoesHere.x - x;
-		var dy = objDiscardGoesHere.y - y;
+		var dy = objDiscardGoesHere.y - y + 10;
 		if (abs(dx) != 0)
 		{
 		  x += min(abs(dx), room_speed) * sign(dx);
@@ -24,4 +24,14 @@ if discarding
 		  y += min(abs(dy), room_speed) * sign(dy);
 		}
 	}
+}
+
+if current_xp == xp_to_level
+{
+	current_xp = 0;
+	xp_to_level++;
+	level++;
+	attack_val_m += 10;
+	defend_val_m += 10;
+	support_val_m += 10;
 }

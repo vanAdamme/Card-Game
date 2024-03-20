@@ -28,7 +28,7 @@ function init_state_machine()
 			with(objPlayer)
 			{
 				deck.discard_hand();
-				deck.deal(hand_size);
+				deck.deal_hand(hand_size);
 			}
 		}
 	});

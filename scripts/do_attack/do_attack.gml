@@ -16,9 +16,10 @@ function do_attack()
 
 		var _damage = round(gauss(_damage_m, _damage_sd));
 
-		deck.discard_card(_card);
 		current_actions -= _card.cost;
-	}
+		_card.current_xp++;
+		deck.discard_card(_card);
+}
 
 	harm_enemy(_damage);
 

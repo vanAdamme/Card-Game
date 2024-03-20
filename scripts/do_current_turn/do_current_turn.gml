@@ -19,7 +19,7 @@ function do_current_turn()
 				current_defence = 0;
 				current_actions = approach(current_actions, max_actions, action_refresh); 
 				deck.discard_hand();
-				deck.deal(hand_size);
+				deck.deal_hand(hand_size);
 			}
 
 			go_to_next_game_state();
