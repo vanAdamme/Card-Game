@@ -1,6 +1,6 @@
-function create_player_deck(_deck, _deck_type)
+function create_player_deck(_deck_type)
 {
-	var deck = _deck;
+	var deck = new Deck();
 	var deck_type = _deck_type;
 
 	for (var i = 0; i < array_length(deck_type.cards_in_deck); i++)

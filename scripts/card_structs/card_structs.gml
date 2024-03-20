@@ -19,9 +19,8 @@ function PlayerCard(_title, _type, _subtype, _front, _back, _attack_val, _defend
 	//attachment	= _attachment;
 }
 
-function Deck(_parent) constructor
+function Deck() constructor
 {
-	parent = _parent;
 	cards = [];
 	deal_pile = [];
 	dealt_cards = [];
@@ -45,7 +44,7 @@ function Deck(_parent) constructor
 
 	static deal_card = function(_card = array_last(deal_pile))
 	{
-		if _card == noone
+		if is_undefined(_card)
 		{
 			empty_discard();
 			_card = array_last(deal_pile);
@@ -116,6 +115,17 @@ function Deck(_parent) constructor
 			_card.y = objBackgroundCardSpot.y + 10;
 			shift_depth(_card);
 		}
+	}
+
+	static fill_gaps = function()
+	{
+		var count = objPlayer.hand_size - array_length(dealt_cards);
+		if count <= 0 { exit; }
+		repeat(count)
+		{
+			deal_card();
+		}
+		sort_dealt_cards();
 	}
 /*
 	static duplicate_card = function(_card)
