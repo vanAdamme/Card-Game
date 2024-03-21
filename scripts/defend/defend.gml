@@ -7,4 +7,7 @@ function defend(_mean, _sd = 0)
 
 		current_defence = approach(current_defence, max_defence, _amount);
 	}
+
+	var text = "Enemy gains " + string(_amount) + " armour!";
+	show_message(text);
 }

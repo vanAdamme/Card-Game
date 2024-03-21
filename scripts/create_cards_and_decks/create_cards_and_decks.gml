@@ -1,8 +1,8 @@
 function create_cards()
 {
-	BasicAttack		= new PlayerCard("Attack",	sprPlayerCardFace,	sprCardBasicBack,	[100, 15],	[20, 8],	[8, 3],		1,	3);
-	BasicDefend		= new PlayerCard("Defend",	sprPlayerCardFace,	sprCardBasicBack,	[8, 3],		[100, 15],	[20, 8],	1,	3);
-	BasicSupport	= new PlayerCard("Support",	sprPlayerCardFace,	sprCardBasicBack,	[20, 8],	[8, 3],		[100, 15],	1,	3);
+	BasicAttack		= new PlayerCard("Attack",	sprPlayerCardFace,	sprPlayerCardBack,	[100, 15],	[20, 8],	[8, 3],		1,	3);
+	BasicDefend		= new PlayerCard("Defend",	sprPlayerCardFace,	sprPlayerCardBack,	[8, 3],		[100, 15],	[20, 8],	1,	3);
+	BasicSupport	= new PlayerCard("Support",	sprPlayerCardFace,	sprPlayerCardBack,	[20, 8],	[8, 3],		[100, 15],	1,	3);
 }
 
 function create_decks()

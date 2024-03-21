@@ -4,4 +4,7 @@ function corrode_armour(_mean, _sd)
 	else		{ var _amount = round(gauss(_mean, _sd)); }
 
 	objPlayer.defence_loss += _amount;
+
+	var text = "Enemy corrodes your armour by " + string(_amount) + "!";
+	show_message(text);
 }
