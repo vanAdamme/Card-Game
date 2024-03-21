@@ -8,7 +8,8 @@ if is_active_card()
 	draw_rectangle_thick(xx, yy, xx + sprite_width, yy + sprite_height, c_red, 4);
 }
 
-if sprite_index == values.face {
+if sprite_index == values.face
+{
 	draw_set_colour(c_white);
 	draw_set_font(fnt_Futured);
 	draw_set_halign(fa_center);
@@ -38,5 +39,38 @@ if sprite_index == values.face {
 	for (var i = 0; i < values.current_xp; i++)
 	{
 		draw_rectangle(xx + 23 + 10 * i, yy + 231, xx + 26 + 10 * i, yy + 246, false);
+	}
+}
+
+if fsm.state_is("moving to deck")
+{
+	x = lerp_approach(xprevious, x, x_target, 0.2);
+	y = lerp_approach(yprevious, y, y_target, 0.2);
+
+	if x == x_target && y == y_target
+	{
+		fsm.change("in deck");
+	}
+}
+
+if fsm.state_is("discarding")
+{
+	x = lerp_approach(xprevious, x, x_target, 0.2);
+	y = lerp_approach(yprevious, y, y_target, 0.2);
+	
+	if x == x_target && y == y_target
+	{
+		fsm.change("discarded");
+	}
+}
+
+if fsm.state_is("dealing")
+{
+	x = lerp_approach(xprevious, x, x_target, 0.2);
+	y = lerp_approach(yprevious, y, y_target, 0.2);
+
+	if x == x_target && y == y_target
+	{
+		fsm.change("dealt");
 	}
 }

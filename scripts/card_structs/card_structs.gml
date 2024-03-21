@@ -49,12 +49,9 @@ function Deck() constructor
 	static add_to_deal_pile = function(_card)
 	{
 		array_push(deal_pile, _card);
-		_card.sprite_index = _card.values.back;
-		shift_depth(_card);
-
-		_card.clickable = false;
-		_card.x = objDeckGoesHere.x;
-		_card.y = objDeckGoesHere.y + 10;
+		_card.x_target = objDeckGoesHere.x;
+		_card.y_target = objDeckGoesHere.y + 10;
+		_card.fsm.change("moving to deck");
 	}
 
 	static deal_card = function(_card = array_last(deal_pile))
@@ -68,22 +65,33 @@ function Deck() constructor
 		array_push(dealt_cards, _card);
 		array_pop(deal_pile);
 
-		_card.sprite_index = _card.values.face;
-		_card.clickable = true;
+		//_card.sprite_index = _card.values.face;
+		//_card.clickable = true;
 
-		sort_dealt_cards();
-		//do deal animation		
+		//sort_dealt_cards();
+
 	}
 
 	static deal_hand = function(_hand_size)
 	{
 		discard_hand();
 
-		if empty(deal_pile) { empty_discard(); }
+		var _width = objBackgroundCardSpot.sprite_width div _hand_size;
 
 		for (var i = 0; i < _hand_size; i++)
 		{
-			deal_card(array_last(deal_pile));
+			var _card = array_last(deal_pile);
+
+			if is_undefined(_card)
+			{
+				empty_discard();
+				_card = array_last(deal_pile);
+			}
+
+			deal_card(_card);
+			_card.x_target = (_width / 2) + (_width * i) + objBackgroundCardSpot.bbox_left;
+			_card.y_target = objBackgroundCardSpot.y + 10;
+			_card.fsm.change("dealing");
 		}
 	}
 
@@ -94,12 +102,9 @@ function Deck() constructor
 		array_delete(dealt_cards, _index, 1);
 		array_push(discard_pile, _card);
 
-		_card.sprite_index = _card.values.face;
-		_card.clickable = true;
-		_card.x = objDiscardGoesHere.x;
-		_card.y = objDiscardGoesHere.y + 10;
-		
-		//_card.discarding = true;
+		_card.x_target = objDiscardGoesHere.x;
+		_card.y_target = objDiscardGoesHere.y + 10;
+		_card.fsm.change("discarding");
 	}
 
 	static discard_hand = function()
@@ -131,9 +136,10 @@ function Deck() constructor
 		for (var i = 0; i < _count; i++)
 		{
 			_card = dealt_cards[i];
-			_card.x = (_width / 2) + (_width * i) + objBackgroundCardSpot.bbox_left;
-			_card.y = objBackgroundCardSpot.y + 10;
-			shift_depth(_card);
+			_card.x_target = (_width / 2) + (_width * i) + objBackgroundCardSpot.bbox_left;
+			_card.y_target = objBackgroundCardSpot.y + 10;
+			_card.fsm.change("dealing");
+//			shift_depth(_card);
 		}
 	}
 

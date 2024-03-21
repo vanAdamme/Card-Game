@@ -1,4 +1,4 @@
-function initialise_state_machine()
+function initialise_game_states()
 {
 	fsm = new SnowState("initialise_game");
 

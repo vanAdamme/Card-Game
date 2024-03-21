@@ -15,11 +15,6 @@ function create_player_deck(_deck_type)
 				values : new TestCard(card_type),
 			});
 
-			with (_inst)
-			{
-				//sprite_index = values.back;
-			}
-
 			deck.add_to_deck(_inst);
 			deck.add_to_deal_pile(_inst);
 		}		

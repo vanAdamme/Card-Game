@@ -1,7 +1,7 @@
 instance_create_layer(100, 0, "Controllers", UI);
 instance_create_layer(50, 0, "Controllers", objMouse_Controller);
 
-initialise_state_machine();
+initialise_game_states();
 
 instance_create_layer(0, 0, "Player", objPlayer);
 instance_create_layer(870, 90, "Enemy", objEnemy);

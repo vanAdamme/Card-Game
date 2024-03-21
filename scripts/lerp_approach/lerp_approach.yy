@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"initialise_state_machine",
+  "%Name":"lerp_approach",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"initialise_state_machine",
+  "name":"lerp_approach",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"utility_functions",
+    "path":"folders/Scripts/utility_functions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

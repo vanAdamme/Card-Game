@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"initialise_card_states",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"initialise_card_states",
+  "parent":{
+    "name":"card_functions",
+    "path":"folders/Scripts/card_functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
