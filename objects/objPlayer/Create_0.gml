@@ -1,5 +1,8 @@
-//initialise_player_deck(deck, DECK_TYPE.BASIC);
 deck = create_player_deck(objGame_Controller.BasicDeck);
+with(objCardParent)
+{
+	layer = layer_get_id("Cards");
+}
 
 hand_size = 5;
 max_hp = 500;

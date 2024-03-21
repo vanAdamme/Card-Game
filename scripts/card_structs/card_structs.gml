@@ -1,14 +1,12 @@
 //if we only have player cards then we can merge these two structs
-function Card(_title, _type, _subtype, _front, _back) constructor
+function Card(_title, _face, _back) constructor
 {
 	title		= _title;
-	type		= _type;
-	subtype		= _subtype;
-	front		= _front;
+	face		= _face;
 	back		= _back;
 }
 
-function PlayerCard(_title, _type, _subtype, _front, _back, _attack_val, _defend_val, _support_val, _cost = 1, _xp_to_level/*, _attachment*/) : Card(_title, _type, _subtype, _front, _back) constructor
+function PlayerCard(_title, _face, _back, _attack_val, _defend_val, _support_val, _cost = 1, _xp_to_level/*, _attachment*/) : Card(_title, _face, _back) constructor
 {
 	attack_val	= _attack_val;
 	defend_val	= _defend_val;
@@ -17,6 +15,23 @@ function PlayerCard(_title, _type, _subtype, _front, _back, _attack_val, _defend
 	xp_to_level	= _xp_to_level;
 	level		= 1;
 	//attachment	= _attachment;
+}
+
+function TestCard(card_type) constructor
+{
+	title			= card_type.title;
+	face			= card_type.face;
+	back			= card_type.back;
+	attack_val_m	= card_type.attack_val[0];
+	attack_val_sd	= card_type.attack_val[1];
+	defend_val_m	= card_type.defend_val[0];
+	defend_val_sd	= card_type.defend_val[1];
+	support_val_m	= card_type.support_val[0];
+	support_val_sd	= card_type.support_val[1];
+	cost			= card_type.cost;
+	xp_to_level		= card_type.xp_to_level;
+	current_xp		= 0;
+	level			= 1
 }
 
 function Deck() constructor
@@ -34,12 +49,12 @@ function Deck() constructor
 	static add_to_deal_pile = function(_card)
 	{
 		array_push(deal_pile, _card);
-		_card.sprite_index = _card.back;
+		_card.sprite_index = _card.values.back;
 		shift_depth(_card);
 
 		_card.clickable = false;
 		_card.x = objDeckGoesHere.x;
-		_card.y = objDeckGoesHere.y;
+		_card.y = objDeckGoesHere.y + 10;
 	}
 
 	static deal_card = function(_card = array_last(deal_pile))
@@ -53,7 +68,7 @@ function Deck() constructor
 		array_push(dealt_cards, _card);
 		array_pop(deal_pile);
 
-		_card.sprite_index = _card.front;
+		_card.sprite_index = _card.values.face;
 		_card.clickable = true;
 
 		sort_dealt_cards();
@@ -79,7 +94,7 @@ function Deck() constructor
 		array_delete(dealt_cards, _index, 1);
 		array_push(discard_pile, _card);
 
-		_card.sprite_index = _card.front;
+		_card.sprite_index = _card.values.face;
 		_card.clickable = true;
 		_card.x = objDiscardGoesHere.x;
 		_card.y = objDiscardGoesHere.y + 10;
@@ -100,7 +115,12 @@ function Deck() constructor
 	{
 		array_for_each(discard_pile, add_to_deal_pile);
 		clear_array(discard_pile);
-		array_shuffle(deal_pile);
+		shuffle(deal_pile);
+	}
+
+	static shuffle = function(_array)
+	{
+		array_shuffle(_array);
 	}
 
 	static sort_dealt_cards = function()
@@ -130,7 +150,7 @@ function Deck() constructor
 /*
 	static duplicate_card = function(_card)
 	{
-		var _new_card = new PlayerCard(_card.title, _card.type, _card.subtype, _card.front, _card.back, _card.attack_val, _card.defend_val, _card.support_val, _card.cost, _card.xp_to_level);
+		var _new_card = new PlayerCard(_card.title, _card.face, _card.back, _card.attack_val, _card.defend_val, _card.support_val, _card.cost, _card.xp_to_level);
 		//do instance create thing here
 		//add_to_deck(_new_card);
 		//discard(_new_card);		

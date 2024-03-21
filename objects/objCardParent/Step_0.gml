@@ -25,7 +25,7 @@ if discarding
 		}
 	}
 }
-
+/*
 if current_xp == xp_to_level
 {
 	current_xp = 0;

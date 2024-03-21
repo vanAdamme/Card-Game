@@ -20,7 +20,7 @@ function empty(_array)
 
 function face_up()
 {
-	return sprite_index == front;
+	return sprite_index == face;
 }
 
 function check_deck()
@@ -31,12 +31,6 @@ function check_deck()
 		{
 			var _text = "deal: " + string(array_length(deal_pile)) + "\ndiscard: " + string(array_length(discard_pile)) + "\nhand: " + string(array_length(dealt_cards)) + "\ncards: " + string(array_length(cards));
 			show_message(_text);
-			//game_end(69);
 		}
 	}
-}
-
-function is_attack_card(_card)
-{
-	return _card.subtype == CARD_SUBTYPE.ATTACK;
 }

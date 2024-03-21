@@ -17,19 +17,6 @@ function define_constants()
 		ENEMY
 	}
 
-	enum CARD_TYPE
-	{
-		PLAYER,
-		ENEMY
-	}
-
-	enum CARD_SUBTYPE
-	{
-		ATTACK,
-		DEFEND,
-		SUPPORT
-	}
-	
 	enum DECK_TYPE
 	{
 		BASIC
