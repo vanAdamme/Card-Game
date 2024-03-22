@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"player_lost",
+  "%Name":"finish_game",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"player_lost",
+  "name":"finish_game",
   "parent":{
-    "name":"player_functions",
-    "path":"folders/Scripts/player_functions.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

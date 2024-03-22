@@ -5,6 +5,12 @@ function define_constants()
 
 	#macro	DOUBLE_CLICK_DELAY	250000
 
+	enum COMBATANT_TYPE
+	{
+		PLAYER,
+		ENEMY
+	}
+
 	enum ATTACHMENT_TYPE
 	{
 		CORE,

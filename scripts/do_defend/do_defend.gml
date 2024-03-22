@@ -1,10 +1,10 @@
 function do_defend()
 {
-	if global.activecard == noone { exit; }
-	else { card = global.activecard; }
-
 	with (obj_player)
 	{
+		if global.active_card == noone { exit; }
+		else { card = global.active_card; }
+
 		if card.values.cost > current_actions
 		{
 			show_message("Not enough action points");
@@ -16,16 +16,17 @@ function do_defend()
 
 		defence = round(gauss(_defence_m, _defence_sd));
 
-		current_defence = Approach(current_defence, max_defence, _defence);
+		current_defence = Approach(current_defence, max_defence, defence);
 		current_actions -= card.values.cost;
-		deck.discardcard(card);
+		deck.discard_card(card);
+
+		var _text = instance_create_layer(800, 280, "Text", obj_text);
+
+		with (_text)
+		{
+			text = other.card.values.title + " card: " + string(other.defence) + " defended!";
+		}
 	}
 
-	var _text = instance_create_layer(800, 280, "Text", obj_text);
-	with (_text)
-	{
-		text = card.values.title + " card: " + string(defence) + " defended!";
-	}
-
-	global.activecard = noone;
+	global.active_card = noone;
 }

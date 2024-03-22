@@ -1,6 +1,6 @@
 function create_player_deck(_deck_type)
 {
-	var _deck = new _deck();
+	var deck = new Deck();
 
 	for (var _i = 0; _i < array_length(_deck_type.cards_in_deck); _i++)
 	{
@@ -14,11 +14,11 @@ function create_player_deck(_deck_type)
 				values : new TestCard(_card_type),
 			});
 
-			_deck.add_to_deck(_inst);
-			_deck.add_to_deal_pile(_inst);
+			deck.add_to_deck(_inst);
+			deck.add_to_deal_pile(_inst);
 		}		
 	}
-	_deck.deal_pile = array_shuffle(_deck.deal_pile);
+	deck.deal_pile = array_shuffle(deck.deal_pile);
 
-	return _deck;
+	return deck;
 }

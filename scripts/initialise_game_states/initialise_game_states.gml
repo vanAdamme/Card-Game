@@ -26,11 +26,7 @@ function initialise_game_states()
 			//do player turn things
 		},
 		leave: function() {
-			if player_won() 
-			{
-				show_message("You win!");
-				game_end();
-			}
+			if check_victory() != false { fsm.trigger("check_victory"); }
 			with(obj_player)
 			{
 				deck.discard_hand();
@@ -56,12 +52,19 @@ function initialise_game_states()
 			fsm.leave();
 		},
 		leave: function() {
+			if check_victory() != false { fsm.trigger("check_victory"); }
 			//do enemy turn clean up
 			fsm.trigger("end_enemy_turn");
 		}
 	});
 
+	fsm.add("game_end", {
+		enter: function() {
+			finish_game(check_victory());
+		}
+	});
+
 	fsm.add_transition("end_player_turn", "player_turn", "enemy_turn");
 	fsm.add_transition("end_enemy_turn", "enemy_turn", "player_turn", undefined, function() {});
-	//fsm.add_transition(//to transition into draw states and the like or something else better
+	fsm.add_wildcard_transition("check_victory", "game_end", , function() {});
 }

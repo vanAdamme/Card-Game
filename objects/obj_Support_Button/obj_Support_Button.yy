@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Support_Button",
+  "%Name":"obj_support_button",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_Support_Button",
+  "name":"obj_support_button",
   "overriddenProperties":[],
   "parent":{
     "name":"Testing_Buttons",
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprSupportButton",
-    "path":"sprites/sprSupportButton/sprSupportButton.yy",
+    "name":"spr_support_button",
+    "path":"sprites/spr_support_button/spr_support_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,

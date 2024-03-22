@@ -1,4 +1,4 @@
-scribble_font_set_default("fnt_8bitoperator_Small");
+scribble_font_set_default("fnt_8bitoperator_small");
 draw_set_halign(fa_left);
 
 var _info_panel = new UIPanel("Info Panel", room_width - 300, 0, 300, room_height, glass_panel);

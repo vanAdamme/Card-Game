@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"player_won",
+  "%Name":"check_victory",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"player_won",
+  "name":"check_victory",
   "parent":{
-    "name":"player_functions",
-    "path":"folders/Scripts/player_functions.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
