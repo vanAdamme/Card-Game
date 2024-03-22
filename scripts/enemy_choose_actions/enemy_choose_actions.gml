@@ -1,6 +1,6 @@
 function enemy_choose_actions()
 {
-	with(objEnemy)
+	with(obj_enemy)
 	{
 		//will make this cycle through options and choose however many
 		//also make it so we're not shoving all the scripts in the choose function

@@ -1,1 +1,0 @@
-objGame_Controller.fsm.trigger("end_player_turn");

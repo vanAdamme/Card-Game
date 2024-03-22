@@ -1,25 +1,24 @@
 function create_player_deck(_deck_type)
 {
-	var deck = new Deck();
-	var deck_type = _deck_type;
+	var _deck = new _deck();
 
-	for (var i = 0; i < array_length(deck_type.cards_in_deck); i++)
+	for (var _i = 0; _i < array_length(_deck_type.cards_in_deck); _i++)
 	{
-		var card_amount = deck_type.cards_in_deck[i][1];
-		var card_type = deck_type.cards_in_deck[i][0];
+		var _card_amount = _deck_type.cards_in_deck[_i][1];
+		var _card_type = _deck_type.cards_in_deck[_i][0];
 
-		repeat(card_amount)
+		repeat(_card_amount)
 		{
-			var _inst = instance_create_layer(0, 0, "Cards", objPlayerCard,
+			var _inst = instance_create_layer(0, 0, "Cards", obj_player_card,
 			{
-				values : new TestCard(card_type),
+				values : new TestCard(_card_type),
 			});
 
-			deck.add_to_deck(_inst);
-			deck.add_to_deal_pile(_inst);
+			_deck.add_to_deck(_inst);
+			_deck.add_to_deal_pile(_inst);
 		}		
 	}
-	deck.deal_pile = array_shuffle(deck.deal_pile);
+	_deck.deal_pile = array_shuffle(_deck.deal_pile);
 
-	return deck;
+	return _deck;
 }

@@ -2,7 +2,7 @@ function harm_enemy(_damage)
 {
 	var damage = _damage;
 
-	with (objEnemy)
+	with (obj_enemy)
 	{
 		if current_defence >= damage
 		{

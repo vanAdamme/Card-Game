@@ -1,13 +1,13 @@
 function defend(_mean, _sd = 0)
 {
-	with(objEnemy)
+	with(obj_enemy)
 	{
-		if _sd == 0	{ var _amount = _mean; }
-		else		{ var _amount = round(gauss(_mean, _sd)); }
+		if _sd == 0	{ amount = _mean; }
+		else		{ amount = round(gauss(_mean, _sd)); }
 
-		current_defence = approach(current_defence, max_defence, _amount);
+		current_defence = approach(current_defence, max_defence, amount);
 	}
 
-	var text = "Enemy gains " + string(_amount) + " armour!";
-	show_message(text);
+	var _text = "Enemy gains " + string(amount) + " armour!";
+	show_message(_text);
 }

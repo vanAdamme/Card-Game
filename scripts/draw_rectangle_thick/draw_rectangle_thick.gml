@@ -1,4 +1,4 @@
-function draw_rectangle_thick(x1,y1,x2,y2,colour,width)
+function draw_rectangle_thick(x1, y1, x2, y2, colour, width)
 {
 	draw_set_color(colour);
 

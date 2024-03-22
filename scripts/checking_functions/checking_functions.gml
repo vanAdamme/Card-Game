@@ -6,7 +6,7 @@ function is_active_card()
 function card_on_top()
 {
 	var _check_depth = depth;
-	with (objCardParent)
+	with (obj_card_parent)
 	{
 		if position_meeting(mouse_x, mouse_y, id) && depth < _check_depth { return false; }
 	}
@@ -25,7 +25,7 @@ function face_up()
 
 function check_deck()
 {
-	with (objPlayer.deck)
+	with (obj_player.deck)
 	{
 		if array_length(deal_pile) + array_length(discard_pile) + array_length(dealt_cards) != array_length(cards)
 		{

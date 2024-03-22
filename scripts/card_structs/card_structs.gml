@@ -6,7 +6,7 @@ function Card(_title, _face, _back) constructor
 	back		= _back;
 }
 
-function PlayerCard(_title, _face, _back, _attack_val, _defend_val, _support_val, _cost = 1, _xp_to_level/*, _attachment*/) : Card(_title, _face, _back) constructor
+function PlayerCard(_title, _face, _back, _attack_val, _defend_val, _support_val, _cost = 1, _xp_to_level = 3/*, _attachment*/) : Card(_title, _face, _back) constructor
 {
 	attack_val	= _attack_val;
 	defend_val	= _defend_val;
@@ -49,8 +49,8 @@ function Deck() constructor
 	static add_to_deal_pile = function(_card)
 	{
 		array_push(deal_pile, _card);
-		_card.x_target = objDeckGoesHere.x;
-		_card.y_target = objDeckGoesHere.y + 10;
+		_card.x_target = obj_deck_spot.x;
+		_card.y_target = obj_deck_spot.y + 10;
 		_card.fsm.change("moving to deck");
 	}
 
@@ -76,9 +76,9 @@ function Deck() constructor
 	{
 		discard_hand();
 
-		var _width = objBackgroundCardSpot.sprite_width div _hand_size;
+		var _width = obj_dealt_cards_spot.sprite_width div _hand_size;
 
-		for (var i = 0; i < _hand_size; i++)
+		for (var _i = 0; _i < _hand_size; _i++)
 		{
 			var _card = array_last(deal_pile);
 
@@ -89,8 +89,8 @@ function Deck() constructor
 			}
 
 			deal_card(_card);
-			_card.x_target = (_width / 2) + (_width * i) + objBackgroundCardSpot.bbox_left;
-			_card.y_target = objBackgroundCardSpot.y + 10;
+			_card.x_target = (_width / 2) + (_width * _i) + obj_dealt_cards_spot.bbox_left;
+			_card.y_target = obj_dealt_cards_spot.y + 10;
 			_card.fsm.change("dealing");
 		}
 	}
@@ -102,8 +102,8 @@ function Deck() constructor
 		array_delete(dealt_cards, _index, 1);
 		array_push(discard_pile, _card);
 
-		_card.x_target = objDiscardGoesHere.x;
-		_card.y_target = objDiscardGoesHere.y + 10;
+		_card.x_target = obj_discard_pile.x;
+		_card.y_target = obj_discard_pile.y + 10;
 		_card.fsm.change("discarding");
 	}
 
@@ -125,19 +125,19 @@ function Deck() constructor
 
 	static shuffle = function(_array)
 	{
-		array_shuffle(_array);
+		_array = array_shuffle(_array);
 	}
 
 	static sort_dealt_cards = function()
 	{
 		var _count = array_length(dealt_cards);
-		var _width = objBackgroundCardSpot.sprite_width div array_length(dealt_cards);
+		var _width = obj_dealt_cards_spot.sprite_width div array_length(dealt_cards);
 
-		for (var i = 0; i < _count; i++)
+		for (var _i = 0; _i < _count; _i++)
 		{
-			_card = dealt_cards[i];
-			_card.x_target = (_width / 2) + (_width * i) + objBackgroundCardSpot.bbox_left;
-			_card.y_target = objBackgroundCardSpot.y + 10;
+			_card = dealt_cards[_i];
+			_card.x_target = (_width / 2) + (_width * _i) + obj_dealt_cards_spot.bbox_left;
+			_card.y_target = obj_dealt_cards_spot.y + 10;
 			_card.fsm.change("dealing");
 //			shift_depth(_card);
 		}
@@ -145,7 +145,7 @@ function Deck() constructor
 
 	static fill_gaps = function()
 	{
-		var count = objPlayer.hand_size - array_length(dealt_cards);
+		var count = obj_player.hand_size - array_length(dealt_cards);
 		if count <= 0 { exit; }
 		repeat(count)
 		{
@@ -168,8 +168,8 @@ function DeckType(_card_type, _amount) constructor
 {
 	cards_in_deck = array_create(argument_count / 2);
 	
-	for (var i = 0; i < argument_count / 2; i++)
+	for (var _i = 0; _i < argument_count / 2; _i++)
 	{
-		cards_in_deck[i] = [argument[2 * i], argument[2 * i + 1]];
+		cards_in_deck[_i] = [argument[2 * _i], argument[2 * _i + 1]];
 	}
 }

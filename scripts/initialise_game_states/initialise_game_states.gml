@@ -15,7 +15,7 @@ function initialise_game_states()
 		enter: function() {
 			//check hp and so forth ...
 			
-			with(objPlayer)
+			with(obj_player)
 			{
 				current_defence = approach(current_defence, 0, defence_loss);
 				current_actions = approach(current_actions, max_actions, action_refresh); 
@@ -26,7 +26,12 @@ function initialise_game_states()
 			//do player turn things
 		},
 		leave: function() {
-			with(objPlayer)
+			if player_won() 
+			{
+				show_message("You win!");
+				game_end();
+			}
+			with(obj_player)
 			{
 				deck.discard_hand();
 				deck.deal_hand(hand_size);
@@ -37,7 +42,7 @@ function initialise_game_states()
 	fsm.add("enemy_turn", {
 		enter: function() {
 			//do start of enemy turn stuff
-			with (objEnemy)
+			with (obj_enemy)
 			{
 				current_defence = approach(current_defence, 0, defence_loss);
 			}
