@@ -6,7 +6,7 @@ function Card(_title, _face, _back) constructor
 	back		= _back;
 }
 
-function PlayerCard(_title, _face, _back, _attack_val, _defend_val, _support_val, _cost = 1, _xp_to_level = 3/*, _attachment*/) : Card(_title, _face, _back) constructor
+function PlayerCard(_title, _face = spr_player_card_face, _back = spr_player_card_back, _attack_val, _defend_val, _support_val, _cost = 1, _xp_to_level = 3, _attachment = ATTACHMENT_TYPE.CORE) : Card(_title, _face, _back) constructor
 {
 	attack_val	= _attack_val;
 	defend_val	= _defend_val;
@@ -14,7 +14,7 @@ function PlayerCard(_title, _face, _back, _attack_val, _defend_val, _support_val
 	cost		= _cost;
 	xp_to_level	= _xp_to_level;
 	level		= 1;
-	//attachment	= _attachment;
+	attachment	= _attachment;
 }
 
 function TestCard(card_type) constructor
@@ -31,7 +31,8 @@ function TestCard(card_type) constructor
 	cost			= card_type.cost;
 	xp_to_level		= card_type.xp_to_level;
 	current_xp		= 0;
-	level			= 1
+	level			= 1;
+	attachment		= card_type.attachment
 }
 
 function Deck() constructor
@@ -65,7 +66,7 @@ function Deck() constructor
 		array_push(dealt_cards, _card);
 		array_pop(deal_pile);
 
-		//_card.sprite_index = _card.values.face;
+		//_card.sprite_index = _card.data.face;
 		//_card.clickable = true;
 
 		//sort_dealt_cards();
@@ -166,10 +167,10 @@ function Deck() constructor
 
 function DeckType(_card_type, _amount) constructor
 {
-	cards_in_deck = array_create(argument_count / 2);
+	cards_in_deck = array_create(argument_count);
 	
-	for (var _i = 0; _i < argument_count / 2; _i++)
+	for (var _i = 0; _i < argument_count; _i++)
 	{
-		cards_in_deck[_i] = [argument[2 * _i], argument[2 * _i + 1]];
+		cards_in_deck[_i] = [argument[_i][0], argument[_i][1]];
 	}
 }

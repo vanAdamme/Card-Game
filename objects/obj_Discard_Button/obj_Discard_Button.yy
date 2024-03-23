@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprDiscardButton",
-    "path":"sprites/sprDiscardButton/sprDiscardButton.yy",
+    "name":"spr_discard_button",
+    "path":"sprites/spr_discard_button/spr_discard_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,

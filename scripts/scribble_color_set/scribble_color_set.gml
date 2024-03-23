@@ -29,7 +29,7 @@ function scribble_color_set(_name, _colour)
     }
     else if (!is_numeric(_colour))
     {
-        __scribble_error("Colour values should be 24-bit BGR values");
+        __scribble_error("Colour data should be 24-bit BGR data");
     }
     else
     {

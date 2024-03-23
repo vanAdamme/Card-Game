@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprDiscardHand",
-    "path":"sprites/sprDiscardHand/sprDiscardHand.yy",
+    "name":"spr_discard_hand",
+    "path":"sprites/spr_discard_hand/spr_discard_hand.yy",
   },
   "spriteMaskId":null,
   "visible":true,

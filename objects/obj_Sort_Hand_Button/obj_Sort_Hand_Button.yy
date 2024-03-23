@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprSortHandButton",
-    "path":"sprites/sprSortHandButton/sprSortHandButton.yy",
+    "name":"spr_sort_hand_button",
+    "path":"sprites/spr_sort_hand_button/spr_sort_hand_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,14 +1,17 @@
-function finish_game(_winner)
+function finish_game()
 {
-	if _winner == COMBATANT_TYPE.ENEMY
+	if obj_player.current_hp <= 0
 	{
 		show_message("You lose!");
 		game_end();
 	}
-		
-	if _winner == COMBATANT_TYPE.PLAYER
+	else if obj_enemy.current_hp <= 0
 	{
 		show_message("You win!");
 		game_end();
-	}		
+	}
+	else
+	{
+		show_message("How did you get here?");
+	}
 }

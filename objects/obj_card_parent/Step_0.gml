@@ -5,7 +5,7 @@ if mouse_check_doubleclick(mb_left, DOUBLE_CLICK_DELAY) && position_meeting(mous
 }
 
 /*
-with(values)
+with(data)
 {
 	if current_xp == xp_to_level
 	{

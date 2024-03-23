@@ -26,7 +26,7 @@ function initialise_game_states()
 			//do player turn things
 		},
 		leave: function() {
-			if check_victory() != false { fsm.trigger("check_victory"); }
+		//	if (obj_enemy.current_hp <= 0 || obj_player.current_hp <= 0) return fsm.change("game_end");
 			with(obj_player)
 			{
 				deck.discard_hand();
@@ -52,7 +52,7 @@ function initialise_game_states()
 			fsm.leave();
 		},
 		leave: function() {
-			if check_victory() != false { fsm.trigger("check_victory"); }
+		//	if (obj_enemy.current_hp <= 0 || obj_player.current_hp <= 0) return fsm.change("game_end");
 			//do enemy turn clean up
 			fsm.trigger("end_enemy_turn");
 		}
@@ -60,7 +60,7 @@ function initialise_game_states()
 
 	fsm.add("game_end", {
 		enter: function() {
-			finish_game(check_victory());
+			finish_game();
 		}
 	});
 

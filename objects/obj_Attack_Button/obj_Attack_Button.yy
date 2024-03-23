@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprAttackButton",
-    "path":"sprites/sprAttackButton/sprAttackButton.yy",
+    "name":"spr_attack_button",
+    "path":"sprites/spr_attack_button/spr_attack_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,

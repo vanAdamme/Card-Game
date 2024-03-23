@@ -31,7 +31,7 @@ function eucdiv(_dividend, _divisor) {
 
 #endregion
 
-#region Reaching target values
+#region Reaching target data
 
 /// @func lerp_angle(from,to,amount)
 /// @desc Calculates the angle interpolated between a starting and destination angle for the given fraction amount.

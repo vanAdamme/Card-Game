@@ -4,7 +4,7 @@
 /// @param newFontName          Name of the new font to create, as a string
 /// @param shader               Shader to use
 /// @param emptyBorderSize      Border around the outside of every output glyph, in pixels. A value of 2 is typical
-/// @param leftPad              Padding around the outside of every *input* glyph. Positive values give more space. e.g. For a shader that adds a border of 2px around the entire glyph, *all* padding arguments should be set to <2>
+/// @param leftPad              Padding around the outside of every *input* glyph. Positive data give more space. e.g. For a shader that adds a border of 2px around the entire glyph, *all* padding arguments should be set to <2>
 /// @param topPad               "
 /// @param rightPad             "
 /// @param bottomPad            "
@@ -166,7 +166,7 @@ function scribble_font_bake_shader(_source_font_name, _new_font_name, _shader, _
     gpu_set_blendenable(false);
     
     //Iterate over all vertex buffers we created and draw those vertex buffers to the first surface
-    var _vbuff_data_array = ds_map_values_to_array(_vbuff_data_map);
+    var _vbuff_data_array = ds_map_data_to_array(_vbuff_data_map);
     var _i = 0;
     repeat(array_length(_vbuff_data_array))
     {

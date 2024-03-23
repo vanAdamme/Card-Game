@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprNextTurnButton",
-    "path":"sprites/sprNextTurnButton/sprNextTurnButton.yy",
+    "name":"spr_next_turn_button",
+    "path":"sprites/spr_next_turn_button/spr_next_turn_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,
