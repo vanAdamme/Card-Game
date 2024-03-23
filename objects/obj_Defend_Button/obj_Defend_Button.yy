@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprDefendButton",
-    "path":"sprites/sprDefendButton/sprDefendButton.yy",
+    "name":"spr_defend_button",
+    "path":"sprites/spr_defend_button/spr_defend_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,

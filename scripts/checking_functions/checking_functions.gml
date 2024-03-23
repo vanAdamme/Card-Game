@@ -20,7 +20,7 @@ function empty(_array)
 
 function face_up()
 {
-	return sprite_index == face;
+	return sprite_index == data.face;
 }
 
 function check_deck()

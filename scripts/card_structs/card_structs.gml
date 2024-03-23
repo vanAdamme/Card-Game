@@ -6,7 +6,7 @@ function Card(_title, _face, _back) constructor
 	back		= _back;
 }
 
-function PlayerCard(_title, _face = spr_player_card_face, _back = spr_player_card_back, _attack_val, _defend_val, _support_val, _cost = 1, _xp_to_level = 3, _attachment = ATTACHMENT_TYPE.CORE) : Card(_title, _face, _back) constructor
+function PlayerCard(_title, _face = spr_player_card_face, _back = spr_player_card_back, _attack_val = [1, 0], _defend_val = [1, 0], _support_val = [1, 0], _cost = 1, _xp_to_level = 3, _attachment = ATTACHMENT_TYPE.CORE, _text = "") : Card(_title, _face, _back) constructor
 {
 	attack_val	= _attack_val;
 	defend_val	= _defend_val;
@@ -15,6 +15,7 @@ function PlayerCard(_title, _face = spr_player_card_face, _back = spr_player_car
 	xp_to_level	= _xp_to_level;
 	level		= 1;
 	attachment	= _attachment;
+	text		= _text;
 }
 
 function TestCard(card_type) constructor
@@ -30,9 +31,10 @@ function TestCard(card_type) constructor
 	support_val_sd	= card_type.support_val[1];
 	cost			= card_type.cost;
 	xp_to_level		= card_type.xp_to_level;
-	current_xp		= 0;
+	current_xp		= 2;
 	level			= 1;
 	attachment		= card_type.attachment
+	text			= card_type.text;
 }
 
 function Deck() constructor

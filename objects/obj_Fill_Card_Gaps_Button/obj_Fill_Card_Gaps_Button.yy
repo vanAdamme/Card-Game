@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_fill_card_gaps",
-    "path":"sprites/spr_fill_card_gaps/spr_fill_card_gaps.yy",
+    "name":"spr_fill_card_gaps_button",
+    "path":"sprites/spr_fill_card_gaps_button/spr_fill_card_gaps_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,

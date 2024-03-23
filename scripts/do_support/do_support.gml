@@ -22,6 +22,7 @@ function do_support()
 
 		current_hp += support;
 		current_actions -= card.data.cost;
+		card.data.current_xp++;		
 		deck.discard_card(card);
 
 		var _text = instance_create_layer(800, 280, "Text", obj_text);

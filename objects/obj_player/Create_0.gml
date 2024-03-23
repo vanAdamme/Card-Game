@@ -1,4 +1,5 @@
 deck = create_player_deck(obj_game_controller.BasicDeck);
+
 with(obj_card_parent)
 {
 	layer = layer_get_id("Cards");

@@ -1,4 +1,4 @@
-//scribble_font_set_default("fnt_Futured");
+//scribble_font_set_default("fnt_futured_12");
 //draw_set_halign(fa_left);
 //draw_set_colour(c_black);
 
