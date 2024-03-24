@@ -128,7 +128,9 @@ function Deck() constructor
 
 	static shuffle = function(_array)
 	{
+		print("Pre-shuffle: ", _array);
 		_array = array_shuffle(_array);
+		print("Post-shuffle: ", _array);
 	}
 
 	static sort_dealt_cards = function()

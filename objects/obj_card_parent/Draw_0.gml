@@ -30,18 +30,20 @@ if face_up()
 
 	scribble("[fnt_futured_12][c_white][fa_center][fa_middle]" + data.text).scale_to_box(154, 25).draw(x, bbox_top + 239);
 
-	for (var _i = data.xp_to_level - 1; _i >= 0; _i--)
+	for (var _i = 0; _i < data.xp_to_level; _i++)
 	{
-		var _xx = bbox_right - 16 - (_i * (xp_box_width + 5));
-		draw_rectangle(_xx, y + 10, _xx + xp_box_width, y + 10 + xp_box_height, true);
+		var _x1 = bbox_right - card_border - (xp_box_width * (_i + 1)) - (_i * xp_box_border);
+		var _x2 = bbox_right - card_border - ((xp_box_width + xp_box_border) * _i);
+		draw_rectangle(_x1, y + 10, _x2, y + 10 + xp_box_height, true);
 	}
 
 	draw_set_colour(c_green);
 
-	for (var _i = data.xp_to_level - 1; _i >= data.current_xp - 1; _i--)
+	for (var _i = data.xp_to_level - 1; _i >= data.xp_to_level - data.current_xp; _i--)
 	{
-		var _xx = bbox_right - 16 - (_i * (xp_box_width + 5)) + 1;
-		draw_rectangle(_xx, y + 10, _xx + xp_box_width - 1, y + 10 + xp_box_height, false);
+		var _x1 = bbox_right - card_border - (xp_box_width * (_i + 1)) - (_i * xp_box_border) + 1;
+		var _x2 = bbox_right - card_border - ((xp_box_width + xp_box_border) * _i) - 1;
+		draw_rectangle(_x1, y + 11, _x2, y + 9 + xp_box_height, false);
 	}
 }
 
