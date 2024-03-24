@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"create_player_deck",
+  "%Name":"deck_structs",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"create_player_deck",
+  "name":"deck_structs",
   "parent":{
     "name":"deck_functions",
     "path":"folders/Scripts/deck_functions.yy",

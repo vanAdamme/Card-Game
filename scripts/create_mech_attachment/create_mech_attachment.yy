@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"create_mech_attachment",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_mech_attachment",
+  "parent":{
+    "name":"mech_functions",
+    "path":"folders/Scripts/mech_functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
