@@ -190,6 +190,7 @@
     {"name":"scribble_typist","order":11,"path":"scripts/scribble_typist/scribble_typist.yy",},
     {"name":"scribble_typists_add_event","order":7,"path":"scripts/scribble_typists_add_event/scribble_typists_add_event.yy",},
     {"name":"scribble","order":10,"path":"scripts/scribble/scribble.yy",},
+    {"name":"mech_structs","order":1,"path":"scripts/mech_structs/mech_structs.yy",},
     {"name":"set_active_card","order":6,"path":"scripts/set_active_card/set_active_card.yy",},
     {"name":"shift_depth","order":7,"path":"scripts/shift_depth/shift_depth.yy",},
     {"name":"show_debug_message_utilities","order":3,"path":"scripts/show_debug_message_utilities/show_debug_message_utilities.yy",},

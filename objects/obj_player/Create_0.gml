@@ -1,4 +1,7 @@
-deck = create_player_deck(obj_game_controller.BasicDeck);
+//deck = create_player_deck(obj_game_controller.BasicDeck);
+
+deck = new Deck();
+core = create_mech_attachment(obj_game_controller.Core, deck);
 
 with(obj_card_parent)
 {

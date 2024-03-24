@@ -31,18 +31,28 @@ function TestCard(card_type) constructor
 	support_val_sd	= card_type.support_val[1];
 	cost			= card_type.cost;
 	xp_to_level		= card_type.xp_to_level;
-	current_xp		= 2;
+	current_xp		= 0;
 	level			= 1;
-	attachment		= card_type.attachment
+	attachment		= card_type.attachment;
 	text			= card_type.text;
+}
+
+function DeckType(_card_type, _amount) constructor
+{
+	cards_in_deck = array_create(argument_count);
+	
+	for (var _i = 0; _i < argument_count; _i++)
+	{
+		cards_in_deck[_i] = [argument[_i][0], argument[_i][1]];
+	}
 }
 
 function Deck() constructor
 {
-	cards = [];
-	deal_pile = [];
-	dealt_cards = [];
-	discard_pile = [];
+	cards			= [];
+	deal_pile		= [];
+	dealt_cards		= [];
+	discard_pile	= [];
 
 	static add_to_deck = function(_card)
 	{
@@ -50,6 +60,17 @@ function Deck() constructor
 	}
 
 	static add_to_deal_pile = function(_card)
+	{
+		array_push(deal_pile, _card);
+	}
+
+	static initialise_deal_pile = function()
+	{
+		array_for_each(cards, add_to_deal_pile);
+		array_for_each(cards, move_to_deal_pile);
+	}
+
+	static move_to_deal_pile = function(_card)
 	{
 		array_push(deal_pile, _card);
 		_card.x_target = obj_deck_spot.x;
@@ -121,7 +142,7 @@ function Deck() constructor
 
 	static empty_discard = function()
 	{
-		array_for_each(discard_pile, add_to_deal_pile);
+		array_for_each(discard_pile, move_to_deal_pile);
 		clear_array(discard_pile);
 		shuffle(deal_pile);
 	}
@@ -167,14 +188,4 @@ function Deck() constructor
 		//discard(_new_card);		
 	}
 */
-}
-
-function DeckType(_card_type, _amount) constructor
-{
-	cards_in_deck = array_create(argument_count);
-	
-	for (var _i = 0; _i < argument_count; _i++)
-	{
-		cards_in_deck[_i] = [argument[_i][0], argument[_i][1]];
-	}
 }
