@@ -1,4 +1,4 @@
-function do_attack()
+function do_attack(_mean, _sd)
 {
 	with (obj_player)
 	{
@@ -11,10 +11,7 @@ function do_attack()
 			exit;
 		}
 
-		var _damage_m = card.data.attack_val_m;
-		var _damage_sd = card.data.attack_val_sd;
-
-		damage = round(gauss(_damage_m, _damage_sd));
+		damage = round(gauss(_mean, _sd));
 
 		current_actions -= card.data.cost;
 		card.data.current_xp++;

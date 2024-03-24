@@ -1,4 +1,4 @@
-function CardType(_title, _face = spr_player_card_face, _back = spr_player_card_back, _attack_val = [1, 0], _defend_val = [1, 0], _support_val = [1, 0], _cost = 1, _xp_to_level = 3, _attachment = ATTACHMENT_TYPE.CORE, _text = "") constructor
+function CardType(_title, _face = spr_player_card_face, _back = spr_player_card_back, _cost = 1, _xp_to_level = 3, _attachment = ATTACHMENT_TYPE.CORE, _text = "", _functions) constructor
 {
 	data = array_create(argument_count);
 
@@ -8,6 +8,21 @@ function CardType(_title, _face = spr_player_card_face, _back = spr_player_card_
 	}
 }
 
+function Card(card_type) constructor
+{
+	title			= card_type.data[0];
+	face			= card_type.data[1];
+	back			= card_type.data[2];
+	cost			= card_type.data[3];
+	xp_to_level		= card_type.data[4];
+	attachment		= card_type.data[5];
+	text			= card_type.data[6];
+	functions		= card_type.data[7];
+	current_xp		= 0;
+	level			= 1;
+}
+
+/*
 function Card(card_type) constructor
 {
 	title			= card_type.data[0];

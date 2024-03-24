@@ -1,8 +1,8 @@
 function create_cards()
 {
-	BasicAttack		= new CardType("Attack", spr_player_card_face, spr_player_card_back, [100, 15], [20, 8], [8, 3], 1, 3, ATTACHMENT_TYPE.CORE, "Punch 'em in the dick!");
-	BasicDefend		= new CardType("Defend",	, ,	[8, 3],		[100, 15],	[20, 8], , , , "Shields up!");
-	BasicSupport	= new CardType("Support",	, ,	[20, 8],	[8, 3],		[100, 15], , , , "Fuck! Time to heal.");
+	BasicAttack		= new CardType("Attack", spr_player_card_face, spr_player_card_back, 1, 3, ATTACHMENT_TYPE.CORE, "Punch 'em in the dick!", [do_attack, [50, 5]]);
+	BasicDefend		= new CardType("Defend", spr_player_card_face, spr_player_card_back, 1, 3, ATTACHMENT_TYPE.CORE, "Shields up!", { scr: do_defend, args: [50, 5] });
+	BasicSupport	= new CardType("Support", spr_player_card_face, spr_player_card_back, 1, 3, ATTACHMENT_TYPE.CORE, "Fuck! Time to heal.", { scr: do_support, args: [50, 5] });
 
 	MegaAttack		= new CardType("Mega Attack", , , [200, 50], , , 2, , , "Mega dick punch!");
 }

@@ -18,7 +18,7 @@ if face_up()
 	draw_set_valign(fa_top);
 
 	scribble("[fnt_futured_24][c_white][fa_center][fa_middle]" + data.title).scale_to_box(150, 50).draw(x, y + 80);
-
+/*
 	draw_text_scribble(bbox_left + 30, bbox_top + 124, data.attack_val_m);
 	draw_text_scribble(bbox_left + 40, bbox_top + 138, data.attack_val_sd);
 
@@ -27,7 +27,7 @@ if face_up()
 
 	draw_text_scribble(bbox_left + 30, bbox_top + 194, data.support_val_m);
 	draw_text_scribble(bbox_left + 40, bbox_top + 207, data.support_val_sd);
-
+*/
 	scribble("[fnt_futured_12][c_white][fa_center][fa_middle]" + data.text).scale_to_box(154, 25).draw(x, bbox_top + 239);
 
 	for (var _i = 0; _i < data.xp_to_level; _i++)
@@ -46,6 +46,7 @@ if face_up()
 		draw_rectangle(_x1, y + 11, _x2, y + 9 + xp_box_height, false);
 	}
 }
+
 
 if fsm.state_is("moving to deck")
 {
