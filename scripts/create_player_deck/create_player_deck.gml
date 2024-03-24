@@ -11,13 +11,14 @@ function create_player_deck(_deck_type)
 		{
 			var _inst = instance_create_layer(0, 0, "Cards", obj_player_card,
 			{
-				data : new TestCard(_card_type),
+				data : new Card(_card_type),
 			});
 
 			deck.add_to_deck(_inst);
 			deck.add_to_deal_pile(_inst);
-		}		
+		}
 	}
+
 	deck.deal_pile = array_shuffle(deck.deal_pile);
 
 	return deck;

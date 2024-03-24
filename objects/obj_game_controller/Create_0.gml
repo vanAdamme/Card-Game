@@ -8,10 +8,9 @@ instance_create_layer(870, 90, "Enemy", obj_enemy);
 
 global.active_card = noone;
 
-
-
 with(obj_player)
 {
+	deck.initialise_deal_pile();
 	deck.deal_hand(hand_size);
 }
 

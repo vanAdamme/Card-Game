@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"create_cards_and_decks_and_attachments",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_cards_and_decks_and_attachments",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

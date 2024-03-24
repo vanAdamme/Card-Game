@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"create_player_deck",
   "parent":{
-    "name":"card_functions",
-    "path":"folders/Scripts/card_functions.yy",
+    "name":"deck_functions",
+    "path":"folders/Scripts/deck_functions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -8,6 +8,7 @@ function initialise_game_states()
 			define_constants();
 			create_cards();
 			create_decks();
+			create_attachments();
 		}
 	});
 

@@ -15,7 +15,6 @@ function define_constants()
 	{
 		CORE,
 		HEAD,
-		BODY,
 		LEFT_ARM,
 		RIGHT_ARM,
 		LEFT_LEG,
