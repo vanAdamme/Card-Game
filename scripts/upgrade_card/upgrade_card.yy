@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"upgrade_card",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"upgrade_card",
+  "parent":{
+    "name":"card_functions",
+    "path":"folders/Scripts/card_functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

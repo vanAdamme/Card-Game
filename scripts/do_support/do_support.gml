@@ -1,8 +1,7 @@
-function do_support()
+function do_support(_mean, _sd)
 {
 	with (obj_player)
 	{
-		
 		if global.active_card == noone { exit; }
 		else { card = global.active_card; }
 
@@ -12,10 +11,7 @@ function do_support()
 			exit;
 		}
 
-		var _support_m = card.data.support_val_m;
-		var _support_sd = card.data.support_val_sd;
-
-		support = round(gauss(_support_m, _support_sd))
+		support = round(gauss(_mean, _sd));
 
 		//heal amount is capped by max_hp
 		support = clamp(support, 0, max_hp - current_hp);  

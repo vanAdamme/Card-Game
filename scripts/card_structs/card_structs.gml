@@ -18,7 +18,7 @@ function Card(card_type) constructor
 	attachment		= card_type.data[5];
 	text			= card_type.data[6];
 	functions		= card_type.data[7];
-	current_xp		= 0;
+	current_xp		= 2;
 	level			= 1;
 }
 

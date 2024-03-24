@@ -11,8 +11,6 @@ with(data)
 		current_xp = 0;
 		xp_to_level++;
 		level++;
-		attack_val_m += 10;
-		defend_val_m += 10;
-		support_val_m += 10;
+		upgrade_card();
 	}
 }

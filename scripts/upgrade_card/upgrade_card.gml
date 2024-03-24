@@ -1,0 +1,4 @@
+function upgrade_card()
+{
+	
+}
