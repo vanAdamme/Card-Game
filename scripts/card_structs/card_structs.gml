@@ -66,7 +66,6 @@ function Deck() constructor
 
 	static initialise_deal_pile = function()
 	{
-		array_for_each(cards, add_to_deal_pile);
 		array_for_each(cards, move_to_deal_pile);
 	}
 
