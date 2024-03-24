@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fnt_futured",
+  "%Name":"fnt_futured_18",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":12,
@@ -117,7 +117,7 @@
   "last":0,
   "lineHeight":17,
   "maintainGms1Font":false,
-  "name":"fnt_futured",
+  "name":"fnt_futured_18",
   "parent":{
     "name":"Fonts",
     "path":"folders/Fonts.yy",

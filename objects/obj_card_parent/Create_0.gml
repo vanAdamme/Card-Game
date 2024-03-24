@@ -7,3 +7,9 @@ initialise_card_states();
 
 x_target = 0;
 y_target = 0;
+
+xp_box_width = 7;
+xp_box_height = 15;
+xp_box_border = 1;
+
+card_border = 16;

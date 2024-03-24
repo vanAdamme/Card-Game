@@ -18,6 +18,7 @@ function do_defend()
 
 		current_defence = Approach(current_defence, max_defence, defence);
 		current_actions -= card.data.cost;
+		card.data.current_xp++;
 		deck.discard_card(card);
 
 		var _text = instance_create_layer(800, 280, "Text", obj_text);

@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_discard_hand",
-    "path":"sprites/spr_discard_hand/spr_discard_hand.yy",
+    "name":"spr_discard_hand_button",
+    "path":"sprites/spr_discard_hand_button/spr_discard_hand_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,

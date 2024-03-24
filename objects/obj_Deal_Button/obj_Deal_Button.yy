@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprDealButton",
-    "path":"sprites/sprDealButton/sprDealButton.yy",
+    "name":"spr_deal_button",
+    "path":"sprites/spr_deal_button/spr_deal_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,
