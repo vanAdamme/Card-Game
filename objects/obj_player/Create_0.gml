@@ -2,6 +2,10 @@
 
 deck = new Deck();
 core = create_mech_attachment(obj_game_controller.Core, deck);
+left_arm = create_mech_attachment(obj_game_controller.LeftArm, deck);
+right_arm = create_mech_attachment(obj_game_controller.RightArm, deck);
+left_leg = create_mech_attachment(obj_game_controller.LeftLeg, deck);
+right_leg = create_mech_attachment(obj_game_controller.RightLeg, deck);
 
 with(obj_card_parent)
 {

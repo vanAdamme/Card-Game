@@ -1,4 +1,4 @@
-function AttachmentType(_card_type, _amount) constructor
+function AttachmentType(_card_and_amount) constructor
 {
 	cards_in_attachment = array_create(argument_count);
 
