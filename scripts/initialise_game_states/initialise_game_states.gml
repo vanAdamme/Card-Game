@@ -7,7 +7,7 @@ function initialise_game_states()
 			randomise();
 			define_constants();
 			create_cards();
-			create_decks();
+//			create_decks();
 			create_attachments();
 		}
 	});
@@ -64,6 +64,25 @@ function initialise_game_states()
 			finish_game();
 		}
 	});
+
+	fsm.add("waiting_for_card_to_be_selected", {
+		enter: function() {},
+		step: function() {
+			if global.card == noone { fsm.step(); }
+			else { fsm.change("player_turn", undefined, function() {}); }
+		},
+		leave: function() {}
+	});
+
+
+
+
+
+
+
+
+
+
 
 	fsm.add_transition("end_player_turn", "player_turn", "enemy_turn");
 	fsm.add_transition("end_enemy_turn", "enemy_turn", "player_turn", undefined, function() {});
