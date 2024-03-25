@@ -17,7 +17,7 @@ function create_cards()
 
 function create_attachments()
 {
-	Core			= new AttachmentType([BasicSupport, 2]);
+	Core			= new AttachmentType([BasicSupport, 2], [DiscardCard, 1]);
 	LeftArm			= new AttachmentType([BasicAttack, 2]);
 	RightArm		= new AttachmentType([BasicAttack, 2]);
 	LeftLeg			= new AttachmentType([BasicDefend, 2]);

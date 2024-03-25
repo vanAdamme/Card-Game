@@ -65,18 +65,15 @@ function initialise_game_states()
 		}
 	});
 
-	fsm.add("waiting_for_card_to_be_selected", {
+	fsm.add("do_discard_card_wait", {
 		enter: function() {},
-		step: function() {
-			if global.card == noone { fsm.step(); }
-			else { fsm.change("player_turn", undefined, function() {}); }
-		},
 		leave: function() {}
 	});
 
-
-
-
+	fsm.add("do_discard_card_selected", {
+		enter: function() {},
+		leave: function() {}
+	});
 
 
 
