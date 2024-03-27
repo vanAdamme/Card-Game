@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"do_attack",
+  "%Name":"upgrade_card",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"do_attack",
+  "name":"upgrade_card",
   "parent":{
-    "name":"card_actions",
-    "path":"folders/Scripts/card_functions/card_actions.yy",
+    "name":"card_functions",
+    "path":"folders/Scripts/card_functions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

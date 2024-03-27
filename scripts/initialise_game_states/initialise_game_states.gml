@@ -7,7 +7,6 @@ function initialise_game_states()
 			randomise();
 			define_constants();
 			create_cards();
-			create_decks();
 			create_attachments();
 		}
 	});
@@ -15,7 +14,6 @@ function initialise_game_states()
 	fsm.add("player_turn", {
 		enter: function() {
 			//check hp and so forth ...
-			
 			with(obj_player)
 			{
 				current_defence = approach(current_defence, 0, defence_loss);
@@ -27,7 +25,6 @@ function initialise_game_states()
 			//do player turn things
 		},
 		leave: function() {
-		//	if (obj_enemy.current_hp <= 0 || obj_player.current_hp <= 0) return fsm.change("game_end");
 			with(obj_player)
 			{
 				deck.discard_hand();
@@ -53,7 +50,6 @@ function initialise_game_states()
 			fsm.leave();
 		},
 		leave: function() {
-		//	if (obj_enemy.current_hp <= 0 || obj_player.current_hp <= 0) return fsm.change("game_end");
 			//do enemy turn clean up
 			fsm.trigger("end_enemy_turn");
 		}
@@ -64,6 +60,22 @@ function initialise_game_states()
 			finish_game();
 		}
 	});
+
+	fsm.add("do_discard_card_wait", {
+		enter: function() {},
+		leave: function() {}
+	});
+
+	fsm.add("do_discard_card_selected", {
+		enter: function() {},
+		leave: function() {}
+	});
+
+
+
+
+
+
 
 	fsm.add_transition("end_player_turn", "player_turn", "enemy_turn");
 	fsm.add_transition("end_enemy_turn", "enemy_turn", "player_turn", undefined, function() {});

@@ -12,3 +12,5 @@ xp_box_height = 15;
 xp_box_border = 1;
 
 card_border = 16;
+
+spd = 0.2;

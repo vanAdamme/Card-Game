@@ -1,0 +1,1 @@
+print(obj_game_controller.fsm.get_current_state());

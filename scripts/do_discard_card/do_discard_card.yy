@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"do_attack",
+  "%Name":"do_discard_card",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"do_attack",
+  "name":"do_discard_card",
   "parent":{
     "name":"card_actions",
     "path":"folders/Scripts/card_functions/card_actions.yy",

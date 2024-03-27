@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"do_attack",
+  "%Name":"camera_functions",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"do_attack",
+  "name":"camera_functions",
   "parent":{
-    "name":"card_actions",
-    "path":"folders/Scripts/card_functions/card_actions.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

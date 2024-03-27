@@ -1,4 +1,4 @@
-function AttachmentType(_card_type, _amount) constructor
+function AttachmentType() constructor
 {
 	cards_in_attachment = array_create(argument_count);
 
@@ -11,6 +11,7 @@ function AttachmentType(_card_type, _amount) constructor
 function Attachment() constructor
 {
 	slot = [];
+	hp = 0;
 
 	static add_to_slot = function(_card)
 	{

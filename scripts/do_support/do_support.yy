@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"do_support",
   "parent":{
-    "name":"player_functions",
-    "path":"folders/Scripts/player_functions.yy",
+    "name":"card_actions",
+    "path":"folders/Scripts/card_functions/card_actions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

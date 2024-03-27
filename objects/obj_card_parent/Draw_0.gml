@@ -18,7 +18,7 @@ if face_up()
 	draw_set_valign(fa_top);
 
 	scribble("[fnt_futured_24][c_white][fa_center][fa_middle]" + data.title).scale_to_box(150, 50).draw(x, y + 80);
-
+/*
 	draw_text_scribble(bbox_left + 30, bbox_top + 124, data.attack_val_m);
 	draw_text_scribble(bbox_left + 40, bbox_top + 138, data.attack_val_sd);
 
@@ -27,7 +27,7 @@ if face_up()
 
 	draw_text_scribble(bbox_left + 30, bbox_top + 194, data.support_val_m);
 	draw_text_scribble(bbox_left + 40, bbox_top + 207, data.support_val_sd);
-
+*/
 	scribble("[fnt_futured_12][c_white][fa_center][fa_middle]" + data.text).scale_to_box(154, 25).draw(x, bbox_top + 239);
 
 	for (var _i = 0; _i < data.xp_to_level; _i++)
@@ -47,21 +47,23 @@ if face_up()
 	}
 }
 
-if fsm.state_is("moving to deck")
+
+if fsm.state_is("moving_to_deal_pile")
 {
-	x = lerp_approach(xprevious, x, x_target, 0.2);
-	y = lerp_approach(yprevious, y, y_target, 0.2);
+	x = lerp_approach(xprevious, x, x_target, spd);
+	y = lerp_approach(yprevious, y, y_target, spd);
 
 	if x == x_target && y == y_target
 	{
-		fsm.change("in deck");
+		fsm.change("in_deck");
+//		depth = obj_deck_spot.depth + array_get_index(obj_player.deck.deal_pile, data);
 	}
 }
 
 if fsm.state_is("discarding")
 {
-	x = lerp_approach(xprevious, x, x_target, 0.2);
-	y = lerp_approach(yprevious, y, y_target, 0.2);
+	x = lerp_approach(xprevious, x, x_target, spd);
+	y = lerp_approach(yprevious, y, y_target, spd);
 	
 	if x == x_target && y == y_target
 	{
@@ -71,8 +73,8 @@ if fsm.state_is("discarding")
 
 if fsm.state_is("dealing")
 {
-	x = lerp_approach(xprevious, x, x_target, 0.2);
-	y = lerp_approach(yprevious, y, y_target, 0.2);
+	x = lerp_approach(xprevious, x, x_target, spd);
+	y = lerp_approach(yprevious, y, y_target, spd);
 
 	if x == x_target && y == y_target
 	{
