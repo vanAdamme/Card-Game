@@ -11,7 +11,7 @@ function DeckType(_card_type, _amount) constructor
 function Deck() constructor
 {
 	cards			= [];
-	deal_pile		= [];
+	deal_pile		= []; // index 0 is bottom card
 	dealt_cards		= [];
 	discard_pile	= [];
 
@@ -22,12 +22,13 @@ function Deck() constructor
 
 	static add_to_deal_pile = function(_card)
 	{
-		array_push(deal_pile, _card);
+		array_push(deal_pile, _card); //adds to top of pile
 	}
 
 	static initialise_deal_pile = function()
 	{
 		array_for_each(cards, move_to_deal_pile);
+		deal_pile = array_shuffle(deal_pile);
 	}
 
 	static move_to_deal_pile = function(_card)
@@ -35,7 +36,8 @@ function Deck() constructor
 		array_push(deal_pile, _card);
 		_card.x_target = obj_deck_spot.x;
 		_card.y_target = obj_deck_spot.y + 10;
-		_card.fsm.change("moving to deck");
+		_card.fsm.change("moving_to_deal_pile");
+		_card.depth = obj_deck_spot.depth - array_length(deal_pile);
 	}
 
 	static deal_card = function(_card = array_last(deal_pile))
@@ -48,12 +50,6 @@ function Deck() constructor
 
 		array_push(dealt_cards, _card);
 		array_pop(deal_pile);
-
-		//_card.sprite_index = _card.data.face;
-		//_card.clickable = true;
-
-		//sort_dealt_cards();
-
 	}
 
 	static deal_hand = function(_hand_size)
@@ -64,15 +60,14 @@ function Deck() constructor
 
 		for (var _i = 0; _i < _hand_size; _i++)
 		{
-			var _card = array_last(deal_pile);
-
-			if is_undefined(_card)
+			if empty(deal_pile)
 			{
 				empty_discard();
-				_card = array_last(deal_pile);
 			}
 
-			deal_card(_card);
+			var _card = array_pop(deal_pile);
+			array_push(dealt_cards, _card);
+
 			_card.x_target = (_width / 2) + (_width * _i) + obj_dealt_cards_spot.bbox_left;
 			_card.y_target = obj_dealt_cards_spot.y + 10;
 			_card.fsm.change("dealing");
@@ -89,6 +84,7 @@ function Deck() constructor
 		_card.x_target = obj_discard_pile.x;
 		_card.y_target = obj_discard_pile.y + 10;
 		_card.fsm.change("discarding");
+		_card.depth = obj_discard_pile.depth - array_length(discard_pile);
 	}
 
 	static discard_hand = function()
@@ -104,14 +100,7 @@ function Deck() constructor
 	{
 		array_for_each(discard_pile, move_to_deal_pile);
 		clear_array(discard_pile);
-		shuffle(deal_pile);
-	}
-
-	static shuffle = function(_array)
-	{
-		print("Pre-shuffle: ", _array);
-		_array = array_shuffle(_array);
-		print("Post-shuffle: ", _array);
+		deal_pile = array_shuffle(deal_pile);
 	}
 
 	static sort_dealt_cards = function()
@@ -125,7 +114,6 @@ function Deck() constructor
 			_card.x_target = (_width / 2) + (_width * _i) + obj_dealt_cards_spot.bbox_left;
 			_card.y_target = obj_dealt_cards_spot.y + 10;
 			_card.fsm.change("dealing");
-//			shift_depth(_card);
 		}
 	}
 
@@ -139,13 +127,4 @@ function Deck() constructor
 		}
 		sort_dealt_cards();
 	}
-/*
-	static duplicate_card = function(_card)
-	{
-		var _new_card = new PlayerCard(_card.title, _card.face, _card.back, _card.attack_val, _card.defend_val, _card.support_val, _card.cost, _card.xp_to_level);
-		//do instance create thing here
-		//add_to_deck(_new_card);
-		//discard(_new_card);		
-	}
-*/
 }

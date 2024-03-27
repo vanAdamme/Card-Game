@@ -11,8 +11,13 @@ function create_mech_attachment(_attachment_type, _deck)
 		{
 			var _inst = instance_create_layer(0, 0, "Cards", obj_player_card,
 			{
-				data : new Card(_card_type),
+				data : new Card(_card_type, attachment, ),
 			});
+
+			with _inst
+			{
+				data.card_obj = id;
+			}
 
 			attachment.add_to_slot(_inst);
 		}		

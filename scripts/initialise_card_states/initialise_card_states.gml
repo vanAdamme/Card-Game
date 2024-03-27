@@ -10,14 +10,14 @@ function initialise_card_states()
 		}
 	});
 
-	fsm.add("moving to deck", {
+	fsm.add("moving_to_deal_pile", {
 		enter: function() {
 			sprite_index = data.back;
 			clickable = false;
 		}
 	});
 
-	fsm.add("in deck", {
+	fsm.add("in_deck", {
 		enter: function() {
 			sprite_index = data.back;
 			clickable = false;

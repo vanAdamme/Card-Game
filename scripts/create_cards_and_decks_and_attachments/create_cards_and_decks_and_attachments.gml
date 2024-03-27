@@ -1,10 +1,10 @@
 function create_cards()
 {
-	BasicAttack		= new CardType("Attack", spr_player_card_face, spr_player_card_back, 1, 3, ATTACHMENT_TYPE.CORE, "Punch 'em in the dick!", [do_attack, [50, 5]]);
-	BasicDefend		= new CardType("Defend", spr_player_card_face, spr_player_card_back, 1, 3, ATTACHMENT_TYPE.CORE, "Shields up!", [do_defend, [50, 5]]);
-	BasicSupport	= new CardType("Support", spr_player_card_face, spr_player_card_back, 1, 3, ATTACHMENT_TYPE.CORE, "Fuck! Time to heal.", [do_support, [50, 5]]);
-	DiscardCard		= new CardType("Discard", spr_player_card_face, spr_player_card_back, 1, 3, ATTACHMENT_TYPE.CORE, "Get something better.", do_discard_card);
-	MegaAttack		= new CardType("Mega Attack", spr_player_card_face, spr_player_card_back, 2, 3, ATTACHMENT_TYPE.CORE, "Mega dick punch!", [do_attack, [100, 15]]);
+	BasicAttack		= new CardType("Attack",		[do_attack,[50,5]],		1,	3,	"Punch 'em in the dick!",	spr_player_card_face,	spr_player_card_back);
+	BasicDefend		= new CardType("Defend",		[do_defend,[50,5]],		1,	3,	"Shields up!",				spr_player_card_face,	spr_player_card_back);
+	BasicSupport	= new CardType("Support",		[do_support,[50,5]],	1,	3,	"Fuck! Time to heal.",		spr_player_card_face,	spr_player_card_back);
+	DiscardCard		= new CardType("Discard",		do_discard_card,		1,	3,	"Get something better.",	spr_player_card_face,	spr_player_card_back);
+	MegaAttack		= new CardType("Mega Attack",	[do_attack,[100,15]],	2,	3,	"Mega dick punch!",			spr_player_card_face,	spr_player_card_back);
 }
 
 //function create_decks()
@@ -17,7 +17,7 @@ function create_cards()
 
 function create_attachments()
 {
-	Core			= new AttachmentType([BasicSupport, 2], [DiscardCard, 1]);
+	Core			= new AttachmentType([BasicSupport, 2]);
 	LeftArm			= new AttachmentType([BasicAttack, 2]);
 	RightArm		= new AttachmentType([BasicAttack, 2]);
 	LeftLeg			= new AttachmentType([BasicDefend, 2]);

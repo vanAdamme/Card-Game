@@ -48,21 +48,22 @@ if face_up()
 }
 
 
-if fsm.state_is("moving to deck")
+if fsm.state_is("moving_to_deal_pile")
 {
-	x = lerp_approach(xprevious, x, x_target, 0.2);
-	y = lerp_approach(yprevious, y, y_target, 0.2);
+	x = lerp_approach(xprevious, x, x_target, spd);
+	y = lerp_approach(yprevious, y, y_target, spd);
 
 	if x == x_target && y == y_target
 	{
-		fsm.change("in deck");
+		fsm.change("in_deck");
+//		depth = obj_deck_spot.depth + array_get_index(obj_player.deck.deal_pile, data);
 	}
 }
 
 if fsm.state_is("discarding")
 {
-	x = lerp_approach(xprevious, x, x_target, 0.2);
-	y = lerp_approach(yprevious, y, y_target, 0.2);
+	x = lerp_approach(xprevious, x, x_target, spd);
+	y = lerp_approach(yprevious, y, y_target, spd);
 	
 	if x == x_target && y == y_target
 	{
@@ -72,8 +73,8 @@ if fsm.state_is("discarding")
 
 if fsm.state_is("dealing")
 {
-	x = lerp_approach(xprevious, x, x_target, 0.2);
-	y = lerp_approach(yprevious, y, y_target, 0.2);
+	x = lerp_approach(xprevious, x, x_target, spd);
+	y = lerp_approach(yprevious, y, y_target, spd);
 
 	if x == x_target && y == y_target
 	{
