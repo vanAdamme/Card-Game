@@ -15,6 +15,6 @@ function harm_player(_damage)
 			current_defence = 0;
 		}
 
-		current_hp = Approach(current_hp, 0, damage);
+	current_hp = Approach(current_hp, 0, damage);
 	}
 }

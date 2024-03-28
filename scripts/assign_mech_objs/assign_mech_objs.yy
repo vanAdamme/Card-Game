@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"harm_enemy",
+  "%Name":"assign_mech_objs",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"harm_enemy",
+  "name":"assign_mech_objs",
   "parent":{
-    "name":"player_functions",
-    "path":"folders/Scripts/player_functions.yy",
+    "name":"mech_functions",
+    "path":"folders/Scripts/mech_functions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

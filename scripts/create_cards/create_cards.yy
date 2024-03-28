@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"create_cards_and_decks_and_attachments",
+  "%Name":"create_cards",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"create_cards_and_decks_and_attachments",
+  "name":"create_cards",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

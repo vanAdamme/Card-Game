@@ -1,4 +1,4 @@
-function display_attachment_info(type)
+function display_attachment_info(_attachment)
 {
-	show_message(string(type));
+	print(_attachment.current_hp);
 }

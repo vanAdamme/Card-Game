@@ -15,11 +15,3 @@ function create_cards()
 //	BasicImmortalDeck	= new DeckType([BasicAttack, 1], [BasicDefend, 3], [BasicSupport, 6]);
 //}
 
-function create_attachments()
-{
-	Core			= new AttachmentType([BasicSupport, 2]);
-	LeftArm			= new AttachmentType([BasicAttack, 2]);
-	RightArm		= new AttachmentType([BasicAttack, 2]);
-	LeftLeg			= new AttachmentType([BasicDefend, 2]);
-	RightLeg		= new AttachmentType([BasicDefend, 2]);
-}

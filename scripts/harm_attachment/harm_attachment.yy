@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"harm_enemy",
+  "%Name":"harm_attachment",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"harm_enemy",
+  "name":"harm_attachment",
   "parent":{
-    "name":"player_functions",
-    "path":"folders/Scripts/player_functions.yy",
+    "name":"enemy_functions",
+    "path":"folders/Scripts/enemy_functions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

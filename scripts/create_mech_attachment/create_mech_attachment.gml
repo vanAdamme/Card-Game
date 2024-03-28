@@ -1,4 +1,4 @@
-function create_mech_attachment(_attachment_type, _deck)
+function create_mech_attachment(_attachment_type, _deck, _hp)
 {
 	var attachment = new Attachment();
 
@@ -11,7 +11,7 @@ function create_mech_attachment(_attachment_type, _deck)
 		{
 			var _inst = instance_create_layer(0, 0, "Cards", obj_player_card,
 			{
-				data : new Card(_card_type, attachment, ),
+				data : new Card(_card_type, attachment),
 			});
 
 			with _inst
@@ -22,6 +22,10 @@ function create_mech_attachment(_attachment_type, _deck)
 			attachment.add_to_slot(_inst);
 		}		
 	}
+
+	attachment.max_hp = _hp;
+	attachment.current_hp = _hp;
+	attachment.title = _attachment_type.title;
 
 	attachment.add_to_deck(_deck);
 

@@ -1,17 +1,23 @@
-function AttachmentType() constructor
+function AttachmentType(_title) constructor
 {
-	cards_in_attachment = array_create(argument_count);
-
-	for (var _i = 0; _i < argument_count; _i++)
+	title = _title;
+	cards_in_attachment = array_create(argument_count - 1);
+for (var _i = 0; _i < argument_count; _i++)
 	{
-		cards_in_attachment[_i] = [argument[_i][0], argument[_i][1]];
+		print("argument", _i, ": ", argument[_i]);
+	}
+	for (var _i = 0; _i < argument_count - 1; _i++)
+	{
+		cards_in_attachment[_i] = [argument[_i + 1][0], argument[_i + 1][1]];
 	}
 }
 
 function Attachment() constructor
 {
 	slot = [];
-	hp = 0;
+	max_hp = 0;
+	current_hp = 0;
+	title = "";
 
 	static add_to_slot = function(_card)
 	{
