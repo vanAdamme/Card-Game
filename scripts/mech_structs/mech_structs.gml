@@ -2,10 +2,7 @@ function AttachmentType(_title) constructor
 {
 	title = _title;
 	cards_in_attachment = array_create(argument_count - 1);
-for (var _i = 0; _i < argument_count; _i++)
-	{
-		print("argument", _i, ": ", argument[_i]);
-	}
+
 	for (var _i = 0; _i < argument_count - 1; _i++)
 	{
 		cards_in_attachment[_i] = [argument[_i + 1][0], argument[_i + 1][1]];
@@ -18,6 +15,7 @@ function Attachment() constructor
 	max_hp = 0;
 	current_hp = 0;
 	title = "";
+	mech_obj = noone;
 
 	static add_to_slot = function(_card)
 	{
@@ -30,5 +28,10 @@ function Attachment() constructor
 		{
 			array_for_each(other.slot, add_to_deck);
 		}
+	}
+
+	static remove_from_mech = function()
+	{
+		instance_destroy(mech_obj);	
 	}
 }

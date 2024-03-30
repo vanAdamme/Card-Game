@@ -1,22 +1,15 @@
 deck = new Deck();
 
-core		= create_mech_attachment(obj_game_controller.Core, deck, 20);
-head		= create_mech_attachment(obj_game_controller.Head, deck, 20);
-left_arm	= create_mech_attachment(obj_game_controller.LeftArm, deck, 10);
-right_arm	= create_mech_attachment(obj_game_controller.RightArm, deck, 10);
-left_leg	= create_mech_attachment(obj_game_controller.LeftLeg, deck, 10);
-right_leg	= create_mech_attachment(obj_game_controller.RightLeg, deck, 10);
+core		= create_mech_attachment(obj_game_controller.Core, deck, 2, obj_mech_core);
+head		= create_mech_attachment(obj_game_controller.Head, deck, 2, obj_mech_head);
+left_arm	= create_mech_attachment(obj_game_controller.LeftArm, deck, 1, obj_mech_left_arm);
+right_arm	= create_mech_attachment(obj_game_controller.RightArm, deck, 1, obj_mech_right_arm);
+left_leg	= create_mech_attachment(obj_game_controller.LeftLeg, deck, 1, obj_mech_left_leg);
+right_leg	= create_mech_attachment(obj_game_controller.RightLeg, deck, 1, obj_mech_right_leg);
 
 assign_mech_objs();
 
-attachment_slot = ds_map_create();
-
-ds_map_add(attachment_slot, "Core", core);
-ds_map_add(attachment_slot, "Head", head);
-ds_map_add(attachment_slot, "Left Arm", left_arm);
-ds_map_add(attachment_slot, "Right Arm", right_arm);
-ds_map_add(attachment_slot, "Left Leg", left_leg);
-ds_map_add(attachment_slot, "Right Leg", right_leg);
+attachment_slots = [core, head, left_arm, right_arm, left_leg, right_leg];
 
 with(obj_card_parent)
 {

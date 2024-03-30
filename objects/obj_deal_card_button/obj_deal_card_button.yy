@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_support_button",
+  "%Name":"obj_deal_card_button",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_support_button",
+  "name":"obj_deal_card_button",
   "overriddenProperties":[],
   "parent":{
     "name":"Testing_Buttons",
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_support_button",
-    "path":"sprites/spr_support_button/spr_support_button.yy",
+    "name":"spr_deal_card_button",
+    "path":"sprites/spr_deal_card_button/spr_deal_card_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"initialise_game_states",
   "parent":{
-    "name":"utility_functions",
-    "path":"folders/Scripts/utility_functions.yy",
+    "name":"game_functions",
+    "path":"folders/Scripts/game_functions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
