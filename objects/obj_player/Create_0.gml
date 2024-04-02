@@ -7,7 +7,7 @@ right_arm	= create_mech_attachment(obj_game_controller.BasicRightArm,	deck,	 obj
 left_leg	= create_mech_attachment(obj_game_controller.BasicLeftLeg,	deck,	 obj_mech_left_leg);
 right_leg	= create_mech_attachment(obj_game_controller.BasicRightLeg,	deck,	 obj_mech_right_leg);
 
-assign_mech_objs();
+//assign_mech_objs();
 
 attachment_slots = [core, head, left_arm, right_arm, left_leg, right_leg];
 
