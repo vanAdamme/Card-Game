@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"check_victory",
+  "%Name":"check_attachments",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"check_victory",
+  "name":"check_attachments",
   "parent":{
     "name":"game_functions",
     "path":"folders/Scripts/game_functions.yy",

@@ -8,7 +8,7 @@ function CardType(_title, _functions, _cost = 1, _xp_to_level = 3, _text = "", _
 	}
 }
 
-function Card(_card_type, _parent) constructor
+function Card(_card_type) constructor
 {
 	title			= _card_type.data[0];
 	functions		= _card_type.data[1];
@@ -17,7 +17,6 @@ function Card(_card_type, _parent) constructor
 	text			= _card_type.data[4];
 	face			= _card_type.data[5];
 	back			= _card_type.data[6];
-	parent			= _parent;
 	card_obj		= noone;
 	current_xp		= 0;
 	level			= 1;

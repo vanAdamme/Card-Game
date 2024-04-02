@@ -1,0 +1,1 @@
+array_for_each(slot, obj_player.deck.remove_from_deck())

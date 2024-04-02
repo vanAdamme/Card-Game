@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"finish_game",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"game_functions",
+    "path":"folders/Scripts/game_functions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -1,4 +1,4 @@
-function create_mech_attachment(_attachment_type, _deck, _hp)
+function create_mech_attachment(_attachment_type, _deck, _hp, _obj)
 {
 	var attachment = new Attachment();
 
@@ -26,6 +26,7 @@ function create_mech_attachment(_attachment_type, _deck, _hp)
 	attachment.max_hp = _hp;
 	attachment.current_hp = _hp;
 	attachment.title = _attachment_type.title;
+	attachment.mech_obj = _obj;
 
 	attachment.add_to_deck(_deck);
 
