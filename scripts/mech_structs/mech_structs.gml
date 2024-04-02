@@ -1,11 +1,13 @@
-function AttachmentType(_title) constructor
+function AttachmentType(_title, _hp) constructor
 {
 	title = _title;
-	cards_in_attachment = array_create(argument_count - 1);
+	max_hp = _hp;
+	current_hp = max_hp;
+	cards_in_attachment = array_create();
 
-	for (var _i = 0; _i < argument_count - 1; _i++)
+	for (var _i = 0; _i < argument_count - 2; _i++)
 	{
-		cards_in_attachment[_i] = [argument[_i + 1][0], argument[_i + 1][1]];
+		cards_in_attachment[_i] = [argument[_i + 2][0], argument[_i + 2][1]];
 	}
 }
 

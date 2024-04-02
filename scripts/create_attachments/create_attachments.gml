@@ -1,9 +1,9 @@
 function create_attachments()
 {
-	Core			= new AttachmentType("Core",		[BasicSupport, 2], [BasicAttack, 1]);
-	Head			= new AttachmentType("Head",		[BasicDefend, 1]);
-	LeftArm			= new AttachmentType("Left Arm",	[BasicAttack, 2]);
-	RightArm		= new AttachmentType("Right Arm",	[BasicAttack, 2]);
-	LeftLeg			= new AttachmentType("Left Leg",	[BasicDefend, 1]);
-	RightLeg		= new AttachmentType("Right Leg",	[BasicDefend, 1]);
+	BasicCore			= new AttachmentType("Basic Core",		20, [BasicSupport, 2], [BasicAttack, 1]);
+	BasicHead			= new AttachmentType("Basic Head",		10, [BasicDefend, 1]);
+	BasicLeftArm		= new AttachmentType("Basic Left Arm",	10, [BasicAttack, 2]);
+	BasicRightArm		= new AttachmentType("Basic Right Arm",	10, [BasicAttack, 2]);
+	BasicLeftLeg		= new AttachmentType("Basic Left Leg",	10, [BasicDefend, 1]);
+	BasicRightLeg		= new AttachmentType("Basic Right Leg",	10, [BasicDefend, 1]);
 }
