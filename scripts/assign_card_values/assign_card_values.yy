@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"use_card",
+  "%Name":"assign_card_values",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"use_card",
+  "name":"assign_card_values",
   "parent":{
     "name":"card_functions",
     "path":"folders/Scripts/card_functions.yy",

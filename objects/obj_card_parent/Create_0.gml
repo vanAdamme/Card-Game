@@ -1,3 +1,15 @@
+title			= "";
+functions		= [];
+cost			= 0;
+xp_to_level		= 0;
+text			= "";
+face			= noone;
+back			= noone;
+current_xp		= 0;
+level			= 1;
+
+assign_card_values();
+
 //mouse handling
 mouse_doubleclick_init();  // initializes the timer variable for double-click timing
 click_flag = false;

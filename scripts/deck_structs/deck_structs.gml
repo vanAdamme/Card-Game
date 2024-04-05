@@ -1,13 +1,3 @@
-function DeckType(_card_type, _amount) constructor
-{
-	cards_in_deck = array_create(argument_count);
-	
-	for (var _i = 0; _i < argument_count; _i++)
-	{
-		cards_in_deck[_i] = [argument[_i][0], argument[_i][1]];
-	}
-}
-
 function Deck() constructor
 {
 	cards			= [];
@@ -136,5 +126,16 @@ function Deck() constructor
 			deal_card();
 		}
 		sort_dealt_cards();
+	}
+}
+
+/*
+function DeckType(_card_type, _amount) constructor
+{
+	cards_in_deck = array_create(argument_count);
+	
+	for (var _i = 0; _i < argument_count; _i++)
+	{
+		cards_in_deck[_i] = [argument[_i][0], argument[_i][1]];
 	}
 }

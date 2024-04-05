@@ -1,11 +1,11 @@
 deck = new Deck();
 
-core		= create_mech_attachment(obj_game_controller.Core, deck, 2, obj_mech_core);
-head		= create_mech_attachment(obj_game_controller.Head, deck, 2, obj_mech_head);
-left_arm	= create_mech_attachment(obj_game_controller.LeftArm, deck, 1, obj_mech_left_arm);
-right_arm	= create_mech_attachment(obj_game_controller.RightArm, deck, 1, obj_mech_right_arm);
-left_leg	= create_mech_attachment(obj_game_controller.LeftLeg, deck, 1, obj_mech_left_leg);
-right_leg	= create_mech_attachment(obj_game_controller.RightLeg, deck, 1, obj_mech_right_leg);
+core		= create_mech_attachment(obj_game_controller.Basic_Core, deck, 2);
+head		= create_mech_attachment(obj_game_controller.Basic_Head, deck, 2);
+left_arm	= create_mech_attachment(obj_game_controller.Basic_Left_Arm, deck, 1);
+right_arm	= create_mech_attachment(obj_game_controller.Basic_Right_Arm, deck, 1);
+left_leg	= create_mech_attachment(obj_game_controller.Basic_Left_Leg, deck, 1);
+right_leg	= create_mech_attachment(obj_game_controller.Basic_Right_Leg, deck, 1);
 
 assign_mech_objs();
 

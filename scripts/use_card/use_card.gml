@@ -4,24 +4,24 @@ function use_card(_card = global.active_card)
 
 	with(obj_player)
 	{
-		if _card.data.cost > current_actions
+		if _card.cost > current_actions
 		{
 			show_message("Not enough action points");
 			exit;
 		}
 
-		current_actions -= _card.data.cost;
+		current_actions -= _card.cost;
 
-		if !is_array(_card.data.functions)
+		if !is_array(_card.functions)
 		{
-			script_execute_ext(_card.data.functions);
+			script_execute_ext(_card.functions);
 		}
 		else
 		{
-			script_execute_ext(_card.data.functions[0], _card.data.functions[1]);
+			script_execute_ext(_card.functions[0], _card.functions[1]);
 		}
 
-		_card.data.current_xp++;
+		_card.current_xp++;
 		deck.discard_card(_card);
 }
 
@@ -30,7 +30,7 @@ function use_card(_card = global.active_card)
 
 	//with (_text)
 	//{
-	//	text = other.card.data.title + " card: " + string(other.defence) + " defended!";
+	//	text = other.card.title + " card: " + string(other.defence) + " defended!";
 	//}
 
 	global.active_card = noone;

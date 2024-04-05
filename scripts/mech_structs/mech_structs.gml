@@ -1,11 +1,12 @@
-function AttachmentType(_title) constructor
+function AttachmentType(_title, _type) constructor
 {
 	title = _title;
-	cards_in_attachment = array_create(argument_count - 1);
+	type = _type;
+	cards_in_attachment = array_create(argument_count - 2);
 
 	for (var _i = 0; _i < argument_count - 1; _i++)
 	{
-		cards_in_attachment[_i] = [argument[_i + 1][0], argument[_i + 1][1]];
+		cards_in_attachment[_i] = [argument[_i + 2][0], argument[_i + 2][1]];
 	}
 }
 
@@ -17,7 +18,7 @@ function Attachment() constructor
 	title = "";
 	mech_obj = noone;
 
-	static add_to_slot = function(_card)
+	static add_card = function(_card)
 	{
 		array_push(slot, _card);
 	}
