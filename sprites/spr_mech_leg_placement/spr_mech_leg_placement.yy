@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_mech_leg_placement",
   "bboxMode":0,
-  "bbox_bottom":194,
+  "bbox_bottom":186,
   "bbox_left":0,
-  "bbox_right":100,
+  "bbox_right":96,
   "bbox_top":0,
   "collisionKind":0,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":195,
+  "height":187,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"fae7d655-6a27-4cb6-9b2c-4ebf8503fef0","blendMode":0,"displayName":"default","isLocked":false,"name":"fae7d655-6a27-4cb6-9b2c-4ebf8503fef0","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":101,
+  "width":97,
 }

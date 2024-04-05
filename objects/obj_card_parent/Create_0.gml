@@ -1,3 +1,5 @@
+initialise_card_states();
+
 title			= "";
 functions		= [];
 cost			= 0;
@@ -14,7 +16,7 @@ assign_card_values();
 mouse_doubleclick_init();  // initializes the timer variable for double-click timing
 click_flag = false;
 
-initialise_card_states();
+
 
 x_target = 0;
 y_target = 0;

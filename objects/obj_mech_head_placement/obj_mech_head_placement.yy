@@ -6,8 +6,8 @@
   "name":"obj_mech_head_placement",
   "overriddenProperties":[],
   "parent":{
-    "name":"mech_placements",
-    "path":"folders/Objects/Mech/mech_placements.yy",
+    "name":"obj_placements",
+    "path":"folders/Objects/Mech/obj_placements.yy",
   },
   "parentObjectId":null,
   "persistent":false,

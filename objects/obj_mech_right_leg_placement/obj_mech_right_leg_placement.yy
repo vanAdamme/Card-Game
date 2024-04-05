@@ -6,8 +6,8 @@
   "name":"obj_mech_right_leg_placement",
   "overriddenProperties":[],
   "parent":{
-    "name":"mech_placements",
-    "path":"folders/Objects/Mech/mech_placements.yy",
+    "name":"obj_placements",
+    "path":"folders/Objects/Mech/obj_placements.yy",
   },
   "parentObjectId":null,
   "persistent":false,

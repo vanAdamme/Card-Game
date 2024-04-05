@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_mech_core_placement",
   "bboxMode":0,
-  "bbox_bottom":374,
+  "bbox_bottom":363,
   "bbox_left":0,
-  "bbox_right":137,
+  "bbox_right":133,
   "bbox_top":0,
   "collisionKind":0,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":375,
+  "height":364,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"40b0f6ae-2260-47e7-b212-9b99af6804e5","blendMode":0,"displayName":"default","isLocked":false,"name":"40b0f6ae-2260-47e7-b212-9b99af6804e5","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":138,
+  "width":134,
 }

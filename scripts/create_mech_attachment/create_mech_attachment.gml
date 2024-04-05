@@ -38,7 +38,7 @@ function create_mech_attachment(_attachment_type, _deck, _hp)
 		{
 			var _inst = instance_create_layer(0, 0, "Cards", obj,
 			{
-				data : new Card(_card_type, attachment),
+				data : new Card(_card_type),
 			});
 
 			attachment.add_card(_inst);
@@ -48,7 +48,6 @@ function create_mech_attachment(_attachment_type, _deck, _hp)
 	attachment.max_hp = _hp;
 	attachment.current_hp = _hp;
 	attachment.title = _attachment_type.title;
-	attachment.mech_obj = _obj;
 
 	attachment.add_to_deck(_deck);
 

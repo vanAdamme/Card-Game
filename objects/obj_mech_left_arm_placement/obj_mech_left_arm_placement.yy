@@ -6,8 +6,8 @@
   "name":"obj_mech_left_arm_placement",
   "overriddenProperties":[],
   "parent":{
-    "name":"mech_placements",
-    "path":"folders/Objects/Mech/mech_placements.yy",
+    "name":"obj_placements",
+    "path":"folders/Objects/Mech/obj_placements.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mech_leg_placement",
-    "path":"sprites/spr_mech_leg_placement/spr_mech_leg_placement.yy",
+    "name":"spr_mech_arm_placement",
+    "path":"sprites/spr_mech_arm_placement/spr_mech_arm_placement.yy",
   },
   "spriteMaskId":null,
   "visible":true,

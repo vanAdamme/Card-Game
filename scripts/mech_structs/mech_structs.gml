@@ -4,7 +4,7 @@ function AttachmentType(_title, _type) constructor
 	type = _type;
 	cards_in_attachment = array_create(argument_count - 2);
 
-	for (var _i = 0; _i < argument_count - 1; _i++)
+	for (var _i = 0; _i < argument_count - 2; _i++)
 	{
 		cards_in_attachment[_i] = [argument[_i + 2][0], argument[_i + 2][1]];
 	}

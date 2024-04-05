@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_mech_arm_placement",
   "bboxMode":0,
-  "bbox_bottom":121,
+  "bbox_bottom":116,
   "bbox_left":0,
-  "bbox_right":102,
+  "bbox_right":98,
   "bbox_top":0,
   "collisionKind":0,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":122,
+  "height":117,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"7fbe25d3-5b2a-4638-9161-024c58a88aff","blendMode":0,"displayName":"default","isLocked":false,"name":"7fbe25d3-5b2a-4638-9161-024c58a88aff","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":103,
+  "width":99,
 }
