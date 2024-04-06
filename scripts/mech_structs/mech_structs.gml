@@ -18,18 +18,18 @@ function Attachment() constructor
 	title = "";
 	mech_obj = noone;
 
-	static add_card = function(_card)
-	{
-		array_push(slot, _card);
-	}
+	//static add_card = function(_card)
+	//{
+	//	array_push(slot, _card);
+	//}
 
-	static add_to_deck = function(_deck)
-	{
-		with(_deck)
-		{
-			array_for_each(other.slot, add_to_deck);
-		}
-	}
+	//static add_to_deck = function(_deck)
+	//{
+	//	with(_deck)
+	//	{
+	//		array_for_each(other.slot, add_to_deck);
+	//	}
+	//}
 
 	static remove_from_mech = function()
 	{

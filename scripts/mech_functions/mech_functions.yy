@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"mech_functions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"mech_functions",
+  "parent":{
+    "name":"mech_functions",
+    "path":"folders/Scripts/mech_functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

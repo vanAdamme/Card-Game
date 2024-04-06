@@ -6,8 +6,6 @@ function initialise_game_states()
 		enter: function() {
 			randomise();
 			define_constants();
-			create_cards();
-			create_attachments();
 		}
 	});
 

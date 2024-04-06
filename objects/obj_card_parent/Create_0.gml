@@ -10,7 +10,7 @@ back			= noone;
 current_xp		= 0;
 level			= 1;
 
-assign_card_values();
+//assign_card_values();
 
 //mouse handling
 mouse_doubleclick_init();  // initializes the timer variable for double-click timing
