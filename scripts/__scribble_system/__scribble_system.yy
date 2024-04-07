@@ -6,7 +6,7 @@
   "name":"__scribble_system",
   "parent":{
     "name":"(System - don't call these functions)",
-    "path":"folders/gooey/Dependencies/Scribble 8.7/(System - don't call these functions).yy",
+    "path":"folders/Scripts/utility_functions/gooey/Dependencies/Scribble 8.7/(System - don't call these functions).yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

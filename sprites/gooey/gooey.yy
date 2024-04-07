@@ -45,7 +45,7 @@
   "origin":0,
   "parent":{
     "name":"gooey",
-    "path":"folders/gooey.yy",
+    "path":"folders/Scripts/utility_functions/gooey.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

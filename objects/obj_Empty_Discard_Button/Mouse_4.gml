@@ -1,4 +1,1 @@
-with(obj_player)
-{
-	deck.empty_discard();
-}
+empty_discard();

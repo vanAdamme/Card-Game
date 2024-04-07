@@ -14,12 +14,12 @@ function create_player_deck(_deck_type)
 				data : new Card(_card_type),
 			});
 
-			deck.add_to_deck(_inst);
-			deck.add_to_deal_pile(_inst);
+			add_to_deck(_inst);
+			add_to_deal_pile(_inst);
 		}
 	}
 
-	deck.deal_pile = array_shuffle(deck.deal_pile);
+	deal_pile = array_shuffle(deal_pile);
 
 	return deck;
 }

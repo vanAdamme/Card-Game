@@ -1,1 +1,4 @@
-obj_player.deck.sort_dealt_cards();
+with(obj_deck_controller)
+{
+	sort_hand();
+}

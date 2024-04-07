@@ -4,13 +4,10 @@ if mouse_check_doubleclick(mb_left, DOUBLE_CLICK_DELAY) && position_meeting(mous
 	if card_on_top() { flip_card(); }
 }
 
-with(data)
+if current_xp == xp_to_level
 {
-	if current_xp == xp_to_level
-	{
-		current_xp = 0;
-		xp_to_level++;
-		level++;
-		upgrade_card();
-	}
+	current_xp = 0;
+	xp_to_level++;
+	level++;
+	upgrade_card();
 }

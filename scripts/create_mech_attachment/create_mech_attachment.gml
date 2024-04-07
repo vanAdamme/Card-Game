@@ -62,4 +62,6 @@ function create_mech_attachment(_attachment_type, _hp)
 		title = _attachment_type.title;
 		array_for_each(slot, add_to_deck);
 	}
+
+	return obj;
 }

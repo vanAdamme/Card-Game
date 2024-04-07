@@ -22,7 +22,7 @@ function use_card(_card = global.active_card)
 		}
 
 		_card.current_xp++;
-		deck.discard_card(_card);
+		discard_card(_card);
 }
 
 //this will handle what screen-text is displayed for each card

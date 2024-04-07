@@ -6,7 +6,7 @@
   "name":"scribble_anim_cycle",
   "parent":{
     "name":"Animation",
-    "path":"folders/gooey/Dependencies/Scribble 8.7/Animation.yy",
+    "path":"folders/Scripts/utility_functions/gooey/Dependencies/Scribble 8.7/Animation.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

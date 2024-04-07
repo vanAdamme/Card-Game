@@ -6,7 +6,7 @@
   "name":"__scribble_class_event",
   "parent":{
     "name":"Classes",
-    "path":"folders/gooey/Dependencies/Scribble 8.7/(System - don't call these functions)/Classes.yy",
+    "path":"folders/Scripts/utility_functions/gooey/Dependencies/Scribble 8.7/(System - don't call these functions)/Classes.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

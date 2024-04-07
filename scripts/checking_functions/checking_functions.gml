@@ -20,16 +20,16 @@ function empty(_array)
 
 function face_up()
 {
-	return sprite_index == data.face;
+	return sprite_index == face;
 }
 
 function check_deck()
 {
-	with (obj_player.deck)
+	with (obj_deck_controller)
 	{
-		if array_length(deal_pile) + array_length(discard_pile) + array_length(dealt_cards) != array_length(cards)
+		if array_length(deal_pile) + array_length(discard_pile) + array_length(hand) != array_length(cards)
 		{
-			var _text = "deal: " + string(array_length(deal_pile)) + "\ndiscard: " + string(array_length(discard_pile)) + "\nhand: " + string(array_length(dealt_cards)) + "\ncards: " + string(array_length(cards));
+			var _text = "deal: " + string(array_length(deal_pile)) + "\ndiscard: " + string(array_length(discard_pile)) + "\nhand: " + string(array_length(hand)) + "\ncards: " + string(array_length(cards));
 			show_message(_text);
 		}
 	}

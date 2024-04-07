@@ -6,7 +6,7 @@
   "name":"scribble_font_exists",
   "parent":{
     "name":"Fonts",
-    "path":"folders/gooey/Dependencies/Scribble 8.7/Fonts.yy",
+    "path":"folders/Scripts/utility_functions/gooey/Dependencies/Scribble 8.7/Fonts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

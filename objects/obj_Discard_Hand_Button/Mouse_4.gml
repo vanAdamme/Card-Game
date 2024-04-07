@@ -1,4 +1,1 @@
-with(obj_player)
-{
-	deck.discard_hand();
-}
+discard_hand();

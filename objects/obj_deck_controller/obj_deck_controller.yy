@@ -8,8 +8,8 @@
   "name":"obj_deck_controller",
   "overriddenProperties":[],
   "parent":{
-    "name":"Cards",
-    "path":"folders/Objects/Cards.yy",
+    "name":"Controllers",
+    "path":"folders/Objects/Controllers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

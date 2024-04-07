@@ -6,7 +6,7 @@
   "name":"__Configuration__",
   "parent":{
     "name":"gooey",
-    "path":"folders/gooey.yy",
+    "path":"folders/Scripts/utility_functions/gooey.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

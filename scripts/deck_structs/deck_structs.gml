@@ -2,7 +2,7 @@ function Deck() constructor
 {
 	cards			= [];
 	deal_pile		= []; // index 0 is top card
-	dealt_cards		= [];
+	hand		= [];
 	discard_pile	= [];
 
 	//static add_to_deck = function(_card)
@@ -14,7 +14,7 @@ function Deck() constructor
 	//{
 	//	array_delete(cards, array_get_index(cards, _card), 1);
 	//	array_delete(deal_pile, array_get_index(deal_pile, _card), 1);
-	//	array_delete(dealt_cards, array_get_index(dealt_cards, _card), 1);
+	//	array_delete(hand, array_get_index(hand, _card), 1);
 	//	array_delete(discard_pile, array_get_index(discard_pile, _card), 1);
 
 	//	instance_destroy(_card.card_obj);
@@ -48,8 +48,8 @@ function Deck() constructor
 	//		_card = array_shift(deal_pile);
 	//	}
 
-	//	array_push(dealt_cards, _card);
-	//	sort_dealt_cards();
+	//	array_push(hand, _card);
+	//	sort_hand();
 	//}
 
 	//static deal_hand = function(_hand_size)
@@ -66,7 +66,7 @@ function Deck() constructor
 	//		}
 
 	//		var _card = array_pop(deal_pile);
-	//		array_push(dealt_cards, _card);
+	//		array_push(hand, _card);
 
 	//		_card.x_target = (_width / 2) + (_width * _i) + obj_dealt_cards_spot.bbox_left;
 	//		_card.y_target = obj_dealt_cards_spot.y + 10;
@@ -76,9 +76,9 @@ function Deck() constructor
 
 	//static discard_card = function(_card)
 	//{
-	//	var _index = array_get_index(dealt_cards, _card);
+	//	var _index = array_get_index(hand, _card);
 
-	//	array_delete(dealt_cards, _index, 1);
+	//	array_delete(hand, _index, 1);
 	//	array_push(discard_pile, _card);
 
 	//	_card.x_target = obj_discard_pile.x;
@@ -89,9 +89,9 @@ function Deck() constructor
 
 	//static discard_hand = function()
 	//{
-	//	while !empty(dealt_cards)
+	//	while !empty(hand)
 	//	{
-	//		var _card = array_last(dealt_cards);
+	//		var _card = array_last(hand);
 	//		discard_card(_card);
 	//	}
 	//}
@@ -103,9 +103,9 @@ function Deck() constructor
 	//	deal_pile = array_shuffle(deal_pile);
 	//}
 
-	//static sort_dealt_cards = function()
+	//static sort_hand = function()
 	//{
-	//	var _count = array_length(dealt_cards);
+	//	var _count = array_length(hand);
 	//	var _width = obj_dealt_cards_spot.sprite_width div array_length(dealt_cards);
 
 	//	for (var _i = 0; _i < _count; _i++)
@@ -125,7 +125,7 @@ function Deck() constructor
 	//	{
 	//		deal_card();
 	//	}
-	//	sort_dealt_cards();
+	//	sort_hand();
 	//}
 }
 

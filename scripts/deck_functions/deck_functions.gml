@@ -1,9 +1,6 @@
 function add_to_deck(_card)
 {
-	with(obj_deck_controller)
-	{
-		array_push(cards, _card);
-	}
+	array_push(obj_deck_controller.cards, _card);
 }
 
 function remove_from_deck(_card)
@@ -68,7 +65,7 @@ function deal_hand()
 	with(obj_deck_controller)
 	{
 		discard_hand();
-		var _hand_size = obj_player._hand_size;
+		var _hand_size = obj_player.hand_size;
 
 		var _width = obj_dealt_cards_spot.sprite_width div _hand_size;
 
@@ -80,7 +77,7 @@ function deal_hand()
 			}
 
 			var _card = array_pop(deal_pile);
-			array_push(dealt_cards, _card);
+			array_push(hand, _card);
 
 			_card.x_target = (_width / 2) + (_width * _i) + obj_dealt_cards_spot.bbox_left;
 			_card.y_target = obj_dealt_cards_spot.y + 10;
@@ -93,9 +90,9 @@ function discard_card(_card)
 {
 	with(obj_deck_controller)
 	{
-		var _index = array_get_index(dealt_cards, _card);
+		var _index = array_get_index(hand, _card);
 
-		array_delete(dealt_cards, _index, 1);
+		array_delete(hand, _index, 1);
 		array_push(discard_pile, _card);
 
 		_card.x_target = obj_discard_pile.x;
@@ -109,9 +106,9 @@ function discard_hand()
 {
 	with(obj_deck_controller)
 	{
-		while !empty(dealt_cards)
+		while !empty(hand)
 		{
-			var _card = array_last(dealt_cards);
+			var _card = array_last(hand);
 			discard_card(_card);
 		}
 	}
@@ -127,16 +124,16 @@ function empty_discard()
 	}
 }
 
-function sort_dealt_cards()
+function sort_hand()
 {
 	with(obj_deck_controller)
 	{
-		var _count = array_length(dealt_cards);
-		var _width = obj_dealt_cards_spot.sprite_width div array_length(dealt_cards);
+		var _count = array_length(hand);
+		var _width = obj_dealt_cards_spot.sprite_width div array_length(hand);
 
 		for (var _i = 0; _i < _count; _i++)
 		{
-			_card = dealt_cards[_i];
+			_card = hand[_i];
 			_card.x_target = (_width / 2) + (_width * _i) + obj_dealt_cards_spot.bbox_left;
 			_card.y_target = obj_dealt_cards_spot.y + 10;
 			_card.fsm.change("dealing");
@@ -148,12 +145,12 @@ function fill_gaps()
 {
 	with(obj_deck_controller)
 	{
-		var count = obj_player.hand_size - array_length(dealt_cards);
+		var count = obj_player.hand_size - array_length(hand);
 		if count <= 0 { exit; }
 		repeat(count)
 		{
 			deal_card();
 		}
-		sort_dealt_cards();
+		sort_hand();
 	}
 }

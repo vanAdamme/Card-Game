@@ -4,8 +4,8 @@ function do_discard_card()
 	{
 		with(obj_player)
 		{
-			deck.discard_card(global.active_card);
-			deck.deal_card();
+			discard_card(global.active_card);
+			deal_card();
 		}
 
 	obj_game_controller.fsm.change("player_turn", undefined, function() {});

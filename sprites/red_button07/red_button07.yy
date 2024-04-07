@@ -45,7 +45,7 @@
   "origin":0,
   "parent":{
     "name":"Test Sprites - Kenney UI",
-    "path":"folders/gooey/Test Sprites - Kenney UI.yy",
+    "path":"folders/Scripts/utility_functions/gooey/Test Sprites - Kenney UI.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

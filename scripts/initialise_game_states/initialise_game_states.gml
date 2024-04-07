@@ -25,8 +25,8 @@ function initialise_game_states()
 		leave: function() {
 			with(obj_player)
 			{
-				deck.discard_hand();
-				deck.deal_hand(hand_size);
+				discard_hand();
+				deal_hand(hand_size);
 			}
 		}
 	});

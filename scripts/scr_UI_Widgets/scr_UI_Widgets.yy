@@ -6,7 +6,7 @@
   "name":"scr_UI_Widgets",
   "parent":{
     "name":"Internal",
-    "path":"folders/gooey/Internal.yy",
+    "path":"folders/Scripts/utility_functions/gooey/Internal.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
