@@ -16,8 +16,6 @@ level			= 1;
 mouse_doubleclick_init();  // initializes the timer variable for double-click timing
 click_flag = false;
 
-
-
 x_target = 0;
 y_target = 0;
 

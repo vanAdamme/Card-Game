@@ -1,1 +1,8 @@
-array_for_each(slot, remove_from_deck)
+while !empty(slot)
+{
+	var _card = array_pop(slot);
+	with(_card)
+	{
+		instance_destroy();
+	}
+}

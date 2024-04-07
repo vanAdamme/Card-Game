@@ -10,8 +10,8 @@
   "name":"obj_energy_icon",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Cards",
+    "path":"folders/Objects/Cards.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -1,34 +1,5 @@
 function create_mech_attachment(_attachment_type, _hp)
 {
-	//var attachment = new Attachment();
-
-	switch (_attachment_type.type)
-	{
-		case ATTACHMENT_TYPE.CORE:
-			obj = obj_mech_core;
-		break;
-
-		case ATTACHMENT_TYPE.HEAD:
-			obj = obj_mech_head;
-		break;
-
-		case ATTACHMENT_TYPE.LEFT_ARM:
-			obj = obj_mech_left_arm;
-		break;
-
-		case ATTACHMENT_TYPE.RIGHT_ARM:
-			obj = obj_mech_right_arm;
-		break;
-
-		case ATTACHMENT_TYPE.LEFT_LEG:
-			obj = obj_mech_left_leg;
-		break;
-
-		case ATTACHMENT_TYPE.RIGHT_LEG:
-			obj = obj_mech_right_leg;
-		break;
-	}
-
 	for (var _i = 0; _i < array_length(_attachment_type.cards_in_attachment); _i++)
 	{
 		var _card_type = _attachment_type.cards_in_attachment[_i][0];
@@ -51,7 +22,38 @@ function create_mech_attachment(_attachment_type, _hp)
 				level			= 1;
 			}
 
-			array_push(obj.slot, _inst);
+			switch (_attachment_type.type)
+			{
+				case ATTACHMENT_TYPE.CORE:
+					array_push(obj_mech_core.slot, _inst);
+					obj = obj_mech_core;
+				break;
+
+				case ATTACHMENT_TYPE.HEAD:
+					array_push(obj_mech_head.slot, _inst);
+					obj = obj_mech_head;
+				break;
+
+				case ATTACHMENT_TYPE.LEFT_ARM:
+					array_push(obj_mech_left_arm.slot, _inst);
+					obj = obj_mech_left_arm;
+				break;
+
+				case ATTACHMENT_TYPE.RIGHT_ARM:
+					array_push(obj_mech_right_arm.slot, _inst);
+					obj = obj_mech_right_arm;
+				break;
+
+				case ATTACHMENT_TYPE.LEFT_LEG:
+					array_push(obj_mech_left_leg.slot, _inst);
+					obj = obj_mech_left_leg;
+				break;
+
+				case ATTACHMENT_TYPE.RIGHT_LEG:
+					array_push(obj_mech_right_leg.slot, _inst);
+					obj = obj_mech_right_leg;
+				break;
+			}
 		}
 	}
 

@@ -3,17 +3,22 @@ function add_to_deck(_card)
 	array_push(obj_deck_controller.cards, _card);
 }
 
-function remove_from_deck(_card)
+function destroy_card(_card)
 {
 	with(obj_deck_controller)
 	{
 		array_delete(cards, array_get_index(cards, _card), 1);
 		array_delete(deal_pile, array_get_index(deal_pile, _card), 1);
-		array_delete(dealt_cards, array_get_index(dealt_cards, _card), 1);
+		array_delete(hand, array_get_index(hand, _card), 1);
 		array_delete(discard_pile, array_get_index(discard_pile, _card), 1);
 	}
 
-	instance_destroy(_card);
+	with(_card)
+	{
+		instance_destroy();
+	}
+	//var _id = _card.id;
+	//instance_destroy(_id);
 }
 
 function add_to_deal_pile(_card)
@@ -28,24 +33,21 @@ function initialise_deck()
 {
 	with(obj_deck_controller)
 	{
-		array_for_each(cards, move_to_deal_pile);
+		_dump = array_for_each_copy(cards, move_to_deal_pile);
 		deal_pile = array_shuffle(deal_pile);
 	}
 }
 
 function move_to_deal_pile(_card)
 {
-	with(obj_deck_controller)
-	{
-		array_push(deal_pile, _card);
-		_card.x_target = obj_deck_spot.x;
-		_card.y_target = obj_deck_spot.y + 10;
-		_card.fsm.change("moving_to_deal_pile");
-		_card.depth = obj_deck_spot.depth - array_length(deal_pile);
-	}
+	array_push(obj_deck_controller.deal_pile, _card);
+	_card.x_target = obj_deck_spot.x;
+	_card.y_target = obj_deck_spot.y + 10;
+	_card.fsm.change("moving_to_deal_pile");
+	_card.depth = obj_deck_spot.depth - array_length(deal_pile);
 }
 
-function deal_card(_card = array_shift(deal_pile))
+function deal_card(_card = array_shift(obj_deck_controller.deal_pile))
 {
 	with(obj_deck_controller)
 	{
@@ -55,8 +57,8 @@ function deal_card(_card = array_shift(deal_pile))
 			_card = array_shift(deal_pile);
 		}
 
-		array_push(dealt_cards, _card);
-		sort_dealt_cards();
+		array_push(hand, _card);
+		sort_hand();
 	}
 }
 
