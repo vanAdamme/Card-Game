@@ -62,7 +62,11 @@ function create_mech_attachment(_attachment_type, _hp)
 		max_hp = _hp;
 		current_hp = _hp;
 		title = _attachment_type.title;
-		array_for_each(slot, add_to_deck);
+		for (var _i = 0; _i < array_length(slot); _i++)
+		{
+			array_push(obj_deck_controller.cards, slot[_i]);
+		}
+
 	}
 
 	return obj;
