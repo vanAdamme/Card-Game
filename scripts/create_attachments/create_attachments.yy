@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"create_attachments",
   "parent":{
-    "name":"game_functions",
-    "path":"folders/Scripts/game_functions.yy",
+    "name":"mech_functions",
+    "path":"folders/Scripts/mech_functions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

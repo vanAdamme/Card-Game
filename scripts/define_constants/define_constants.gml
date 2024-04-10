@@ -11,6 +11,13 @@ function define_constants()
 		ENEMY
 	}
 
+	enum CARD_LOCATION
+	{
+		DEAL_PILE,
+		HAND,
+		DISCARD_PILE
+	}
+
 	enum ATTACHMENT_TYPE
 	{
 		CORE,

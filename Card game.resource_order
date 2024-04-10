@@ -135,7 +135,7 @@
     {"name":"camera_functions","order":7,"path":"scripts/camera_functions/camera_functions.yy",},
     {"name":"check_attachments","order":6,"path":"scripts/check_attachments/check_attachments.yy",},
     {"name":"checking_functions","order":5,"path":"scripts/checking_functions/checking_functions.yy",},
-    {"name":"create_attachments","order":1,"path":"scripts/create_attachments/create_attachments.yy",},
+    {"name":"create_attachments","order":5,"path":"scripts/create_attachments/create_attachments.yy",},
     {"name":"create_cards","order":9,"path":"scripts/create_cards/create_cards.yy",},
     {"name":"create_mech_attachment","order":2,"path":"scripts/create_mech_attachment/create_mech_attachment.yy",},
     {"name":"create_player_deck","order":1,"path":"scripts/create_player_deck/create_player_deck.yy",},

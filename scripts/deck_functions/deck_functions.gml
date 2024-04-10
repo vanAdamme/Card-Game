@@ -35,6 +35,7 @@ function initialise_deck()
 	{
 		_dump = array_for_each_copy(cards, move_to_deal_pile);
 		deal_pile = array_shuffle(deal_pile);
+		array_delete(_dump, 0, array_length(_dump) - 1);
 	}
 }
 
@@ -44,47 +45,40 @@ function move_to_deal_pile(_card)
 	_card.x_target = obj_deck_spot.x;
 	_card.y_target = obj_deck_spot.y + 10;
 	_card.fsm.change("moving_to_deal_pile");
-	_card.depth = obj_deck_spot.depth - array_length(deal_pile);
+	//_card.depth = obj_deck_spot.depth - array_length(deal_pile);
 }
 
-function deal_card(_card = array_shift(obj_deck_controller.deal_pile))
+function deal_card()
 {
 	with(obj_deck_controller)
 	{
-		if is_undefined(_card)
+		if no_cards_left()
 		{
-			empty_discard();
-			_card = array_shift(deal_pile);
+			show_message("no cards left!");
+			exit;
 		}
 
+		if empty(deal_pile)
+		{
+			empty_discard();
+		}
+
+		var _card = array_shift(deal_pile);
 		array_push(hand, _card);
-		sort_hand();
 	}
+
+	sort_hand();
 }
 
 function deal_hand()
 {
-	with(obj_deck_controller)
+	discard_hand();
+
+	var _hand_size = obj_player.hand_size;
+
+	for (var _i = 0; _i < _hand_size; _i++)
 	{
-		discard_hand();
-		var _hand_size = obj_player.hand_size;
-
-		var _width = obj_dealt_cards_spot.sprite_width div _hand_size;
-
-		for (var _i = 0; _i < _hand_size; _i++)
-		{
-			if empty(deal_pile)
-			{
-				empty_discard();
-			}
-
-			var _card = array_pop(deal_pile);
-			array_push(hand, _card);
-
-			_card.x_target = (_width / 2) + (_width * _i) + obj_dealt_cards_spot.bbox_left;
-			_card.y_target = obj_dealt_cards_spot.y + 10;
-			_card.fsm.change("dealing");
-		}
+		deal_card();
 	}
 }
 
@@ -100,7 +94,7 @@ function discard_card(_card)
 		_card.x_target = obj_discard_pile.x;
 		_card.y_target = obj_discard_pile.y + 10;
 		_card.fsm.change("discarding");
-		_card.depth = obj_discard_pile.depth - array_length(discard_pile);
+		//_card.depth = obj_discard_pile.depth - array_length(discard_pile);
 	}
 }
 
@@ -138,6 +132,7 @@ function sort_hand()
 			_card = hand[_i];
 			_card.x_target = (_width / 2) + (_width * _i) + obj_dealt_cards_spot.bbox_left;
 			_card.y_target = obj_dealt_cards_spot.y + 10;
+			_card.depth = obj_dealt_cards_spot.depth - 1 - _i
 			_card.fsm.change("dealing");
 		}
 	}

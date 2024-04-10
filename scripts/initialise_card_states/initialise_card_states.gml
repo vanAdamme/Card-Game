@@ -21,6 +21,7 @@ function initialise_card_states()
 		enter: function() {
 			sprite_index = back;
 			clickable = false;
+			location = CARD_LOCATION.DEAL_PILE;
 		}
 	});
 
@@ -35,6 +36,7 @@ function initialise_card_states()
 		enter: function() {
 			sprite_index = face;
 			clickable = true;
+			location = CARD_LOCATION.HAND;
 		}
 	});
 
@@ -49,6 +51,7 @@ function initialise_card_states()
 		enter: function() {
 			sprite_index = face;
 			clickable = true;
+			location = CARD_LOCATION.DISCARD_PILE;
 		}
 	});
 }

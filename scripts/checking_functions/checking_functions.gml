@@ -34,3 +34,23 @@ function check_deck()
 		}
 	}
 }
+
+function no_cards_left()
+{
+	return (empty(obj_deck_controller.deal_pile) && empty(obj_deck_controller.discard_pile));
+}
+
+function in_deal_pile(_card = id)
+{
+	return _card.location == CARD_LOCATION.DEAL_PILE;
+}
+
+function in_hand(_card = id)
+{
+	return _card.location == CARD_LOCATION.HAND;
+}
+
+function in_discard_pile(_card = id)
+{
+	return _card.location == CARD_LOCATION.DISCARD_PILE;
+}

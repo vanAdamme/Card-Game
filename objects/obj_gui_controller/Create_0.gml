@@ -37,3 +37,25 @@ var _enemy_defence = _info_panel.add(new UIText("Enemy Defence", 50, 500, "", UI
 	_enemy_defence.setPreRenderCallback(function() {
 		UI.get("Enemy Defence").setText("[fa_left]Defence: " + string(obj_enemy.current_defence));
 	});
+
+_info_panel.add(new UIText("Deck Info", 0, 600, "[fa_center]Deck Info", UI_RELATIVE_TO.TOP_CENTER));
+
+var _cards = _info_panel.add(new UIText("Cards", 50, 650, "", UI_RELATIVE_TO.TOP_LEFT));
+	_cards.setPreRenderCallback(function() {
+		UI.get("Cards").setText("[fa_left]Cards: " + string(array_length(obj_deck_controller.cards)));
+	});
+
+var _deal_pile = _info_panel.add(new UIText("Deal pile", 50, 700, "", UI_RELATIVE_TO.TOP_LEFT));
+	_deal_pile.setPreRenderCallback(function() {
+		UI.get("Deal pile").setText("[fa_left]Deal pile: " + string(array_length(obj_deck_controller.deal_pile)));
+	});
+
+var _hand = _info_panel.add(new UIText("Hand", 50, 750, "", UI_RELATIVE_TO.TOP_LEFT));
+	_hand.setPreRenderCallback(function() {
+		UI.get("Hand").setText("[fa_left]Hand: " + string(array_length(obj_deck_controller.hand)));
+	});
+
+var _discards = _info_panel.add(new UIText("Discards", 50, 800, "", UI_RELATIVE_TO.TOP_LEFT));
+	_discards.setPreRenderCallback(function() {
+		UI.get("Discards").setText("[fa_left]Discards: " + string(array_length(obj_deck_controller.discard_pile)));
+	});
