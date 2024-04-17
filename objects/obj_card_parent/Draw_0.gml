@@ -17,18 +17,16 @@ if face_up()
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 
-	scribble("[fnt_futured_24][c_white][fa_center][fa_middle]" + title).scale_to_box(150, 50).draw(x, y + 80);
-/*
-	draw_text_scribble(bbox_left + 30, bbox_top + 124, attack_val_m);
-	draw_text_scribble(bbox_left + 40, bbox_top + 138, attack_val_sd);
-
-	draw_text_scribble(bbox_left + 30, bbox_top + 159, defend_val_m);
-	draw_text_scribble(bbox_left + 40, bbox_top + 173, defend_val_sd);
-
-	draw_text_scribble(bbox_left + 30, bbox_top + 194, support_val_m);
-	draw_text_scribble(bbox_left + 40, bbox_top + 207, support_val_sd);
-*/
-	scribble("[fnt_futured_12][c_white][fa_center][fa_middle]" + text).scale_to_box(154, 25).draw(x, bbox_top + 239);
+	if !disabled
+	{
+		scribble("[fnt_futured_24][c_white][fa_center][fa_middle]" + title).scale_to_box(150, 50).draw(x, y + 80);
+		scribble("[fnt_futured_12][c_white][fa_center][fa_middle]" + text).scale_to_box(154, 25).draw(x, bbox_top + 239);
+	}
+	else
+	{
+	scribble("[fnt_futured_24][c_grey][fa_center][fa_middle]" + title).scale_to_box(150, 50).draw(x, y + 80);
+	scribble("[fnt_futured_12][c_grey][fa_center][fa_middle]" + text).scale_to_box(154, 25).draw(x, bbox_top + 239);
+	}
 
 	for (var _i = 0; _i < xp_to_level; _i++)
 	{

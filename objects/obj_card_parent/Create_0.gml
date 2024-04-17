@@ -12,6 +12,8 @@ level			= 1;
 
 location		= noone;
 
+disabled		= false;
+
 //mouse handling
 mouse_doubleclick_init();  // initializes the timer variable for double-click timing
 click_flag = false;

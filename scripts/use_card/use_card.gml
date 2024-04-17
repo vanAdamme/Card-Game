@@ -10,6 +10,12 @@ function use_card(_card = global.active_card)
 			exit;
 		}
 
+		if _card.disabled
+		{
+			show_message("Card disabled.");
+			exit;
+		}
+
 		current_actions -= _card.cost;
 
 		if !is_array(_card.functions)
