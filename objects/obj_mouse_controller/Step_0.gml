@@ -1,3 +1,13 @@
+var _inst = instance_position(mouse_x, mouse_y, all);
+
+if obj_game_controller.fsm.get_current_state() == "wait_for_player_input" {
+	if _inst.location == CARD_LOCATION.HAND { 
+		global.active_card = _inst;
+	} else {
+		exit;
+	}
+}
+
 if mouse_check_button_pressed(mb_left) && !position_meeting(mouse_x, mouse_y, obj_card_parent)
 {
 	global.active_card = noone;
@@ -48,4 +58,3 @@ if (mouse_check_button_released(mb_left))
 	xrelative = 0;
 	yrelative = 0;
 }
-

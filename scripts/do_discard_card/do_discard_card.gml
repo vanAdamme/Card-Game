@@ -1,6 +1,6 @@
 function do_discard_card()
 {
-	if obj_game_controller.fsm.get_current_state() == "do_discard_card_selected"
+	if obj_game_controller.fsm.get_current_state() == "wait_for_player_input"
 	{
 		with(obj_player)
 		{

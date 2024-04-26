@@ -2,6 +2,7 @@ instance_create_layer(50, 0, "Controllers", UI);
 instance_create_layer(100, 0, "Controllers", obj_mouse_controller);
 instance_create_layer(150, 0, "Controllers", obj_deck_controller);
 instance_create_layer(200, 0, "Controllers", obj_mech_controller);
+instance_create_layer(250, 0, "Controllers", obj_Items);
 
 initialise_game_states();
 

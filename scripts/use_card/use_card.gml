@@ -31,13 +31,5 @@ function use_card(_card = global.active_card)
 		discard_card(_card);
 }
 
-//this will handle what screen-text is displayed for each card
-	//var _text = instance_create_layer(800, 280, "Text", obj_text);
-
-	//with (_text)
-	//{
-	//	text = other.card.title + " card: " + string(other.defence) + " defended!";
-	//}
-
 	global.active_card = noone;
 }

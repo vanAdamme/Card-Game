@@ -26,7 +26,7 @@ function initialise_game_states()
 			with(obj_player)
 			{
 				discard_hand();
-				deal_hand(hand_size);
+				deal_hand();
 			}
 		}
 	});
@@ -59,16 +59,10 @@ function initialise_game_states()
 		}
 	});
 
-	fsm.add("do_discard_card_wait", {
+	fsm.add("wait_for_player_input", {
 		enter: function() {},
 		leave: function() {}
 	});
-
-	fsm.add("do_discard_card_selected", {
-		enter: function() {},
-		leave: function() {}
-	});
-
 
 
 

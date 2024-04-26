@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"initialise_game_states",
+  "%Name":"game_states",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"initialise_game_states",
+  "name":"game_states",
   "parent":{
     "name":"game_functions",
     "path":"folders/Scripts/game_functions.yy",
