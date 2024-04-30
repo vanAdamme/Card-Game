@@ -25,5 +25,4 @@ function AddItemToMasterList(attributes){
 	for (var _i = 0; _i < array_length(attributes); _i++) {
 		global.AllItems[# ds_grid_width(global.AllItems) - 1, _i] = attributes[_i];
 	}
-	
 }

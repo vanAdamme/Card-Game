@@ -1,6 +1,6 @@
 event_inherited()
 
-type = ATTACHMENT_TYPE.HEAD;
+type = MECH_PART.HEAD;
 
 x = obj_mech_head_placement.x;
 y = obj_mech_head_placement.y;

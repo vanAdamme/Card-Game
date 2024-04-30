@@ -31,7 +31,7 @@ function Card(_title, _face, _back) constructor
 	back		= _back;
 }
 
-function PlayerCard(_title, _face = spr_player_card_face, _back = spr_player_card_back, _attack_val = [1, 0], _defend_val = [1, 0], _support_val = [1, 0], _cost = 1, _xp_to_level = 3, _attachment = ATTACHMENT_TYPE.CORE, _text = "") : Card(_title, _face, _back) constructor
+function PlayerCard(_title, _face = spr_player_card_face, _back = spr_player_card_back, _attack_val = [1, 0], _defend_val = [1, 0], _support_val = [1, 0], _cost = 1, _xp_to_level = 3, _attachment = MECH_PART.CORE, _text = "") : Card(_title, _face, _back) constructor
 {
 	attack_val	= _attack_val;
 	defend_val	= _defend_val;

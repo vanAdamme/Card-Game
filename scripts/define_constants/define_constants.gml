@@ -18,7 +18,7 @@ function define_constants()
 		DISCARD_PILE
 	}
 
-	enum ATTACHMENT_TYPE
+	enum MECH_PART
 	{
 		CORE,
 		HEAD,

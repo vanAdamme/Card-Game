@@ -1,3 +1,0 @@
-Hello, Jimmy.
-
-Each card consists of an instance of obj_playerCard that is assigned to a card struct. The struct contains all of the card's information.

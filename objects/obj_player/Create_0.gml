@@ -1,7 +1,3 @@
-//deck = new Deck();
-
-
-
 with(obj_card_parent)
 {
 	layer = layer_get_id("Cards");

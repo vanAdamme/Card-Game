@@ -6,11 +6,3 @@ function create_cards()
 	DiscardCard		= new CardType("Discard",		do_discard_card,		1,	3,	"Get something better.",	spr_player_card_face,	spr_player_card_back);
 	MegaAttack		= new CardType("Mega Attack",	[do_attack,[13, 5]],	2,	3,	"Mega dick punch!",			spr_player_card_face,	spr_player_card_back);
 }
-
-//function create_decks()
-//{
-//	BasicDeck			= new DeckType([BasicAttack, 5], [BasicDefend, 3], [BasicSupport, 2]);
-//	BasicBerserkDeck	= new DeckType([BasicAttack, 8], [BasicDefend, 1], [BasicSupport, 1]);
-//	BasicTurtleDeck		= new DeckType([BasicAttack, 1], [BasicDefend, 8], [BasicSupport, 1]);
-//	BasicImmortalDeck	= new DeckType([BasicAttack, 1], [BasicDefend, 3], [BasicSupport, 6]);
-//}

@@ -8,8 +8,8 @@
   "name":"obj_Discard_Hand_Button",
   "overriddenProperties":[],
   "parent":{
-    "name":"Testing_Buttons",
-    "path":"folders/Objects/Testing_Buttons.yy",
+    "name":"Testing Buttons",
+    "path":"folders/Objects/Testing Buttons.yy",
   },
   "parentObjectId":null,
   "persistent":false,

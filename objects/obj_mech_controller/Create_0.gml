@@ -15,6 +15,4 @@ right_arm	= create_mech_attachment(BasicRightArm, 1);
 left_leg	= create_mech_attachment(BasicLeftLeg, 1);
 right_leg	= create_mech_attachment(BasicRightLeg, 1);
 
-//assign_mech_objs();
-
 attachment_slots = [core, head, left_arm, right_arm, left_leg, right_leg];

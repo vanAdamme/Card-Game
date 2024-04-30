@@ -1,9 +1,9 @@
-function create_mech_attachment(_attachment_type, _hp)
+function create_mech_attachment(_mech_part, _hp)
 {
-	for (var _i = 0; _i < array_length(_attachment_type.cards_in_attachment); _i++)
+	for (var _i = 0; _i < array_length(_mech_part.cards_in_attachment); _i++)
 	{
-		var _card_type = _attachment_type.cards_in_attachment[_i][0];
-		var _card_amount = _attachment_type.cards_in_attachment[_i][1];
+		var _card_type = _mech_part.cards_in_attachment[_i][0];
+		var _card_amount = _mech_part.cards_in_attachment[_i][1];
 
 		repeat(_card_amount)
 		{
@@ -22,34 +22,34 @@ function create_mech_attachment(_attachment_type, _hp)
 				level			= 1;
 			}
 
-			switch (_attachment_type.type)
+			switch (_mech_part.type)
 			{
-				case ATTACHMENT_TYPE.CORE:
+				case MECH_PART.CORE:
 					array_push(obj_mech_core.slot, _inst);
 					obj = obj_mech_core;
 				break;
 
-				case ATTACHMENT_TYPE.HEAD:
+				case MECH_PART.HEAD:
 					array_push(obj_mech_head.slot, _inst);
 					obj = obj_mech_head;
 				break;
 
-				case ATTACHMENT_TYPE.LEFT_ARM:
+				case MECH_PART.LEFT_ARM:
 					array_push(obj_mech_left_arm.slot, _inst);
 					obj = obj_mech_left_arm;
 				break;
 
-				case ATTACHMENT_TYPE.RIGHT_ARM:
+				case MECH_PART.RIGHT_ARM:
 					array_push(obj_mech_right_arm.slot, _inst);
 					obj = obj_mech_right_arm;
 				break;
 
-				case ATTACHMENT_TYPE.LEFT_LEG:
+				case MECH_PART.LEFT_LEG:
 					array_push(obj_mech_left_leg.slot, _inst);
 					obj = obj_mech_left_leg;
 				break;
 
-				case ATTACHMENT_TYPE.RIGHT_LEG:
+				case MECH_PART.RIGHT_LEG:
 					array_push(obj_mech_right_leg.slot, _inst);
 					obj = obj_mech_right_leg;
 				break;
@@ -61,7 +61,7 @@ function create_mech_attachment(_attachment_type, _hp)
 	{
 		max_hp = _hp;
 		current_hp = _hp;
-		title = _attachment_type.title;
+		title = _mech_part.title;
 		for (var _i = 0; _i < array_length(slot); _i++)
 		{
 			array_push(obj_deck_controller.cards, slot[_i]);

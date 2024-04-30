@@ -9,9 +9,7 @@ face			= noone;
 back			= noone;
 current_xp		= 0;
 level			= 1;
-
 location		= noone;
-
 disabled		= false;
 
 //mouse handling

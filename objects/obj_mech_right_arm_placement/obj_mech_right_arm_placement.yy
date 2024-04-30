@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"obj_placements",
-    "path":"folders/Objects/Mech/obj_placements.yy",
+    "path":"folders/Objects/Player Items/Mech parts/obj_placements.yy",
   },
   "parentObjectId":null,
   "persistent":false,

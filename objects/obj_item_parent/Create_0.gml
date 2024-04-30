@@ -1,0 +1,2 @@
+description = undefined;
+damage = undefined;

@@ -8,8 +8,8 @@
   "name":"obj_mech_core",
   "overriddenProperties":[],
   "parent":{
-    "name":"Mech",
-    "path":"folders/Objects/Mech.yy",
+    "name":"Mech parts",
+    "path":"folders/Objects/Player Items/Mech parts.yy",
   },
   "parentObjectId":{
     "name":"obj_mech_parent",

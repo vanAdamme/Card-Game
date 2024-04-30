@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Cards",
-    "path":"folders/Objects/Cards.yy",
+    "path":"folders/Objects/Player Items/Cards.yy",
   },
   "parentObjectId":{
     "name":"obj_card_parent",
