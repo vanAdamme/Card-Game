@@ -3,14 +3,13 @@
   "%Name":"obj_player_card",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_player_card",
   "overriddenProperties":[],
   "parent":{
     "name":"Cards",
-    "path":"folders/Objects/Player Items/Cards.yy",
+    "path":"folders/Objects/Items/Cards.yy",
   },
   "parentObjectId":{
     "name":"obj_card_parent",

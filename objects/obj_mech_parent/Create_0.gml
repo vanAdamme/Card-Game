@@ -1,6 +1,5 @@
 event_inherited();
 
-title = "";
 type = undefined;
 inv_sprite = undefined;
 max_hp = 0;

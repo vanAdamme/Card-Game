@@ -7,8 +7,8 @@ instance_create_layer(200, 0, "Controllers", obj_mech_controller);
 
 initialise_game_states();
 
-instance_create_layer(0, 0, "Player", obj_player);
-instance_create_layer(870, 90, "Enemy", obj_enemy);
+instance_create_layer(0, 0, "Player", obj_player_controller);
+instance_create_layer(870, 90, "Enemy", obj_enemy_controller);
 
 global.active_card = noone;
 

@@ -1,6 +1,6 @@
 function enemy_choose_actions()
 {
-	with(obj_enemy)
+	with(obj_enemy_controller)
 	{
 		repeat(actions_per_turn)
 		{

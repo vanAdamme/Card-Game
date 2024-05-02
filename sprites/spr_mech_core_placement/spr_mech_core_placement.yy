@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"mech",
-    "path":"folders/Sprites/mech.yy",
+    "name":"placements",
+    "path":"folders/Sprites/mech/placements.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

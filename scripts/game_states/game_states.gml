@@ -12,7 +12,7 @@ function initialise_game_states()
 	fsm.add("player_turn", {
 		enter: function() {
 			//check hp and so forth ...
-			with(obj_player)
+			with(obj_player_controller)
 			{
 				current_defence = approach(current_defence, 0, defence_loss);
 				current_actions = approach(current_actions, max_actions, action_refresh); 
@@ -23,7 +23,7 @@ function initialise_game_states()
 			//do player turn things
 		},
 		leave: function() {
-			with(obj_player)
+			with(obj_player_controller)
 			{
 				discard_hand();
 				deal_hand();
@@ -34,7 +34,7 @@ function initialise_game_states()
 	fsm.add("enemy_turn", {
 		enter: function() {
 			//do start of enemy turn stuff
-			with (obj_enemy)
+			with (obj_enemy_controller)
 			{
 				current_defence = approach(current_defence, 0, defence_loss);
 			}

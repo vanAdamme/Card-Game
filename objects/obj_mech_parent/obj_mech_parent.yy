@@ -14,7 +14,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Mech parts",
-    "path":"folders/Objects/Player Items/Mech parts.yy",
+    "path":"folders/Objects/Items/Mech parts.yy",
   },
   "parentObjectId":{
     "name":"obj_item_parent",

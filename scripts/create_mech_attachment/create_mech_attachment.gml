@@ -1,5 +1,7 @@
 function create_mech_attachment(_mech_part)
 {
+	obj = instance_create_layer(_mech_part.x_pos, _mech_part.y_pos, "Mech", _mech_part.object);
+	
 	for (var _i = 0; _i < array_length(_mech_part.cards_in_attachment); _i++)
 	{
 		var _card_type = _mech_part.cards_in_attachment[_i][0];
@@ -22,38 +24,7 @@ function create_mech_attachment(_mech_part)
 				level			= 1;
 			}
 
-			switch (_mech_part.type)
-			{
-				case MECH_PART.CORE:
-					array_push(obj_mech_core.slot, _inst);
-					obj = obj_mech_core;
-				break;
-
-				case MECH_PART.HEAD:
-					array_push(obj_mech_head.slot, _inst);
-					obj = obj_mech_head;
-				break;
-
-				case MECH_PART.LEFT_ARM:
-					array_push(obj_mech_left_arm.slot, _inst);
-					obj = obj_mech_left_arm;
-				break;
-
-				case MECH_PART.RIGHT_ARM:
-					array_push(obj_mech_right_arm.slot, _inst);
-					obj = obj_mech_right_arm;
-				break;
-
-				case MECH_PART.LEFT_LEG:
-					array_push(obj_mech_left_leg.slot, _inst);
-					obj = obj_mech_left_leg;
-				break;
-
-				case MECH_PART.RIGHT_LEG:
-					array_push(obj_mech_right_leg.slot, _inst);
-					obj = obj_mech_right_leg;
-				break;
-			}
+			array_push(obj.slot, _inst);
 		}
 	}
 

@@ -2,7 +2,7 @@ function use_card(_card = global.active_card)
 {
 	if _card == noone { exit; }
 
-	with(obj_player)
+	with(obj_player_controller)
 	{
 		if _card.cost > current_actions
 		{

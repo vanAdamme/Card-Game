@@ -1,6 +1,6 @@
 function do_support(_mean, _sd)
 {
-	with (obj_player)
+	with (obj_player_controller)
 	{
 		support = round(gauss(_mean, _sd));
 
