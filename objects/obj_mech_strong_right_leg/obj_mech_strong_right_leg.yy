@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mech_basic_right_leg",
-    "path":"sprites/spr_mech_basic_right_leg/spr_mech_basic_right_leg.yy",
+    "name":"spr_mech_strong_right_leg",
+    "path":"sprites/spr_mech_strong_right_leg/spr_mech_strong_right_leg.yy",
   },
   "spriteMaskId":null,
   "visible":true,

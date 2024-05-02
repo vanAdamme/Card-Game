@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mech_basic_right_arm",
-    "path":"sprites/spr_mech_basic_right_arm/spr_mech_basic_right_arm.yy",
+    "name":"spr_mech_strong_right_arm",
+    "path":"sprites/spr_mech_strong_right_arm/spr_mech_strong_right_arm.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mech_basic_core",
-    "path":"sprites/spr_mech_basic_core/spr_mech_basic_core.yy",
+    "name":"spr_mech_strong_core",
+    "path":"sprites/spr_mech_strong_core/spr_mech_strong_core.yy",
   },
   "spriteMaskId":null,
   "visible":true,

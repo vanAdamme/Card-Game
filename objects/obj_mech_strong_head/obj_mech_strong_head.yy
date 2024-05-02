@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mech_basic_head",
-    "path":"sprites/spr_mech_basic_head/spr_mech_basic_head.yy",
+    "name":"spr_mech_strong_head",
+    "path":"sprites/spr_mech_strong_head/spr_mech_strong_head.yy",
   },
   "spriteMaskId":null,
   "visible":true,
