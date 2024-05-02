@@ -34,7 +34,19 @@ if isShowingMenu {
 			draw_set_colour(c_blue);
 			draw_rectangle(_itemX - (spriteWidth * itemScale / 2), _itemY - (spriteHeight * itemScale / 2), _itemX + (spriteWidth * itemScale / 2), _itemY + (spriteHeight * itemScale / 2), false);
 			draw_set_alpha(1);
-			
+
+			//draw item info
+			if is_undefined(myItems[# _i, Item.Object]) {
+				currentItem = instance_create_layer(-32, -32, "Inventory", myItems[# _i, Item.Object]);
+				currentItem.price = myItems[# _i, Item.Price];
+				currentItem.type = myItems[# _i, Item.Type];
+				currentItem.name = myItems[# _i, Item.Name];
+				currentItem.isInMenu = true;
+				if showingDescription {
+					currentItem.isShowingInfo = true;
+				}
+			}
+
 			//clicked on an item?
 			if mouse_check_button_pressed(mb_left) && !showingDescription {
 				sequence = layer_sequence_create("Inventory", CameraMiddleX(), CameraMiddleY(), sq_description_animation);

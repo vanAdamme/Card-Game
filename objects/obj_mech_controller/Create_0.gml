@@ -8,11 +8,11 @@ instance_create_layer(obj_mech_right_leg_placement.x,	obj_mech_right_leg_placeme
 create_cards();
 create_attachments();
 
-core		= create_mech_attachment(BasicCore, 2);
-head		= create_mech_attachment(BasicHead, 2);
-left_arm	= create_mech_attachment(BasicLeftArm, 1);
-right_arm	= create_mech_attachment(BasicRightArm, 1);
-left_leg	= create_mech_attachment(BasicLeftLeg, 1);
-right_leg	= create_mech_attachment(BasicRightLeg, 1);
+core		= create_mech_attachment(BasicCore);
+head		= create_mech_attachment(BasicHead);
+left_arm	= create_mech_attachment(BasicLeftArm);
+right_arm	= create_mech_attachment(BasicRightArm);
+left_leg	= create_mech_attachment(BasicLeftLeg);
+right_leg	= create_mech_attachment(BasicRightLeg);
 
 attachment_slots = [core, head, left_arm, right_arm, left_leg, right_leg];

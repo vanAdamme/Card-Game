@@ -1,7 +1,13 @@
-slot = [];
+event_inherited();
+
+title = "";
+type = undefined;
+inv_sprite = undefined;
 max_hp = 0;
 current_hp = 0;
-title = "";
+price = 0;
+
+slot = [];
 
 isInMenu = false;
 isShowingInfo = false;

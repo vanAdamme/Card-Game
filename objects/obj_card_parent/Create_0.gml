@@ -1,3 +1,4 @@
+event_inherited();
 initialise_card_states();
 
 title			= "";

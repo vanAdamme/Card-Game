@@ -3,6 +3,7 @@ myItems = global.AllItems;
 isShowingMenu = false;
 showingDescription = false;
 
+currentItem = undefined;
 sequence = undefined;
 
 menuWidth = 6;

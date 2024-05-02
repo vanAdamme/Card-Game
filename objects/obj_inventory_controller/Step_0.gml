@@ -5,6 +5,9 @@ if keyboard_check_pressed(ord("M")) {
 //animations
 if sequence != undefined && layer_sequence_is_finished(sequence) && layer_sequence_get_headdir(sequence) == seqdir_right {
 	showingDescription = true;
+	if instance_exists(obj_item_parent) {
+		currentItem.isShowingInfo = true;
+	}
 }
 
 if sequence != undefined && layer_sequence_is_finished(sequence) && layer_sequence_get_headdir(sequence) == seqdir_left {

@@ -1,4 +1,4 @@
-function create_mech_attachment(_mech_part, _hp)
+function create_mech_attachment(_mech_part)
 {
 	for (var _i = 0; _i < array_length(_mech_part.cards_in_attachment); _i++)
 	{
@@ -59,14 +59,20 @@ function create_mech_attachment(_mech_part, _hp)
 
 	with(obj)
 	{
-		max_hp = _hp;
-		current_hp = _hp;
 		title = _mech_part.title;
+		type = _mech_part.type;
+		inv_sprite = _mech_part.inv_sprite;
+		max_hp = _mech_part.hp;
+		current_hp = max_hp;
+		price = _mech_part.price;
+		description = _mech_part.description;
+
 		for (var _i = 0; _i < array_length(slot); _i++)
 		{
 			array_push(obj_deck_controller.cards, slot[_i]);
 		}
 
+		AddItemToMasterList([title,	inv_sprite,	1, type, price,	id]);
 	}
 
 	return obj;
