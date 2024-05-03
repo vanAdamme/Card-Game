@@ -1,7 +1,9 @@
 event_inherited();
 initialise_card_states();
 
-title			= "";
+title = undefined;
+description = undefined;
+
 functions		= [];
 cost			= 0;
 xp_to_level		= 0;

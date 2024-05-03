@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_mech_basic_right_leg",
+  "%Name":"obj_inventory_item_parent",
   "eventList":[],
   "managed":true,
-  "name":"obj_mech_basic_right_leg",
+  "name":"obj_inventory_item_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Basic",
-    "path":"folders/Objects/Items/Mech parts/Basic.yy",
+    "name":"Inventory",
+    "path":"folders/Objects/Items/Inventory.yy",
   },
   "parentObjectId":{
-    "name":"obj_mech_parent",
-    "path":"objects/obj_mech_parent/obj_mech_parent.yy",
+    "name":"obj_item_parent",
+    "path":"objects/obj_item_parent/obj_item_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_mech_basic_right_leg",
-    "path":"sprites/spr_mech_basic_right_leg/spr_mech_basic_right_leg.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

@@ -1,17 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_items_controller",
+  "%Name":"obj_mech_basic_inv_right_arm",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_items_controller",
+  "name":"obj_mech_basic_inv_right_arm",
   "overriddenProperties":[],
   "parent":{
-    "name":"Controllers",
-    "path":"folders/Objects/Controllers.yy",
+    "name":"BasicMech",
+    "path":"folders/Objects/Items/Inventory/BasicMech.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_inventory_item_parent",
+    "path":"objects/obj_inventory_item_parent/obj_inventory_item_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -29,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_mech_basic_right_arm_inv",
+    "path":"sprites/spr_mech_basic_right_arm_inv/spr_mech_basic_right_arm_inv.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

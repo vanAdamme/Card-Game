@@ -1,17 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_mech_basic_right_leg",
-  "eventList":[],
+  "%Name":"obj_mech_basic_inv_left_arm",
+  "eventList":[
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_mech_basic_right_leg",
+  "name":"obj_mech_basic_inv_left_arm",
   "overriddenProperties":[],
   "parent":{
-    "name":"Basic",
-    "path":"folders/Objects/Items/Mech parts/Basic.yy",
+    "name":"BasicMech",
+    "path":"folders/Objects/Items/Inventory/BasicMech.yy",
   },
   "parentObjectId":{
-    "name":"obj_mech_parent",
-    "path":"objects/obj_mech_parent/obj_mech_parent.yy",
+    "name":"obj_inventory_item_parent",
+    "path":"objects/obj_inventory_item_parent/obj_inventory_item_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -31,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mech_basic_right_leg",
-    "path":"sprites/spr_mech_basic_right_leg/spr_mech_basic_right_leg.yy",
+    "name":"spr_mech_basic_left_arm_inv",
+    "path":"sprites/spr_mech_basic_left_arm_inv/spr_mech_basic_left_arm_inv.yy",
   },
   "spriteMaskId":null,
   "visible":true,

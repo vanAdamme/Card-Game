@@ -12,4 +12,4 @@ itemSeparation = 38;
 itemScale = 2;
 
 spriteHeight = 16;
-spriteWidth = 16;
+spriteWidth = 16; 

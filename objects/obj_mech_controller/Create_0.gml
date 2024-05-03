@@ -1,10 +1,10 @@
 assign_card_types();
 assign_attachment_types();
 
-core		= create_mech_attachment(StrongCore);
+core		= create_mech_attachment(BasicCore);
 head		= create_mech_attachment(BasicHead);
-left_arm	= create_mech_attachment(StrongLeftArm);
-right_arm	= create_mech_attachment(StrongRightArm);
+left_arm	= create_mech_attachment(BasicLeftArm);
+right_arm	= create_mech_attachment(BasicRightArm);
 left_leg	= create_mech_attachment(BasicLeftLeg);
 right_leg	= create_mech_attachment(BasicRightLeg);
 

@@ -14,7 +14,7 @@ if isShowingMenu {
 	for (var _i = 0; _i < ds_grid_width(myItems); _i++) {
 		var _itemX = CameraX() + 81 + (_i * itemSeparation);
 		var _itemY = CameraY() + 411;
-		var _sprite = myItems[# _i, Item.Sprite];
+		var _sprite = object_get_sprite(myItems[# _i, Item.Object]);
 
 			//check for additional rows needed
 			if _i >= menuWidth && _i < menuWidth * 2 {
@@ -36,7 +36,7 @@ if isShowingMenu {
 			draw_set_alpha(1);
 
 			//draw item info
-			if is_undefined(myItems[# _i, Item.Object]) {
+			if !instance_exists(myItems[# _i, Item.Object]) {
 				currentItem = instance_create_layer(-32, -32, "Inventory", myItems[# _i, Item.Object]);
 				currentItem.price = myItems[# _i, Item.Price];
 				currentItem.type = myItems[# _i, Item.Type];
@@ -60,6 +60,11 @@ if isShowingMenu {
 			 layer_sequence_play(sequence);
 			 showingDescription = false;
 		}
+	}
+
+	//ensure only 1 item exists at a time
+	if instance_number(obj_item_parent) > 1 {
+		instance_destroy(obj_item_parent);
 	}
 
 	//front of inventory
