@@ -1,1 +1,8 @@
 make obj_init that does stuff game_controller is currently doing
+
+global.allitems ==> obj_player.inventory
+
+
+obj_player_controller ==> obj_player?
+
+make script: findItem("item name") that finds that item from myItems and returns all its data

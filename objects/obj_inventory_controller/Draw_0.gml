@@ -34,9 +34,10 @@ if isShowingMenu {
 			draw_set_colour(c_blue);
 			draw_rectangle(_itemX - (spriteWidth * itemScale / 2), _itemY - (spriteHeight * itemScale / 2), _itemX + (spriteWidth * itemScale / 2), _itemY + (spriteHeight * itemScale / 2), false);
 			draw_set_alpha(1);
+			currentItemSlot = _i;
 
 			//draw item info
-			if !instance_exists(myItems[# _i, Item.Object]) {
+			if !instance_exists(myItems[# _i, Item.Object]) && !draggingItem {
 				currentItem = instance_create_layer(-32, -32, "Inventory", myItems[# _i, Item.Object]);
 				currentItem.price = myItems[# _i, Item.Price];
 				currentItem.type = myItems[# _i, Item.Type];
@@ -54,6 +55,28 @@ if isShowingMenu {
 		}
 	}
 
+	//Dragging system
+	if mouse_check_button(mb_middle) {
+		draggedItem = instance_find(obj_item_parent, 0);
+		draggedItem.x = mouse_x;
+		draggedItem.y = mouse_y;
+		draggedItem.visible = true;
+		draggedItem.image_xscale = itemScale;
+		draggedItem.image_yscale = itemScale;
+		draggingItem = true;
+	}
+
+	if mouse_check_button_pressed(mb_middle) {
+		draggedItemSlot = currentItemSlot;
+	}
+
+	if mouse_check_button_released(mb_middle) {
+		draggedItem.x = -100;
+		draggedItem.y = -100;
+		draggingItem = false;
+		alarm[0] = 1;
+	}
+		
 	if point_in_rectangle(mouse_x, mouse_y, CameraX() + 1535, CameraY() + 320, CameraX() + 1575, CameraY() + 355) {
 		if mouse_check_button_pressed(mb_left) {
 			 layer_sequence_headdir(sequence, seqdir_left);

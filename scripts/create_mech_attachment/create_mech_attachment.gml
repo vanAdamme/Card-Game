@@ -43,7 +43,7 @@ function create_mech_attachment(_mech_part)
 			array_push(obj_deck_controller.cards, slot[_i]);
 		}
 
-		AddItemToMasterList([title,	inv_object,	1, type, price]);
+		AddItem(obj_inventory_controller.myItems, [title, inv_object, 1, type, price]);
 	}
 
 	return obj;

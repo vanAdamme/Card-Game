@@ -13,7 +13,7 @@ enum Item {
 enum Type {
 	MECH_PART,
 	Armour,
-	Consumable
+	Consumable //stackable
 }
 
 enum Ailment {

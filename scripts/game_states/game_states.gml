@@ -64,7 +64,10 @@ function initialise_game_states()
 		leave: function() {}
 	});
 
-
+	fsm.add("inventory", {
+		enter: function() {},
+		leave: function() {}
+	});
 
 
 
