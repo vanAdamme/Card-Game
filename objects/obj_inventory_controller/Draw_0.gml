@@ -10,11 +10,13 @@ if isShowingMenu {
 	draw_set_alpha(1);
 	draw_sprite(spr_inventory_back, 0, CameraX() + 175, CameraMiddleY());
 
+	var _currentItems = obj_player.myItems;
+
 	//items
-	for (var _i = 0; _i < ds_grid_width(myItems); _i++) {
+	for (var _i = 0; _i < ds_grid_width(_currentItems); _i++) {
 		var _itemX = CameraX() + 81 + (_i * itemSeparation);
 		var _itemY = CameraY() + 411;
-		var _sprite = object_get_sprite(myItems[# _i, Item.Object]);
+		var _sprite = object_get_sprite(_currentItems[# _i, Item.Object]);
 
 			//check for additional rows needed
 			if _i >= menuWidth && _i < menuWidth * 2 {
@@ -37,11 +39,11 @@ if isShowingMenu {
 			currentItemSlot = _i;
 
 			//draw item info
-			if !instance_exists(myItems[# _i, Item.Object]) && !draggingItem {
-				currentItem = instance_create_layer(-32, -32, "Inventory", myItems[# _i, Item.Object]);
-				currentItem.price = myItems[# _i, Item.Price];
-				currentItem.type = myItems[# _i, Item.Type];
-				currentItem.name = myItems[# _i, Item.Name];
+			if !instance_exists(_currentItems[# _i, Item.Object]) && !draggingItem {
+				currentItem = instance_create_layer(-32, -32, "Inventory", _currentItems[# _i, Item.Object]);
+				currentItem.price = _currentItems[# _i, Item.Price];
+				currentItem.type = _currentItems[# _i, Item.Type];
+				currentItem.name = _currentItems[# _i, Item.Name];
 				currentItem.isInMenu = true;
 				if showingDescription {
 					currentItem.isShowingInfo = true;

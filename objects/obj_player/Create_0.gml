@@ -14,3 +14,5 @@ defence_loss = 20;
 max_actions = 3;
 current_actions = max_actions;
 action_refresh = 3;
+
+myItems = ds_grid_create(0, Item.Height);

@@ -6,34 +6,36 @@ function AddItem(grid, attributes) {
 		show_message("No grid found.");
 		return;
 	}
-	
-	if !is_array(attributes) || array_length != Item.Height {
+
+	if !is_array(attributes) || array_length(attributes) != Item.Height {
 		show_message("Wrong attributes.");
-	}
-	
-	//second check - is item in the master list?
-	var _isInMasterList = false;
-	for (var _i = 0; _i < ds_grid_width(global.AllItems); _i++) {
-		if global.AllItems[# _i, Item.Name] == attributes[Item.Name] {
-			_isInMasterList = true;
-		}
-	}
-	if !_isInMasterList {
-		show_message("Cannot find this item.");
 		return;
 	}
 	
+	//second check - is item in the master list?
+	//var _isInMasterList = false;
+	//for (var _i = 0; _i < ds_grid_width(global.AllItems); _i++) {
+	//	if global.AllItems[# _i, Item.Name] == attributes[Item.Name] {
+	//		_isInMasterList = true;
+	//	}
+	//}
+	//if !_isInMasterList {
+	//	show_message("Cannot find this item.");
+	//	return;
+	//}
+	
 	//third check - can it stack?
 	if attributes[Item.Type] != Type.Consumable { //or any other type that can stack
-		canStack = false;
+		_canStack = false;
 	}
 	
 	//fourth check - is it already in the grid?
-	if canStack {
+	if _canStack {
 		for (var _i = 0; _i < ds_grid_width(grid); _i++) {
 			if attributes[Item.Name] == grid[# _i, Item.Name] {
 				//it's in here, so add amount to item
 				grid[# _i, Item.Amount] += attributes[Item.Amount];
+				return;
 			}
 		}
 	}
@@ -53,14 +55,14 @@ function AddItemToMasterList(attributes){
 		show_message("No 'AllItems' variable found");
 		return;
 	}
-	
+
 	//Check type of variable
 	if !ds_exists(global.AllItems, ds_type_grid) {
 		//global.AllItems = ds_grid_create(0, Item.Height);
 		show_message("'AllItems' not a ds_grid");
 		return;
 	}
-	
+
 	//check inputs
 	if !is_array(attributes) || array_length(attributes) != Item.Height {
 		show_message("Bad input for AddItemToMasterList");

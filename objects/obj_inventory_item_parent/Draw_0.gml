@@ -18,6 +18,9 @@ if isShowingInfo {
 if isInMenu {
 	//Price
 	draw_set_colour(c_orange);
+	print(parent.price);
+	print(parent.title);
+	
 	draw_set_font(fnt_futured_12);
 	draw_text_ext(CameraX() + 75, CameraY() + 690, parent.title + ": " + string(parent.price) + " coin.", font_get_size(fnt_futured_12) * 1.5, sprite_get_width(spr_inventory_front) - 20);
 }

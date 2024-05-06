@@ -2,7 +2,7 @@ function do_discard_card()
 {
 	if obj_game_controller.fsm.get_current_state() == "wait_for_player_input"
 	{
-		with(obj_player_controller)
+		with(obj_player)
 		{
 			discard_card(global.active_card);
 			deal_card();

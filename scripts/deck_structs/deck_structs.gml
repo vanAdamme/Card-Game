@@ -119,7 +119,7 @@ function Deck() constructor
 
 	//static fill_gaps = function()
 	//{
-	//	var count = obj_player_controller.hand_size - array_length(dealt_cards);
+	//	var count = obj_player.hand_size - array_length(dealt_cards);
 	//	if count <= 0 { exit; }
 	//	repeat(count)
 	//	{

@@ -55,7 +55,7 @@ function deal_hand()
 {
 	discard_hand();
 
-	var _hand_size = obj_player_controller.hand_size;
+	var _hand_size = obj_player.hand_size;
 
 	for (var _i = 0; _i < _hand_size; _i++)
 	{
@@ -123,7 +123,7 @@ function fill_gaps()
 {
 	with(obj_deck_controller)
 	{
-		var count = obj_player_controller.hand_size - array_length(hand);
+		var count = obj_player.hand_size - array_length(hand);
 		if count <= 0 { exit; }
 		repeat(count)
 		{

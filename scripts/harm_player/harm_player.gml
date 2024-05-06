@@ -2,7 +2,7 @@ function harm_player(_damage)
 {
 	var damage = _damage;
 
-	with (obj_player_controller)
+	with (obj_player)
 	{
 		if current_defence >= damage
 		{

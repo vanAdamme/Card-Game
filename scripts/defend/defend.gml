@@ -1,6 +1,6 @@
 function defend(_mean, _sd = 0)
 {
-	with(obj_enemy_controller)
+	with(obj_enemy)
 	{
 		if _sd == 0	{ amount = _mean; }
 		else		{ amount = round(gauss(_mean, _sd)); }

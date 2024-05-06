@@ -1,6 +1,6 @@
 function do_enemy_turn()
 {
-	with (obj_enemy_controller)
+	with (obj_enemy)
 	{
 		while !ds_queue_empty(enemy_actions)
 		{

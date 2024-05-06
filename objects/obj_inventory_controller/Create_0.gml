@@ -1,4 +1,4 @@
-myItems = ds_grid_create(0, Item.Height);
+//myItems = ds_grid_create(0, Item.Height);
 
 isShowingMenu = false;
 showingDescription = false;
