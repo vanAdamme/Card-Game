@@ -1,8 +1,3 @@
-with(obj_card_parent)
-{
-	layer = layer_get_id("Cards");
-}
-
 hand_size = 5;
 max_hp = 500;
 current_hp = max_hp;

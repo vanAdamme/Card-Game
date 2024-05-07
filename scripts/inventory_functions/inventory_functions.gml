@@ -15,7 +15,7 @@ function AddItem(grid, attributes) {
 	//second check - is item in the master list?
 	//var _isInMasterList = false;
 	//for (var _i = 0; _i < ds_grid_width(global.AllItems); _i++) {
-	//	if global.AllItems[# _i, Item.Name] == attributes[Item.Name] {
+	//	if global.AllItems[# _i, Item.Title] == attributes[Item.Title] {
 	//		_isInMasterList = true;
 	//	}
 	//}
@@ -32,7 +32,7 @@ function AddItem(grid, attributes) {
 	//fourth check - is it already in the grid?
 	if _canStack {
 		for (var _i = 0; _i < ds_grid_width(grid); _i++) {
-			if attributes[Item.Name] == grid[# _i, Item.Name] {
+			if attributes[Item.Title] == grid[# _i, Item.Title] {
 				//it's in here, so add amount to item
 				grid[# _i, Item.Amount] += attributes[Item.Amount];
 				return;

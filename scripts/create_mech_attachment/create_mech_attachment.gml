@@ -33,17 +33,21 @@ function create_mech_attachment(_mech_part)
 		title = _mech_part.title;
 		type = _mech_part.type;
 		inv_object = _mech_part.inv_object;
+		parent_object = id;
 		max_hp = _mech_part.hp;
 		current_hp = max_hp;
 		price = _mech_part.price;
 		description = _mech_part.description;
-		
+		x = _mech_part.x_pos;
+		y = _mech_part.y_pos;
+		depth = _mech_part.init_depth;
+	
 		for (var _i = 0; _i < array_length(slot); _i++)
 		{
 			array_push(obj_deck_controller.cards, slot[_i]);
 		}
 
-		AddItem(obj_player.myItems, [title, inv_object, 1, type, price]);
+		AddItem(obj_player.myItems, [title, inv_object, parent_object, 1, type, price]);
 	}
 
 	return obj;

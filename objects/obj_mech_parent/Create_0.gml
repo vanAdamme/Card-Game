@@ -3,6 +3,7 @@ event_inherited();
 title = undefined;
 description = undefined;
 type = undefined;
+inv_object = undefined;
 inv_sprite = undefined;
 max_hp = 0;
 current_hp = 0;

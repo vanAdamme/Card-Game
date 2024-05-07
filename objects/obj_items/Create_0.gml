@@ -1,9 +1,10 @@
-/// @desc Master Item Object
+/// @desc Master Inventory Item Object
 
-//All item properties
+//All inventory item properties
 enum Item {
-	Name,
-	Object,
+	Title,
+	InvObject,
+	ParentObject,
 	Amount,
 	Type,
 	Price,
@@ -12,7 +13,8 @@ enum Item {
 
 enum Type {
 	MECH_PART,
-	Armour,
+	Card,
+	Boost,
 	Consumable //stackable
 }
 
@@ -23,7 +25,7 @@ enum Ailment {
 }
 
 enum SortType {
-	Name,
+	Title,
 	Amount,
 	Type,
 	Price,

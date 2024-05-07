@@ -1,6 +1,8 @@
 event_inherited();
 initialise_card_states();
 
+layer = layer_get_id("Cards");
+
 title = undefined;
 description = undefined;
 

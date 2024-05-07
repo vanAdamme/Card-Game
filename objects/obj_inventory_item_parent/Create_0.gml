@@ -1,13 +1,12 @@
 layer = layer_get_id("Inventory");
 depth = layer_get_depth("Inventory") - 1;
 
-title = undefined;
-description = undefined;
-
 //specific drawing data
 type = undefined;
-name = undefined;
+title = undefined;
 price = undefined;
+description = undefined;
+parent = undefined;
 
 isInMenu = false;
 isShowingInfo = false;

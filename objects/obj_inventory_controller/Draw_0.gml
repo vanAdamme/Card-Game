@@ -16,7 +16,7 @@ if isShowingMenu {
 	for (var _i = 0; _i < ds_grid_width(_currentItems); _i++) {
 		var _itemX = CameraX() + 81 + (_i * itemSeparation);
 		var _itemY = CameraY() + 411;
-		var _sprite = object_get_sprite(_currentItems[# _i, Item.Object]);
+		var _sprite = object_get_sprite(_currentItems[# _i, Item.InvObject]);
 
 			//check for additional rows needed
 			if _i >= menuWidth && _i < menuWidth * 2 {
@@ -39,11 +39,12 @@ if isShowingMenu {
 			currentItemSlot = _i;
 
 			//draw item info
-			if !instance_exists(_currentItems[# _i, Item.Object]) && !draggingItem {
-				currentItem = instance_create_layer(-32, -32, "Inventory", _currentItems[# _i, Item.Object]);
-				currentItem.price = _currentItems[# _i, Item.Price];
+			if !instance_exists(_currentItems[# _i, Item.InvObject]) && !draggingItem {
+				currentItem = instance_create_layer(-32, -32, "Inventory", _currentItems[# _i, Item.InvObject]);
 				currentItem.type = _currentItems[# _i, Item.Type];
-				currentItem.name = _currentItems[# _i, Item.Name];
+				currentItem.title = _currentItems[# _i, Item.Title];
+				currentItem.price = _currentItems[# _i, Item.Price];
+				currentItem.parent = _currentItems[# _i, Item.ParentObject];
 				currentItem.isInMenu = true;
 				if showingDescription {
 					currentItem.isShowingInfo = true;
@@ -88,8 +89,8 @@ if isShowingMenu {
 	}
 
 	//ensure only 1 item exists at a time
-	if instance_number(obj_item_parent) > 1 {
-		instance_destroy(obj_item_parent);
+	if instance_number(obj_inventory_item_parent) > 1 {
+		instance_destroy(obj_inventory_item_parent);
 	}
 
 	//front of inventory
