@@ -294,3 +294,12 @@ function array_for_each_copy(_array, _script) {
     }
     return _new_array;   
 }
+
+function array_contains(array, number) {
+	for (var i = 0; i < array_length(array); i++) {
+		if array[i] == number {
+			return true;
+		}
+	}
+	return false;
+}

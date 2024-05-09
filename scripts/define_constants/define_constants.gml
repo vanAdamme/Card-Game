@@ -27,6 +27,4 @@ function define_constants()
 		LEFT_LEG,
 		RIGHT_LEG
 	}
-	
-
 }

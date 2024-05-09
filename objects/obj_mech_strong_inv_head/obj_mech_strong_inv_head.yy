@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_mech_basic_inv_left_leg",
+  "%Name":"obj_mech_strong_inv_head",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_mech_basic_inv_left_leg",
+  "name":"obj_mech_strong_inv_head",
   "overriddenProperties":[],
   "parent":{
-    "name":"Basic",
-    "path":"folders/Objects/Items/Inventory/Basic.yy",
+    "name":"Strong",
+    "path":"folders/Objects/Items/Inventory/Strong.yy",
   },
   "parentObjectId":{
     "name":"obj_inventory_item_parent",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mech_basic_left_leg_inv",
-    "path":"sprites/spr_mech_basic_left_leg_inv/spr_mech_basic_left_leg_inv.yy",
+    "name":"spr_mech_strong_head_inv",
+    "path":"sprites/spr_mech_strong_head_inv/spr_mech_strong_head_inv.yy",
   },
   "spriteMaskId":null,
   "visible":true,

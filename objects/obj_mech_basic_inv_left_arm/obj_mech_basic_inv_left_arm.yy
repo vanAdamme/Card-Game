@@ -8,8 +8,8 @@
   "name":"obj_mech_basic_inv_left_arm",
   "overriddenProperties":[],
   "parent":{
-    "name":"BasicMech",
-    "path":"folders/Objects/Items/Inventory/BasicMech.yy",
+    "name":"Basic",
+    "path":"folders/Objects/Items/Inventory/Basic.yy",
   },
   "parentObjectId":{
     "name":"obj_inventory_item_parent",
