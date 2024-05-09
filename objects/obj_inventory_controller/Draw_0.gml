@@ -17,30 +17,25 @@ if isShowingMenu {
 		itemRow = _i div menuWidth;
 		itemCol = _i mod menuHeight;
 
-		itemX = itemStartX + (itemCol * itemSeparation);
+		itemX = frontX + itemStartX + (itemCol * itemSeparation);
 		itemY = frontY + itemStartY + (itemRow * itemSeparation);
 
 		sprite = object_get_sprite(_currentItems[# _i, Item.InvObject]);
 
 		draw_sprite_ext(sprite, 0, itemX, itemY, itemScale, itemScale, 0, c_white, 1);
 
-//if _i = 0 {
-//	show_debug_message("itemX = " + string(itemX));
-//	show_debug_message("itemY = " + string(itemY));
-//	show_debug_message("itemRow = " + string(itemRow));
-//	show_debug_message("itemCol = " + string(itemCol));
-//}
 		//amount
 		draw_set_color(c_white);
 		draw_set_alpha(1);
 		draw_set_font(fnt_futured_12);
-		draw_text(itemX - 14, itemY + 2, obj_player.myItems[# _i, Item.Amount]);
+		draw_text(itemX + amountOffsetX, itemY + amountOffsetY, obj_player.myItems[# _i, Item.Amount]);
 
 		//check if mouse is hovering over an item
-		if point_in_rectangle(mouse_x, mouse_y, itemX - (spriteWidth * itemScale / 2), itemY - (spriteHeight * itemScale / 2), itemX + (spriteWidth * itemScale / 2), itemY + (spriteHeight * itemScale / 2)) {
+		//if point_in_rectangle(mouse_x, mouse_y, itemX - (spriteWidth * itemScale / 2), itemY - (spriteHeight * itemScale / 2), itemX + (spriteWidth * itemScale / 2), itemY + (spriteHeight * itemScale / 2)) {
+		if point_in_rectangle(mouse_x, mouse_y, itemX, itemY, itemX + (spriteWidth * itemScale), itemY + (spriteHeight * itemScale)) {
 			draw_set_alpha(0.25);
 			draw_set_colour(c_blue);
-			draw_rectangle(itemX - (spriteWidth * itemScale / 2), itemY - (spriteHeight * itemScale / 2), itemX + (spriteWidth * itemScale / 2), itemY + (spriteHeight * itemScale / 2), false);
+			draw_rectangle(itemX, itemY, itemX + (spriteWidth * itemScale), itemY + (spriteHeight * itemScale), false);
 			draw_set_alpha(1);
 			currentItemSlot = _i;
 
@@ -172,18 +167,21 @@ if isShowingMenu {
 	draw_set_alpha(1);
 	draw_set_colour(c_white);
 	draw_set_font(fnt_futured_12);
-	if sortType == SortType.Title {
-		draw_text(CameraX() + 50, CameraY() + 725, "Sorting by name");
+	switch sortType {
+		case SortType.Title:
+			var _string = "Sorting by name";
+		break;
+		case SortType.Amount:
+			var _string = "Sorting by amount";
+		break;
+		case SortType.Price:
+			var _string = "Sorting by price";
+		break;
+		case SortType.Type:
+			var _string = "Sorting by type";
+		break;
 	}
-	if sortType == SortType.Amount {
-		draw_text(CameraX() + 50, CameraY() + 725, "Sorting by amount");
-	}
-	if sortType == SortType.Price {
-		draw_text(CameraX() + 50, CameraY() + 725, "Sorting by price");
-	}
-	if sortType == SortType.Type {
-		draw_text(CameraX() + 50, CameraY() + 725, "Sorting by type");
-	}
+	draw_text(sortOffsetX, sortOffsetY, _string);
 
 	//press button
 	if point_in_rectangle(mouse_x, mouse_y, CameraX() + 440, CameraY() + 435, CameraX() + 520, CameraY() + 470) && mouse_check_button_pressed(mb_left) {

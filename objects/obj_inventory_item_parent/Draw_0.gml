@@ -20,5 +20,5 @@ if isInMenu {
 	draw_set_colour(c_orange);
 
 	draw_set_font(fnt_futured_12);
-	draw_text_ext(CameraX() + 75, CameraY() + 690, parent.title + ": " + string(parent.price) + " coin.", font_get_size(fnt_futured_12) * 1.5, sprite_get_width(spr_inventory_front) - 20);
+	draw_text_ext(textX, textY, parent.title + ": " + string(parent.price) + " coin.", font_get_size(fnt_futured_12) * 1.5, sprite_get_width(spr_inventory_front) - 20);
 }

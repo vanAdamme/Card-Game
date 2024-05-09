@@ -7,10 +7,10 @@ currentItem = undefined;
 currentItemSlot = undefined;
 sequence = undefined;
 
-backX = CameraX() + 175;
-backY = CameraMiddleY();
-frontX = backX;
-frontY = backY + 20;
+backX = CameraX() + 475;
+backY = CameraMiddleY() - 200;
+frontX = backX + 8;
+frontY = backY + 52;
 
 menuWidth = 6;
 menuHeight = 8;
@@ -21,6 +21,10 @@ spriteHeight = 16;
 spriteWidth = 16;
 itemStartX = 20;
 itemStartY = 16;
+amountOffsetX = 10;
+amountOffsetY = 10;
+sortOffsetX = frontX + 12;
+sortOffsetY = frontY + 340;
 
 draggedItem = undefined;
 draggingItem = false;
