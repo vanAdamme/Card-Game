@@ -1,8 +1,3 @@
-with(obj_card_parent)
-{
-	layer = layer_get_id("Cards");
-}
-
 hand_size = 5;
 max_hp = 500;
 current_hp = max_hp;
@@ -14,3 +9,7 @@ defence_loss = 20;
 max_actions = 3;
 current_actions = max_actions;
 action_refresh = 3;
+
+myItems = ds_grid_create(0, Item.Height);
+
+//AddItem(myItems, ["Basic Core", obj_mech_basic_inv_core, obj_mech_basic_core, 6, MECH_PART.CORE, 20]);

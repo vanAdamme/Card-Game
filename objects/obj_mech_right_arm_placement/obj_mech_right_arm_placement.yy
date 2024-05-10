@@ -6,8 +6,8 @@
   "name":"obj_mech_right_arm_placement",
   "overriddenProperties":[],
   "parent":{
-    "name":"obj_placements",
-    "path":"folders/Objects/Player Items/Mech parts/obj_placements.yy",
+    "name":"mech_placements",
+    "path":"folders/Objects/GUI_objs/mech_placements.yy",
   },
   "parentObjectId":null,
   "persistent":false,

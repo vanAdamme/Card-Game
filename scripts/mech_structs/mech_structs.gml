@@ -1,46 +1,58 @@
-function AttachmentType(_title, _type, _inv_sprite, _hp, _price, _description) constructor
+function AttachmentType(_title, _object, _type, _inv_object, _hp, _price, _description) constructor
 {
 	title = _title;
+	object = _object;
 	type = _type;
-	inv_sprite = _inv_sprite;
+	inv_object = _inv_object;
 	hp = _hp;
 	price = _price;
 	description = _description;
 	
-	stdParameters = 6;
-	
-	cards_in_attachment = array_create(argument_count - stdParameters); //the "4" refers to how many parameters there are before the cards appear
+	stdParameters = 7;
+
+	cards_in_attachment = array_create(argument_count - stdParameters);
 
 	for (var _i = 0; _i < argument_count - stdParameters; _i++)
 	{
 		cards_in_attachment[_i] = [argument[_i + stdParameters][0], argument[_i + stdParameters][1]];
 	}
-}
 
-/*
-function Attachment() constructor
-{
-	slot = [];
-	max_hp = 0;
-	current_hp = 0;
-	title = "";
-	mech_obj = noone;
-
-	//static add_card = function(_card)
-	//{
-	//	array_push(slot, _card);
-	//}
-
-	//static add_to_deck = function(_deck)
-	//{
-	//	with(_deck)
-	//	{
-	//		array_for_each(other.slot, add_to_deck);
-	//	}
-	//}
-
-	static remove_from_mech = function()
+	switch (type)
 	{
-		instance_destroy(mech_obj);	
+		case MECH_PART.CORE:
+			x_pos = obj_mech_core_placement.x;
+			y_pos = obj_mech_core_placement.y;
+			init_depth = obj_mech_core_placement.depth - 1;
+		break;
+
+		case MECH_PART.HEAD:
+			x_pos = obj_mech_head_placement.x;
+			y_pos = obj_mech_head_placement.y;
+			init_depth = obj_mech_head_placement.depth - 1;
+		break;
+
+		case MECH_PART.LEFT_ARM:
+			x_pos = obj_mech_left_arm_placement.x;
+			y_pos = obj_mech_left_arm_placement.y;
+			init_depth = obj_mech_left_arm_placement.depth - 1;
+		break;
+
+		case MECH_PART.RIGHT_ARM:
+			x_pos = obj_mech_right_arm_placement.x;
+			y_pos = obj_mech_right_arm_placement.y;
+			init_depth = obj_mech_right_arm_placement.depth - 1;
+		break;
+
+		case MECH_PART.LEFT_LEG:
+			x_pos = obj_mech_left_leg_placement.x;
+			y_pos = obj_mech_left_leg_placement.y;
+			init_depth = obj_mech_left_leg_placement.depth - 1;
+		break;
+
+		case MECH_PART.RIGHT_LEG:
+			x_pos = obj_mech_right_leg_placement.x;
+			y_pos = obj_mech_right_leg_placement.y;
+			init_depth = obj_mech_right_leg_placement.depth - 1;
+		break;
 	}
 }

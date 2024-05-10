@@ -1,7 +1,11 @@
 event_inherited();
 initialise_card_states();
 
-title			= "";
+layer = layer_get_id("Cards");
+
+title = undefined;
+description = undefined;
+
 functions		= [];
 cost			= 0;
 xp_to_level		= 0;

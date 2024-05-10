@@ -21,24 +21,3 @@ function Card(_card_type) constructor
 	current_xp		= 0;
 	level			= 1;
 }
-
-/*
-//if we only have player cards then we can merge these two structs
-function Card(_title, _face, _back) constructor
-{
-	title		= _title;
-	face		= _face;
-	back		= _back;
-}
-
-function PlayerCard(_title, _face = spr_player_card_face, _back = spr_player_card_back, _attack_val = [1, 0], _defend_val = [1, 0], _support_val = [1, 0], _cost = 1, _xp_to_level = 3, _attachment = MECH_PART.CORE, _text = "") : Card(_title, _face, _back) constructor
-{
-	attack_val	= _attack_val;
-	defend_val	= _defend_val;
-	support_val	= _support_val;
-	cost		= _cost;
-	xp_to_level	= _xp_to_level;
-	level		= 1;
-	attachment	= _attachment;
-	text		= _text;
-}
