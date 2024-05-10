@@ -462,7 +462,6 @@
     {"id":{"name":"spr_fill_card_gaps_button","path":"sprites/spr_fill_card_gaps_button/spr_fill_card_gaps_button.yy",},},
     {"id":{"name":"spr_inventory_back","path":"sprites/spr_inventory_back/spr_inventory_back.yy",},},
     {"id":{"name":"spr_inventory_front","path":"sprites/spr_inventory_front/spr_inventory_front.yy",},},
-    {"id":{"name":"spr_locked_icon","path":"sprites/spr_locked_icon/spr_locked_icon.yy",},},
     {"id":{"name":"spr_mech_arm_placement","path":"sprites/spr_mech_arm_placement/spr_mech_arm_placement.yy",},},
     {"id":{"name":"spr_mech_basic_core_inv","path":"sprites/spr_mech_basic_core_inv/spr_mech_basic_core_inv.yy",},},
     {"id":{"name":"spr_mech_basic_core","path":"sprites/spr_mech_basic_core/spr_mech_basic_core.yy",},},

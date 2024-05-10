@@ -402,7 +402,6 @@
     {"name":"spr_fill_card_gaps_button","order":4,"path":"sprites/spr_fill_card_gaps_button/spr_fill_card_gaps_button.yy",},
     {"name":"spr_inventory_back","order":3,"path":"sprites/spr_inventory_back/spr_inventory_back.yy",},
     {"name":"spr_inventory_front","order":4,"path":"sprites/spr_inventory_front/spr_inventory_front.yy",},
-    {"name":"spr_locked_icon","order":2,"path":"sprites/spr_locked_icon/spr_locked_icon.yy",},
     {"name":"spr_mech_basic_head_inv","order":1,"path":"sprites/spr_mech_basic_head_inv/spr_mech_basic_head_inv.yy",},
     {"name":"spr_mech_basic_head","order":1,"path":"sprites/spr_mech_basic_head/spr_mech_basic_head.yy",},
     {"name":"spr_mech_basic_left_arm_inv","order":2,"path":"sprites/spr_mech_basic_left_arm_inv/spr_mech_basic_left_arm_inv.yy",},

@@ -46,9 +46,9 @@ function AddItem(grid, attributes) {
 	}
 
 	//fifth check - do I have space?
-	if obj_player.inventorySize <= ds_grid_width(grid) {
-		return;
-	}
+	//if obj_player.inventorySize <= ds_grid_width(grid) {
+	//	return;
+	//}
 
 	//sixth check - not in the grid, so add it
 	ds_grid_resize(grid, ds_grid_width(grid) + 1, ds_grid_height(grid));
@@ -137,4 +137,36 @@ function SortInventory(grid, sortType) {
 	ds_grid_set_grid_region(grid, sortedGrid, 0, 0, ds_grid_width(sortedGrid), Item.Height, 0, 0);
 	ds_grid_destroy(sortedGrid);
 	return grid;
+}
+
+// @param Grid - Grid From
+// @param Comumn number - getting column number
+// @param Return as Array - if true - than return array of attributes in Target Column from target Grid
+//						  - if false - than return new DS List reccord with data
+
+function get_column_from_grid(grid, column_number, return_as_array) {
+	if(return_as_array) {
+		var _ds_to_array = [];
+		for (var i = 0; i < ds_grid_height(grid); i++){
+	        array_push(_ds_to_array, grid[# column_number, i]); 
+	    }
+		return _ds_to_array;
+	}
+    else {
+		var _ds_list = ds_list_create();
+
+	    for (var i = 0; i < ds_grid_height(grid); i++){
+	        ds_list_add(_ds_list,grid[# column_number, i]); 
+	    }
+    
+	    return _ds_list
+	}
+}
+
+function grid_delete_column(grid, col) {
+    var w = ds_grid_width(grid);
+    var h = ds_grid_height(grid);
+ 
+    ds_grid_set_grid_region(grid, grid, col + 1, 0, w - 1, h - 1, col, 0);
+    ds_grid_resize(grid, w  -1, h);
 }

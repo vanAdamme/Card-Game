@@ -1,5 +1,3 @@
-//myItems = ds_grid_create(0, Item.Height);
-
 isShowingMenu = false;
 showingDescription = false;
 
@@ -21,8 +19,8 @@ spriteHeight = 16;
 spriteWidth = 16;
 itemStartX = 20;
 itemStartY = 16;
-amountOffsetX = 10;
-amountOffsetY = 10;
+amountOffsetX = 30;
+amountOffsetY = 16;
 sortOffsetX = frontX + 12;
 sortOffsetY = frontY + 340;
 
@@ -33,7 +31,3 @@ draggedItemSlot = undefined;
 itemLocked = false;
 lockedItemX = undefined;
 lockedItemY = undefined;
-
-//maxInventorySlots = obj_player.inventorySize;
-
-//prevState = undefined;

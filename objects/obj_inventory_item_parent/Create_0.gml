@@ -13,6 +13,3 @@ isShowingInfo = false;
 
 textWidth = sprite_get_width(spr_description) - 60;
 iconScale = 0.4;
-
-textX = x + 12;
-textY = y + 320;

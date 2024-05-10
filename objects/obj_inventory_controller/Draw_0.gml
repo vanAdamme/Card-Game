@@ -12,6 +12,7 @@ if isShowingMenu {
 
 	var _currentItems = obj_player.myItems;
 
+#region
 	//items
 	for (var _i = 0; _i < ds_grid_width(_currentItems); _i++) {
 		itemRow = _i div menuWidth;
@@ -26,12 +27,13 @@ if isShowingMenu {
 
 		//amount
 		draw_set_color(c_white);
+		draw_set_halign(fa_right);
 		draw_set_alpha(1);
 		draw_set_font(fnt_futured_12);
 		draw_text(itemX + amountOffsetX, itemY + amountOffsetY, obj_player.myItems[# _i, Item.Amount]);
+		draw_set_halign(fa_left);
 
 		//check if mouse is hovering over an item
-		//if point_in_rectangle(mouse_x, mouse_y, itemX - (spriteWidth * itemScale / 2), itemY - (spriteHeight * itemScale / 2), itemX + (spriteWidth * itemScale / 2), itemY + (spriteHeight * itemScale / 2)) {
 		if point_in_rectangle(mouse_x, mouse_y, itemX, itemY, itemX + (spriteWidth * itemScale), itemY + (spriteHeight * itemScale)) {
 			draw_set_alpha(0.25);
 			draw_set_colour(c_blue);
@@ -56,7 +58,7 @@ if isShowingMenu {
 			if mouse_check_button_pressed(mb_left) && !showingDescription {
 				sequence = layer_sequence_create("Inventory", CameraMiddleX(), CameraMiddleY(), sq_description_animation);
 			}
-			
+
 			//lock item
 			if mouse_check_button_pressed(mb_right) && !itemLocked && showingDescription {
 				itemLocked = true;
@@ -68,12 +70,13 @@ if isShowingMenu {
 			}
 		}
 	}
+#endregion
 
 	//draw locked item
 	if itemLocked {
 		draw_set_alpha(0.5);
 		draw_set_colour(c_red);
-		draw_rectangle(lockedItemX - 16, lockedItemY - 16, lockedItemX +16, lockedItemY + 16, false);
+		draw_rectangle(lockedItemX, lockedItemY, lockedItemX + 32, lockedItemY + 32, false);
 		draw_set_alpha(1);
 	}
 
@@ -113,53 +116,7 @@ if isShowingMenu {
 	if instance_number(obj_inventory_item_parent) > 1 {
 		instance_destroy(obj_inventory_item_parent);
 	}
-/*
-	//locked item slots
-	for (var _i = obj_player.inventorySize; _i < (menuHeight * menuWidth); _i++) {
-		itemX = CameraX() + 81 + (_i * itemSeparation);
-		itemY = CameraY() + 411;
-		sprite = spr_locked_icon;
 
-		//check for additional rows needed
-		if _i >= menuWidth && _i < menuWidth * 2 {
-			itemX = CameraX() + 81 + ((_i - menuWidth) * itemSeparation);
-			itemY = CameraY() + 447;
-			//show_message(string(itemX) + ", " + string(itemY));
-		}
-
-		if _i >= menuWidth * 2 && _i < menuWidth * 3 {
-			itemX = CameraX() + 81 + ((_i - menuWidth * 2) * itemSeparation);
-			itemY = CameraY() + 483;
-		}
-
-		if _i >= menuWidth * 3 && _i < menuWidth * 4 {
-			itemX = CameraX() + 81 + ((_i - menuWidth * 3) * itemSeparation);
-			itemY = CameraY() + 519;
-		}
-
-		if _i >= menuWidth * 4 && _i < menuWidth * 5 {
-			itemX = CameraX() + 81 + ((_i - menuWidth * 4) * itemSeparation);
-			itemY = CameraY() + 555;
-		}
-
-		if _i >= menuWidth * 5 && _i < menuWidth * 6 {
-			itemX = CameraX() + 81 + ((_i - menuWidth * 5) * itemSeparation);
-			itemY = CameraY() + 591;
-		}
-
-		if _i >= menuWidth * 6 && _i < menuWidth * 7 {
-			itemX = CameraX() + 81 + ((_i - menuWidth * 6) * itemSeparation);
-			itemY = CameraY() + 627;
-		}
-
-		if _i >= menuWidth * 7 && _i < menuWidth * 8 {
-			itemX = CameraX() + 81 + ((_i - menuWidth * 7) * itemSeparation);
-			itemY = CameraY() + 663;
-		}
-
-		draw_sprite_ext(sprite, 0, itemX, itemY, 0.5, 0.5, 0, c_white, 0.5);
-	}
-*/
 	//front of inventory
 	draw_sprite(spr_inventory_front, 0, frontX, frontY);
 
@@ -182,7 +139,7 @@ if isShowingMenu {
 		break;
 	}
 	draw_text(sortOffsetX, sortOffsetY, _string);
-
+			
 	//press button
 	if point_in_rectangle(mouse_x, mouse_y, CameraX() + 440, CameraY() + 435, CameraX() + 520, CameraY() + 470) && mouse_check_button_pressed(mb_left) {
 		show_message("Button pressed.");
