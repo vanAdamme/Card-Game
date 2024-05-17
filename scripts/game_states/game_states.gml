@@ -69,8 +69,10 @@ function initialise_game_states()
 		leave: function() {}
 	});
 
-
-
+	fsm.add("paused", {
+		enter: function() {},
+		leave: function() {}
+	});
 
 	fsm.add_transition("end_player_turn", "player_turn", "enemy_turn");
 	fsm.add_transition("end_enemy_turn", "enemy_turn", "player_turn", undefined, function() {});

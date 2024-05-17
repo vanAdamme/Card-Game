@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_tester",
+  "%Name":"obj_pubsub_controller",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_tester",
+  "name":"obj_pubsub_controller",
   "overriddenProperties":[],
   "parent":{
     "name":"Controllers",
     "path":"folders/Objects/Controllers.yy",
   },
   "parentObjectId":null,
-  "persistent":false,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -31,5 +31,5 @@
   "solid":false,
   "spriteId":null,
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

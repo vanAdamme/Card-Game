@@ -1,7 +1,7 @@
 instance_create_layer(50, 0, "Controllers", UI);
 instance_create_layer(100, 0, "Controllers", obj_mouse_controller);
 instance_create_layer(250, 0, "Controllers", obj_items);
-
+instance_create_layer(350, 0, "Controllers", obj_pubsub_controller);
 instance_create_layer(0, 0, "Player", obj_player);
 
 instance_create_layer(300, 0, "Controllers", obj_inventory_controller);
@@ -9,7 +9,6 @@ instance_create_layer(150, 0, "Controllers", obj_deck_controller);
 instance_create_layer(200, 0, "Controllers", obj_mech_controller);
 
 initialise_game_states();
-
 
 instance_create_layer(870, 90, "Enemy", obj_enemy);
 
@@ -22,6 +21,8 @@ instance_create_layer(150, 0, "GUI", obj_gui_controller);
 
 //should make this a separate GUI_controller object
 show_damage = false;
+paused = false;
+paused_surf = -1;
 
 fsm.change("player_turn");
 
