@@ -1,4 +1,4 @@
-if paused {
+if fsm.get_current_state() == "paused" {
 	if !surface_exists(paused_surf) {
 		if paused_surf == -1 { instance_deactivate_all(true); }
 	    paused_surf = surface_create(room_width, room_height);

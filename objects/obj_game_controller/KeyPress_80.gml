@@ -1,5 +1,7 @@
 /// @desc Pause
 
+pause();
+/*
 paused = !paused;
 if !paused
 {
@@ -9,5 +11,6 @@ if !paused
 	fsm.change(fsm.get_previous_state());
 }
 else {
+	pause();
 	fsm.change("paused");
 }

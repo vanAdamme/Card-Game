@@ -240,6 +240,7 @@
     {"id":{"name":"maths_functions","path":"scripts/maths_functions/maths_functions.yy",},},
     {"id":{"name":"mech_functions","path":"scripts/mech_functions/mech_functions.yy",},},
     {"id":{"name":"mech_structs","path":"scripts/mech_structs/mech_structs.yy",},},
+    {"id":{"name":"pause","path":"scripts/pause/pause.yy",},},
     {"id":{"name":"pubsub_functions","path":"scripts/pubsub_functions/pubsub_functions.yy",},},
     {"id":{"name":"put_on_top","path":"scripts/put_on_top/put_on_top.yy",},},
     {"id":{"name":"scr_position_highest","path":"scripts/scr_position_highest/scr_position_highest.yy",},},
