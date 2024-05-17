@@ -15,11 +15,4 @@ right_leg	= create_mech_attachment(BasicRightLeg);
 //strongleft_leg	= create_mech_attachment(StrongLeftLeg);
 //strongright_leg	= create_mech_attachment(StrongRightLeg);
 
-
-
-
-
-
-
-
 attachment_slots = [core, head, left_arm, right_arm, left_leg, right_leg];
