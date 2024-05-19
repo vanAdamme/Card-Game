@@ -1,20 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Empty_Discard_Button",
+  "%Name":"obj_parent_test_button",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_Empty_Discard_Button",
+  "name":"obj_parent_test_button",
   "overriddenProperties":[],
   "parent":{
     "name":"Testing Buttons",
     "path":"folders/Objects/Testing Buttons.yy",
   },
-  "parentObjectId":{
-    "name":"obj_parent_test_button",
-    "path":"objects/obj_parent_test_button/obj_parent_test_button.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_empty_discard_button",
-    "path":"sprites/spr_empty_discard_button/spr_empty_discard_button.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

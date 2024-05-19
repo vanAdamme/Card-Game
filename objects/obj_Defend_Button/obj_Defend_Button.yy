@@ -11,7 +11,10 @@
     "name":"Testing Buttons",
     "path":"folders/Objects/Testing Buttons.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_parent_test_button",
+    "path":"objects/obj_parent_test_button/obj_parent_test_button.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

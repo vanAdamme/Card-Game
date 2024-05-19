@@ -21,6 +21,8 @@ instance_create_layer(150, 0, "GUI", obj_gui_controller);
 
 //should make this a separate GUI_controller object
 show_damage = false;
+
+//pausing variables
 paused = false;
 paused_surf = -1;
 
@@ -30,3 +32,5 @@ if game_get_speed(gamespeed_fps) != 60
 {
     game_set_speed(60, gamespeed_fps);
 }
+
+//room_goto(rm_mech_selection);

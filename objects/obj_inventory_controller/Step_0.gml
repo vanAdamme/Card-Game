@@ -1,20 +1,20 @@
-//open/close inventory
-if keyboard_check_pressed(ord("M")) {
-	if !isShowingMenu {
-		isShowingMenu = true;
-		SortInventory(obj_player.myItems, sortType);
-		obj_game_controller.fsm.change("inventory");
-	} else {
-		isShowingMenu = false;
-		if sequence != undefined {
-			layer_sequence_destroy(sequence);
-			instance_destroy(obj_inventory_item_parent);
-			showingDescription = false;
-			itemLocked = false;
-		}
-		obj_game_controller.fsm.change(obj_game_controller.fsm.get_previous_state());
-	}
-}
+////open/close inventory
+//if keyboard_check_pressed(ord("M")) {
+//	if !isShowingMenu {
+//		isShowingMenu = true;
+//		SortInventory(obj_player.myItems, sortType);
+//		obj_game_controller.fsm.change("inventory");
+//	} else {
+//		isShowingMenu = false;
+//		if sequence != undefined {
+//			layer_sequence_destroy(sequence);
+//			instance_destroy(obj_inventory_item_parent);
+//			showingDescription = false;
+//			itemLocked = false;
+//		}
+//		obj_game_controller.fsm.change(obj_game_controller.fsm.get_previous_state());
+//	}
+//}
 
 //sort
 if isShowingMenu {
