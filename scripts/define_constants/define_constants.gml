@@ -27,4 +27,39 @@ function define_constants()
 		LEFT_LEG,
 		RIGHT_LEG
 	}
+	
+	//All inventory item properties
+	enum Item {
+		Title,
+		InvObject,
+		ParentObject,
+		Amount,
+		Type,
+		Price,
+		Description,
+		Height
+	}
+
+	enum Type {
+		MECH_PART,
+		Card,
+		Boost,
+		Consumable //stackable
+	}
+
+	enum Ailment {
+		Poisoned,
+		Confused,
+		Drunk
+	}
+
+	enum SortType {
+		Title,
+		Amount,
+		Type,
+		Price,
+		Height
+	}
+	
+	
 }

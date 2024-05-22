@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"add_to_item_masterlist",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"add_to_item_masterlist",
+  "parent":{
+    "name":"mech_functions",
+    "path":"folders/Scripts/mech_functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

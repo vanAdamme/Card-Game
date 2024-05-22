@@ -1,3 +1,5 @@
+///@desc Menu
+
 //open/close inventory
 
 with(obj_inventory_controller) {

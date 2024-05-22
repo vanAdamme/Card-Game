@@ -1,14 +1,14 @@
-function AttachmentType(_title, _object, _type, _inv_object, _hp, _price, _description) constructor
+function AttachmentType(_title, _parent_object, _type, _inv_object, _hp, _price, _description) constructor
 {
 	title = _title;
-	object = _object;
+	parent_object = _parent_object;
 	type = _type;
 	inv_object = _inv_object;
 	hp = _hp;
 	price = _price;
 	description = _description;
-	
-	stdParameters = 7;
+
+	stdParameters = 7; //must equal number of variables above
 
 	cards_in_attachment = array_create(argument_count - stdParameters);
 
