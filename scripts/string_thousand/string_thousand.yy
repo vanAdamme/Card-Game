@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"string_thousand",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"string_thousand",
+  "parent":{
+    "name":"utility_functions",
+    "path":"folders/Scripts/utility_functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

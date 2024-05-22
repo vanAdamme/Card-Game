@@ -1,6 +1,13 @@
 function AddItem(grid, attributes) {
 	var _canStack = true;
 
+	//zeroth check - is attributes not an array?
+	if !is_array(attributes) {
+		show_message(object_get_name(attributes));
+		var _obj = attributes;
+		attributes = [_obj.title, _obj.inv_object, _obj.parent_object, 1, _obj.type, _obj.price, _obj.description];
+	}
+
 	//first check - are the arguments acceptable?
 	if !ds_exists(grid, ds_type_grid) {
 		show_message("No grid found.");
@@ -13,23 +20,23 @@ function AddItem(grid, attributes) {
 	}
 
 	//second check - is item in the master list?
-	//var _isInMasterList = false;
-	//for (var _i = 0; _i < ds_grid_width(global.AllItems); _i++) {
-	//	if global.AllItems[# _i, Item.Title] == attributes[Item.Title] {
-	//		_isInMasterList = true;
-	//	}
-	//}
-	//if !_isInMasterList {
-	//	show_message("Cannot find this item.");
-	//	return;
-	//}
+	var _isInMasterList = false;
+	for (var _i = 0; _i < ds_grid_width(global.AllItems); _i++) {
+		if global.AllItems[# _i, Item.Title] == attributes[Item.Title] {
+			_isInMasterList = true;
+		}
+	}
+	if !_isInMasterList {
+		show_message("Cannot find this item.");
+		return;
+	}
 
 	//third check - can it stack?
 	if attributes[Item.Type] != MECH_PART.CORE { //or any other type that can stack
 		_canStack = false;
 		if attributes[Item.Amount] > 1 {
 			for (var _i = 0; _i < attributes[Item.Amount]; _i++) {
-				AddItem(grid, [attributes[Item.Title], attributes[Item.InvObject], attributes[Item.ParentObject], 1,  attributes[Item.Type], attributes[Item.Price]]);
+				AddItem(grid, [attributes[Item.Title], attributes[Item.InvObject], 1,  attributes[Item.Type], attributes[Item.Price], attributes[Item.Description]]);
 			}
 		}
 	}
@@ -58,7 +65,9 @@ function AddItem(grid, attributes) {
 	}
 }
 
-function AddItemToMasterList(attributes) {
+function AddItemToMasterList(_attachment_type) {
+	attributes = [_attachment_type.title, _attachment_type.inv_object, _attachment_type.parent_object, 1, _attachment_type.type, _attachment_type.price, _attachment_type.description];
+
 	//Check for global variable
 	if !variable_global_exists("AllItems") {
 		//global.AllItems = ds_grid_create(0, Item.Height);
@@ -119,7 +128,7 @@ function SortInventory(grid, sortType) {
 		}
 		
 		//end of inner loop
-		AddItem(sortedGrid, [grid[# lowestItem, Item.Title], grid[# lowestItem, Item.InvObject], grid[# lowestItem, Item.ParentObject],
+		AddItem(sortedGrid, [grid[# lowestItem, Item.Title], grid[# lowestItem, Item.InvObject], 
 				grid[# lowestItem, Item.Amount], grid[# lowestItem, Item.Type], grid[# lowestItem, Item.Price]]);
 
 		//add to saved items

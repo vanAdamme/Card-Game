@@ -47,7 +47,7 @@ if isShowingMenu {
 				currentItem.type = _currentItems[# _i, Item.Type];
 				currentItem.title = _currentItems[# _i, Item.Title];
 				currentItem.price = _currentItems[# _i, Item.Price];
-				currentItem.parent = _currentItems[# _i, Item.ParentObject];
+				//currentItem.parent = _currentItems[# _i, Item.ParentObject];
 				currentItem.isInMenu = true;
 				if showingDescription {
 					currentItem.isShowingInfo = true;
