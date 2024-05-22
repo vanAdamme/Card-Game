@@ -12,6 +12,7 @@
     {"name":"inst_2EE78ED8","path":"rooms/rm_mech_selection/rm_mech_selection.yy",},
     {"name":"inst_57C98E0D","path":"rooms/rm_mech_selection/rm_mech_selection.yy",},
     {"name":"inst_7931DA89","path":"rooms/rm_mech_selection/rm_mech_selection.yy",},
+<<<<<<< Updated upstream
     {"name":"inst_7358C898","path":"rooms/rm_mech_selection/rm_mech_selection.yy",},
     {"name":"inst_49B5CFD2","path":"rooms/rm_mech_selection/rm_mech_selection.yy",},
   ],
@@ -20,6 +21,15 @@
     {"$GMRInstanceLayer":"","%Name":"Menu","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"","%Name":"inst_7358C898","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7358C898","objectId":{"name":"obj_mech_selector","path":"objects/obj_mech_selector/obj_mech_selector.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":32.0,},
       ],"layers":[],"name":"Menu","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+=======
+    {"name":"inst_11772BFD","path":"rooms/rm_mech_selection/rm_mech_selection.yy",},
+  ],
+  "isDnd":false,
+  "layers":[
+    {"$GMRInstanceLayer":"","%Name":"Inventory","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"","%Name":"inst_11772BFD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_11772BFD","objectId":{"name":"obj_mech_selector","path":"objects/obj_mech_selector/obj_mech_selector.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":32.0,},
+      ],"layers":[],"name":"Inventory","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+>>>>>>> Stashed changes
     {"$GMRInstanceLayer":"","%Name":"Mech","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"","%Name":"inst_43FB50A3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_43FB50A3","objectId":{"name":"obj_mech_left_arm_placement","path":"objects/obj_mech_left_arm_placement/obj_mech_left_arm_placement.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":768.0,"y":192.0,},
         {"$GMRInstance":"","%Name":"inst_40DBEDFB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_40DBEDFB","objectId":{"name":"obj_mech_core_placement","path":"objects/obj_mech_core_placement/obj_mech_core_placement.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":896.0,"y":192.0,},
