@@ -4,8 +4,7 @@ function initialise_game_states()
 
 	fsm.add("initialise_game", {
 		enter: function() {
-			randomise();
-			define_constants();
+
 		}
 	});
 

@@ -1,6 +1,6 @@
 //shop variables
 selected = 0;
-chosen = array_create(6);
+chosen = array_create(6, noone);
 
 //items
 items = global.AvailableToPurchase;

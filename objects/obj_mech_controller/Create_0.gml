@@ -1,2 +1,2 @@
 //assign_card_types();
-//assign_attachment_types();
+//define_attachment_types();

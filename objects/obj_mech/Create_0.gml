@@ -1,11 +1,10 @@
-attachment = array_create(6);
-
+attachment = array_create(6, noone);
 selected = false;
-chosen = array_create(6);
+chosen = array_create(6, noone);
 
-//core = undefined;
-//head = undefined;
-//left_arm = undefined;
-//right_arm = undefined;
-//left_leg = undefined;
-//right_leg = undefined;
+core = noone;
+head = noone;
+left_arm = noone;
+right_arm = noone;
+left_leg = noone;
+right_leg = noone;

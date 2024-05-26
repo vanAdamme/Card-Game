@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"set_game_speed",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"set_game_speed",
+  "parent":{
+    "name":"utility_functions",
+    "path":"folders/Scripts/utility_functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
