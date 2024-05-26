@@ -1,5 +1,7 @@
 function build_mech_attachment(_mech_part)
 {
+	if _mech_part == undefined exit;
+	
 	obj = instance_create_layer(_mech_part.x_pos, _mech_part.y_pos, "Mech", _mech_part.parent_object);
 
 	for (var _i = 0; _i < array_length(_mech_part.cards_in_attachment); _i++)

@@ -8,13 +8,13 @@ function AttachmentType(_title, _parent_object, _type, _inv_object, _hp, _price,
 	price = _price;
 	description = _description;
 
-	stdParameters = 7; //must equal number of variables above
+	var _stdParameters = 7; //must equal number of variables above
 
-	cards_in_attachment = array_create(argument_count - stdParameters);
+	cards_in_attachment = array_create(argument_count - _stdParameters);
 
-	for (var _i = 0; _i < argument_count - stdParameters; _i++)
+	for (var _i = 0; _i < argument_count - _stdParameters; _i++)
 	{
-		cards_in_attachment[_i] = [argument[_i + stdParameters][0], argument[_i + stdParameters][1]];
+		cards_in_attachment[_i] = [argument[_i + _stdParameters][0], argument[_i + _stdParameters][1]];
 	}
 
 	switch (type)

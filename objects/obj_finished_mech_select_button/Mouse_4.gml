@@ -1,6 +1,6 @@
 event_inherited();
 
-//do save things
-
-
-room_goto(Room1);
+//pubsub_publish("mech attachments chosen", id);
+obj_mech.selected = true;
+obj_mech.chosen = obj_mech_selector.chosen;
+room_goto(rm_battle);

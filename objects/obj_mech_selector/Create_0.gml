@@ -1,8 +1,9 @@
 //shop variables
 selected = 0;
+chosen = array_create(6);
 
 //items
-items = obj_player.inventory;
+items = global.AvailableToPurchase;
 
 itemCount = array_length(items);
 

@@ -16,7 +16,5 @@ if keyboard_check_pressed(vk_up) {
 var _item = items[selected];
 
 if keyboard_check_pressed(vk_enter) {
-
-//add to mech
-
+	chosen[_item.type] = _item;
 }
